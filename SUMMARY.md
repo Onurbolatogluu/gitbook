@@ -174,3 +174,4 @@
 * [💂 Securing Storage](azure/securing-storage.md)
 * [📓 Administering Azure Blobs and Azure Files](azure/administering-azure-blobs-and-azure-files.md)
 * [🔧 Managing Storage](azure/managing-storage.md)
+* [🎁 App Service](azure/app-service.md)
