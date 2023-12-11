@@ -2,18 +2,21 @@
 
 <figure><img src="../.gitbook/assets/ContainersvsVMs_Image.webp" alt=""><figcaption></figcaption></figure>
 
-* **Sanal Makineler:**
-  * Sanal makineler, tam teşekküllü bir işletim sistemi gerektirirler; her biri kendi işletim sistemine (Guest OS), kütüphanelerine ve bağımsız uygulamalarına sahiptir.
-  * Bu yapılar, fiziksel donanım üzerinde hypervisor adı verilen bir aracı yazılım tarafından ayrılır ve yönetilir. Bu, her bir sanal makinenin kendi içinde tamamen izole edilmiş bir ortam oluşturmasını sağlar.
-  * Sanal makinelerin her biri, fiziksel kaynakları (örneğin CPU, bellek) kendi aralarında bölüşür ve bu kaynaklar genellikle sabittir.
-* **Containerlar:**
-  * Containerlar, işletim sistemini paylaşır ve böylelikle ayrı ayrı işletim sistemlerine (Guest OS) ihtiyaç duymazlar. Bunun yerine, her bir container sadece uygulamanın çalıştırılması için gerekli olan kütüphaneleri ve bağımsız dosyaları (Libs/Bin) içerir.
-  * Container runtime (örneğin Docker), containerların yönetimi ve izolasyonu için kullanılır ve bu yapılar daha hafif ve esnektir.
-  * Containerlar daha hızlı başlatılır ve daha az kaynak kullanır çünkü birden fazla container aynı işletim sistemi çekirdeğini paylaşabilir ve gerektiğinde kaynakları dinamik olarak alıp bırakabilir.
+#### **Sanal Makineler:**
+
+* Sanal makineler, tam teşekküllü bir işletim sistemi gerektirirler; her biri kendi işletim sistemine (Guest OS), kütüphanelerine ve bağımsız uygulamalarına sahiptir.
+* Bu yapılar, fiziksel donanım üzerinde hypervisor adı verilen bir aracı yazılım tarafından ayrılır ve yönetilir. Bu, her bir sanal makinenin kendi içinde tamamen izole edilmiş bir ortam oluşturmasını sağlar.
+* Sanal makinelerin her biri, fiziksel kaynakları (örneğin CPU, bellek) kendi aralarında bölüşür ve bu kaynaklar genellikle sabittir.
+
+#### **Containerlar:**
+
+* Containerlar, işletim sistemini paylaşır ve böylelikle ayrı ayrı işletim sistemlerine (Guest OS) ihtiyaç duymazlar. Bunun yerine, her bir container sadece uygulamanın çalıştırılması için gerekli olan kütüphaneleri ve bağımsız dosyaları (Libs/Bin) içerir.
+* Container runtime (örneğin Docker), containerların yönetimi ve izolasyonu için kullanılır ve bu yapılar daha hafif ve esnektir.
+* Containerlar daha hızlı başlatılır ve daha az kaynak kullanır çünkü birden fazla container aynı işletim sistemi çekirdeğini paylaşabilir ve gerektiğinde kaynakları dinamik olarak alıp bırakabilir.
 
 
 
-#### Azure Container Instances;
+### Azure Container Instances;
 
 Azure Container Instances (ACI), Microsoft Azure'un, kullanımı kolay ve yönetim gerektirmeyen bir container hizmetidir. ACI, herhangi bir sanal makine ya da ekstra konfigürasyon olmaksızın Azure'da container'ları çalıştırmanızı sağlar.
 
@@ -30,7 +33,7 @@ Azure Container Instances (ACI), Microsoft Azure'un, kullanımı kolay ve yönet
 Azure Container Registry (ACR), Azure 'da konteyner imajlarınızı depolamanıza ve yönetmenize olanak tanıyan bir servistir. Docker konteyner imajlarınızı ACR'ye yükleyebilir ve buradan Azure Kubernetes Service (AKS) veya Azure Container Instances gibi hizmetlere kolayca dağıtabilirsiniz. ACR, güvenilir bir şekilde imaj saklama, sürüm kontrolü ve imajlara erişim için entegre kimlik doğrulama mekanizmaları sunar.
 {% endhint %}
 
-#### Container groups;
+### Container groups;
 
 <figure><img src="../.gitbook/assets/container-groups-example.png" alt="" width="563"><figcaption></figcaption></figure>
 
@@ -42,7 +45,7 @@ Sidecar container, ana uygulama containerının yanında çalışan ve ona yard�
 
 
 
-#### Azure Kubernetes Services;
+### Azure Kubernetes Services;
 
 <figure><img src="../.gitbook/assets/image (211).png" alt=""><figcaption></figcaption></figure>
 
@@ -51,7 +54,7 @@ Bu servis, Kubernetes cluster'ınızı Azure üzerinde yönetmenize olanak tanı
 1. **Azure Managed Node (Master):** Bu, Kubernetes Master node'unu temsil eder ve AKS tarafından otomatik olarak yönetilir. Cluster oluşturulduğunda bu node otomatik olarak oluşturulur ve kullanıcı tarafından görülemez. Kubernetes'in çekirdek bileşenlerini (API sunucusu, etcd, denetleyici yöneticisi, planlayıcı vb.) çalıştırır.
 2. **Customer Managed Nodes:** Bunlar, kendi uygulamalarınızın ve servislerinizin çalıştırıldığı nodelardır. Bu nodelar üzerinde konteynerlerinizi ve pod'larınızı planlamak ve çalıştırmak için kendi kaynaklarınızı (CPU, bellek, disk) kullanırsınız ve bu nodeların sayısı üzerinden ücretlendirilirsiniz.
 
-**Bileşenler:**
+#### **Bileşenler:**
 
 * **kubelet:** Bu, her bir müşteri tarafından yönetilen node üzerinde çalışır ve Azure yönetim node'undan (master) gelen konteyner planlama taleplerini alır.
 * **kube-proxy:** Ağ trafiğini yönlendirir ve pod'ların ve servislerin IP adreslerini yönetir.
@@ -61,9 +64,7 @@ Bu servis, Kubernetes cluster'ınızı Azure üzerinde yönetmenize olanak tanı
 
 Bu bileşenler, Kubernetes cluster'ınızın sağlıklı ve verimli bir şekilde çalışmasını sağlamak için bir arada çalışır. AKS'nin kullanımı, bu karmaşık bileşenleri yönetme yükünü azaltır ve uygulama dağıtımını, ölçeklendirmeyi ve yönetimini kolaylaştırır.
 
-
-
-**Azure Kubernetes Service terminolojisi;**
+#### **Azure Kubernetes Service terminolojisi;**
 
 <figure><img src="../.gitbook/assets/image (212).png" alt="" width="417"><figcaption></figcaption></figure>
 
@@ -73,7 +74,7 @@ Bu bileşenler, Kubernetes cluster'ınızın sağlıklı ve verimli bir şekilde
 * **Deployment:** Deployment, podunuzun bir veya daha fazla aynı kopyasını yaratmanızı sağlar. Bu sayede uygulamanızı ölçeklendirebilir ve güncellemeleri yönetebilirsiniz.
 * **Manifest:** Manifest, Kubernetes'te bir YAML veya JSON dosyasıdır ve pod, service, volume ve diğer Kubernetes objelerinin nasıl oluşturulacağını tanımlar.
 
-#### AKS Networking;
+### AKS Networking;
 
 <figure><img src="../.gitbook/assets/image (213).png" alt=""><figcaption></figcaption></figure>
 
@@ -88,7 +89,7 @@ Azure Kubernetes Service (AKS) cluster'ı oluştururken karşılaşabileceğiniz
 * **Kubenet:** Bu, Kubernetes'in varsayılan ağ eklentisidir. Kubenet, her bir node için bir VNet (Sanal Ağ) oluşturur. Kubenet ile, podlar node bazında izole edilmiş ağlar kullanır ve birbirleriyle ve dış dünya ile iletişim kurabilmek için NAT (Network Address Translation) üzerinden geçer.
 * **Azure CNI:** Azure CNI, pod'ların doğrudan Azure Sanal Ağ'ına (VNet) bağlandığı ve her pod'a bir IP adresi atandığı daha gelişmiş bir ağ yapılandırmasıdır. Bu sayede pod'lar sanal ağdaki diğer servislerle ve kaynaklarla doğrudan etkileşime girebilir. Azure CNI, özellikle gelişmiş ağ senaryoları ve güvenlik gereksinimleri için tercih edilir çünkü her pod, sanal ağın yerel özelliklerini ve güvenlik politikalarını kullanabilir.
 
-#### AKS Storage;
+### AKS Storage;
 
 <figure><img src="../.gitbook/assets/image (214).png" alt="" width="392"><figcaption></figcaption></figure>
 
@@ -97,7 +98,7 @@ Azure Kubernetes Service (AKS) cluster'ı oluştururken karşılaşabileceğiniz
 * **Storage Class:** Storage Class 'lar, oluşturulacak depolamanın türünü tanımlamak için kullanılır. Performans ihtiyaçlarına göre Premium veya Standard gibi farklı depolama katmanları seçilebilir. `reclaimPolicy` parametresi ile depolamanın silinip silinmeyeceğini belirleyebilirsiniz.
 * **Persistent Volume Claims (PVC):** PVC'ler, pod'lar tarafından kullanılmak üzere Azure Managed Disk veya Azure File gibi belirli bir depolama kaynağından yer istemek için kullanılır. PVC'ler, boyut, erişim modu ve StorageClass gibi özelliklere göre ne tür depolamanın tahsis edileceğini belirtir.
 
-#### AKS Scaling;
+### AKS Scaling;
 
 <figure><img src="../.gitbook/assets/image (216).png" alt="" width="359"><figcaption></figcaption></figure>
 
@@ -105,7 +106,7 @@ Azure Kubernetes Service (AKS) cluster'ı oluştururken karşılaşabileceğiniz
 * **Cluster Autoscaler:** Cluster Autoscaler, AKS cluster'ındaki node sayısını otomatik olarak talebe göre artırabilir veya azaltabilir. Kubernetes API, her 10 saniyede bir cluster'ı kontrol eder ve node sayısını ayarlamak gerekip gerekmediğini belirler.
 * **Horizontal Pod Autoscaler (HPA):** HPA, pod replikalarının sayısını otomatik olarak artırır veya azaltır. Bu karar, belirli performans metriklerine (örneğin, CPU veya memory kullanımı) dayanır. Metrics API, her 30 saniyede bir metrikleri kontrol eder ve replika sayısında bir değişiklik yapılması gerekip gerekmediğine karar verir.
 
-#### AKS Bursting;
+### AKS Bursting;
 
 <figure><img src="../.gitbook/assets/image (217).png" alt="" width="563"><figcaption></figcaption></figure>
 
