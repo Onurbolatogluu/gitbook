@@ -54,3 +54,29 @@ Azure Site Recovery (ASR) bir felaket sırasında uygulamalarınızı ve veriler
 4. **Target Environment:** Bu, replike edilmiş verilerinizi ve uygulamalarınızı barındıran ikincil konumdur. Bu ortam genellikle farklı bir coğrafi konumda bulunur ve bir felaket durumunda yükü devralmaya hazır olacak şekilde yapılandırılır.
 5. **vnet-asr:** Hedef ortamdaki sanal ağ, replikasyon için özel olarak yapılandırılmıştır ve kaynak ortamdaki orijinal sanal ağın bir yansımasıdır.
 
+
+
+### RSV VS BV;
+
+<figure><img src="../.gitbook/assets/image-1-1024x381.png" alt=""><figcaption></figcaption></figure>
+
+Azure'da yedekleme hizmetleri, veri koruma ve felaket kurtarma için iki ana hizmet olan Recovery Services vault ve Backup vault üzerinden sağlanır. Her ikisi de verileri güvenli ve erişilebilir tutmak için kullanılır, ancak belirli kaynaklar ve senaryolar için farklı özellikler sunarlar.
+
+**Recovery Services Vault:**
+
+* **Sanal Makineler (VM'ler):** Azure sanal makinelerinizi doğrudan Recovery Services vault üzerinden yedekleyebilirsiniz.&#x20;
+* **Dosya Paylaşımları (File Shares):** Azure File Shares, Recovery Services vault kullanılarak yedeklenebilir.
+
+**Backup Vault:**
+
+* **Blob Container:** Blob verilerini yedeklemek için Backup vault kullanmanız gerekir.&#x20;
+* **Azure Database for MySQL:** Backup vault kullanılarak yedeklenir.
+
+Recovery Services vault genellikle işletim sistemi ve disk seviyesinde yedekleme için kullanılırken, Backup vault daha çok veri tabanı ve Blob verilerinin yedeklemesi için kullanılır. Her iki hizmet de otomatik yedekleme, politika tabanlı yedekleme yönetimi ve uzun süreli saklama gibi özellikler sunar.
+
+
+
+{% hint style="info" %}
+Microsoft Azure'da yeni oluşturulan bir Recovery Services Vault için varsayılan yedeklilik, genellikle coğrafi yedeklilik anlamına gelen "Geo-Redundant Storage" (GRS) olarak ayarlanır.
+{% endhint %}
+
