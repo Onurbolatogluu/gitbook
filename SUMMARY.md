@@ -176,3 +176,4 @@
 * [🔧 Managing Storage](azure/managing-storage.md)
 * [🎁 App Service](azure/app-service.md)
 * [🛳 Azure Container](azure/azure-container.md)
+* [Backup And Recovery](azure/backup-and-recovery.md)
