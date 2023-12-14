@@ -37,7 +37,7 @@ Bu hizmet, özellikle birden çok lokasyonda çalışan büyük şirketler için
 
 ### Creating Containers;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 1. **Azure Portalına Giriş Yapın**:
    * [Azure Portal](https://portal.azure.com/) adresine gidin ve Microsoft hesabınız ile giriş yapın.
@@ -107,7 +107,7 @@ Azure Blob Storage için Blob Lifecycle Management (BLM), depolanan blob veriler
 3. **Filtering option**: Policy, depolama alanındaki tüm bloblara uygulayabilir veya filtrelerle belirli blobları hedefleyebilirsiniz.
 4. **Target different types**: Farklı blob tiplerini (block blob, append blob vb.) hedef alabilir ve bunları daha da alt tiplere (temel bloblar, versiyonlar, snapshotlar) bölebilirsiniz.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ekran görüntüsündeki örnekte, bir lifecycle yönetim kuralı şu şekilde tanımlanmıştır:
 

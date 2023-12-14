@@ -178,3 +178,4 @@
 * [🛳 Azure Container](azure/azure-container.md)
 * [🥇 Backup And Recovery](azure/backup-and-recovery.md)
 * [🪐 Network Watcher](azure/network-watcher.md)
+* [⏰ Resource Monitoring And Alerts](azure/resource-monitoring-and-alerts.md)
