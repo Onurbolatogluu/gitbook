@@ -6,17 +6,11 @@
 
 Azure Monitor, Microsoft Azure'da uygulamalarınızın, hizmetlerinizin ve altyapınızın performansını ve sağlığını izlemek için kullanılan bir hizmettir. Geniş bir veri toplama, analiz ve uyarı işlevselliği sunar, böylece Azure kaynaklarınız ve Azure üzerinde çalışan uygulamalarınız hakkında derinlemesine bilgi edinebilir ve proaktif olarak yönetebilirsiniz.
 
-
-
 ### Azure Metrics;
 
 Azure Metrics, Azure Monitor'ın bir parçasıdır ve Azure kaynaklarınızın performansını ölçmek için kullanılan zaman serisi verileridir. Metrikler, Azure kaynaklarınızın sağlığı ve performansı hakkında gerçek zamanlı bilgiler sağlar ve bu bilgilerin ölçümünü ve takibini yapmanıza olanak tanır.
 
 Metrikler, CPU kullanımı, bellek kullanımı, disk I/O, ağ trafiği gibi belirli bir kaynakla ilgili nicel verileri içerir. Örneğin, bir sanal makinenin CPU kullanımı yüzdesi veya bir web uygulamasının HTTP istek sayısı gibi. Azure'da hemen hemen her hizmet ve kaynak, kendi özel metriklerini üretir ve bu metrikler Azure Monitor aracılığıyla toplanır ve saklanır.
-
-### Azure Logs;
-
-Azure Logs, Azure Monitor'ın bir parçası olan ve Azure kaynaklarınızdan toplanan operasyonel verileri ifade eder. Bu günlükler, sanal makineler, uygulamalar, veritabanı hizmetleri ve diğer Azure hizmetleri gibi çeşitli kaynaklardan toplanan olaylar, performans verileri, hatalar ve diğer telemetri verilerini içerir.
 
 ### Azure Activity Logs;
 
@@ -63,9 +57,9 @@ Azure Monitor Alerts, operasyonel verimliliği artırmak ve potansiyel sorunlara
 
 ### Log Analytics;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+Azure Monitor'ın bir parçası olan ve Azure kaynaklarınızdan toplanan operasyonel verileri ifade eder. Bu günlükler, sanal makineler, uygulamalar, veritabanı hizmetleri ve diğer Azure hizmetleri gibi çeşitli kaynaklardan toplanan olaylar, performans verileri, hatalar ve diğer telemetri verilerini içerir. Bu hizmet, bulut ve on-premise ortamlarınızdan büyük miktarda log verisini toplamanıza, saklamanıza, araştırmanıza ve analiz etmenize olanak tanır.&#x20;
 
-Azure Log Analytics, Microsoft'un Azure Monitor kapsamında sunduğu güçlü bir log yönetim ve analiz hizmetidir. Bu hizmet, bulut ve on-premise ortamlarınızdan büyük miktarda log verisini toplamanıza, saklamanıza, araştırmanıza ve analiz etmenize olanak tanır.&#x20;
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 1. **Veri Toplama:**
    * Çeşitli kaynaklardan (Azure kaynakları, on-premise sunucular, diğer bulut sağlayıcılarından gelen kaynaklar) log ve telemetri verilerini toplayabilir. Bu veriler güvenlik olayları, uygulama logları, sistem logları ve daha fazlasını içerebilir.
