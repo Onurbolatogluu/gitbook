@@ -184,3 +184,4 @@
 
 * [🆔 identity and access management](azure-305/identity-and-access-management.md)
 * [💼 Desing Azure AD (Entra ID)](azure-305/desing-azure-ad-entra-id.md)
+* [👨💼 Desing For Azure B2B](azure-305/desing-for-azure-b2b.md)
