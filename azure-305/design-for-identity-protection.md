@@ -16,3 +16,4 @@ Azure Identity Protection, Azure Active Directory'nin bir parçası olarak, kuru
 * Oturum açma risk politikasını orta ve üzeri seviyelere ayarlayıp, kullanıcıların kendilerine çözüm bulmalarını sağlanmalıdır.&#x20;
 * Identity Protection'dan elde ettiğiniz verileri Conditional Access veya SIEM çözümleri ile entegre edilmelidir.
 
+{% embed url="https://morethanpatches.com/2020/12/04/microsoft-identity-protection-1/" %}
