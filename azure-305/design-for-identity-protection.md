@@ -8,9 +8,11 @@ Azure Identity Protection, Azure Active Directory'nin bir parçası olarak, kuru
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
+**Best Practices;**
+
 * Azure Identity Protection için gerekli olan Premium P2 lisansı kullanılmalıdır.
-* Etkili olacak politikalar oluşturulup ve sonuçları aktif bir şekilde gözden geçirilmelidir.
+* Etkili olacak politikalar oluşturulup, sonuçları aktif bir şekilde gözden geçirilmelidir.
 * Acil durum hesapları politikaların dışında tutulmalıdır.
-* Oturum açma risk politikasını orta ve üzeri seviyelere ayarlayın ve kullanıcıların kendi kendilerine çözüm bulmalarını sağlanmalıdır.&#x20;
+* Oturum açma risk politikasını orta ve üzeri seviyelere ayarlayıp, kullanıcıların kendilerine çözüm bulmalarını sağlanmalıdır.&#x20;
 * Identity Protection'dan elde ettiğiniz verileri Conditional Access veya SIEM çözümleri ile entegre edilmelidir.
 
