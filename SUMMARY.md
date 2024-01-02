@@ -188,3 +188,4 @@
 * [🛃 Desing For Azure B2C](azure-305/desing-for-azure-b2c.md)
 * [💳 Design for MFA and Conditional Access](azure-305/design-for-mfa-and-conditional-access.md)
 * [⛑ Design for Identity Protection](azure-305/design-for-identity-protection.md)
+* [🚶 Access Reviews](azure-305/access-reviews.md)
