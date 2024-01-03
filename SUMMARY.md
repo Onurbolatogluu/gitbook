@@ -190,3 +190,4 @@
 * [⛑ Design for Identity Protection](azure-305/design-for-identity-protection.md)
 * [🚶 Access Reviews](azure-305/access-reviews.md)
 * [🚦 Managed identity Demostration](azure-305/managed-identity-demostration.md)
+* [🔐 Key Vault Demostration](azure-305/key-vault-demostration.md)
