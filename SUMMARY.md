@@ -189,3 +189,4 @@
 * [💳 Design for MFA and Conditional Access](azure-305/design-for-mfa-and-conditional-access.md)
 * [⛑ Design for Identity Protection](azure-305/design-for-identity-protection.md)
 * [🚶 Access Reviews](azure-305/access-reviews.md)
+* [🚦 Managed identity Demostration](azure-305/managed-identity-demostration.md)

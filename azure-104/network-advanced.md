@@ -65,7 +65,7 @@ VNet Peering avantajları şunlardır:
 
 Azure'da "VNet-to-VNet" (Sanal Ağdan Sanal Ağa), iki veya daha fazla Azure Sanal Ağı'nın (VNet) birbirleriyle güvenli bir şekilde bağlantı kurmasını sağlayan bir yöntemdir. Bu, özellikle farklı Azure bölgelerinde veya hatta farklı Azure aboneliklerinde yer alan sanal ağların birbirleriyle iletişim kurabilmesi için kullanılır.
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption><p>vnet peering vs vnet-to-vnet</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>vnet peering vs vnet-to-vnet</p></figcaption></figure>
 
 VNet-to-VNet VPN bağlantısı, aşağıdaki kullanım senaryoları için kullanışlıdır:
 
