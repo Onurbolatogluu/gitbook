@@ -148,10 +148,10 @@ Adım 5: Artık ubuntu sunucumuz 'da python scripti kullanarak, storage üzerind
 
 
 
-[Bu örnekte, system assigned managed identity kullandık fakat, user assigned managed identity'de kullanabilirdik.  Bunun için, gidip manuel olarak user assigned managed identity oluşturmamız gerekecekti. Çalışma anlamında değişen bir şey olmayacaktı.](#user-content-fn-1)[^1]
+{% hint style="info" %}
+Yukarıdaki örnekte, system assigned managed identity kullandık fakat, user assigned managed identity'de kullanabilirdik.  Bunun için, gidip manuel olarak user assigned managed identity oluşturmamız gerekecekti. Çalışma anlamında değişen bir şey olmayacaktı.
+{% endhint %}
 
 
 
 {% embed url="https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview" %}
-
-[^1]: 
