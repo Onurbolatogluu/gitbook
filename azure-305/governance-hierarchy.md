@@ -21,4 +21,6 @@ Azure'da, şirketinizin bulut kaynaklarını düzenlerken bir düzen oluşturmak
 
 İşte bu sürecin bir örneği: Şirketinizin IT güvenlik politikaları var diyelim. Bu politikaları Azure'daki en üst düzeydeki management group'a uygularsınız. Yaptığınız bu uygulama, alt düzeydeki tüm management group'lara ve onların içindeki subscription'lara otomatik olarak aktarılır. Böylece, her subscription veya kaynak için güvenlik ayarlarını tekrar tekrar yapmak zorunda kalmazsınız; üst seviyede yaptığınız ayarlar, alt seviyelere geçer. Bu yöntem, kuralların ve standartların şirket çapında tutarlı ve verimli bir şekilde uygulanmasını sağlar.
 
+{% embed url="https://cloudacademy.com/blog/how-to-effectively-use-azure-management-groups-subscriptions-and-resource-groups/" %}
+
 {% embed url="https://www.pragimtech.com/blog/azure/azure-management-groups-and-subscriptions/" %}
