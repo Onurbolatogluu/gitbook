@@ -192,3 +192,4 @@
 * [🚦 Managed identity Demostration](azure-305/managed-identity-demostration.md)
 * [🔐 Key Vault Demostration](azure-305/key-vault-demostration.md)
 * [👑 Governance hierarchy](azure-305/governance-hierarchy.md)
+* [💠 Design for Management Groups](azure-305/design-for-management-groups.md)
