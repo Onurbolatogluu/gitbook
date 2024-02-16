@@ -8,7 +8,7 @@ Azure Management Groups, Microsoft Azure bulut platformunda bulunan kaynakların
 
 #### Flat Hierarchy Design:
 
-* Azure Flat Hierarchy Design, Azure Management Groups kullanımında basitlik ve esnekliğe odaklanan bir yaklaşımdır. Bu tasarım stratejisi, az sayıda yönetim grubu kullanarak kaynakları organize etmeyi ve yönetmeyi amaçlar. Flat hierarchy, yönetim karmaşıklığını minimize ederken, kaynakların ve aboneliklerin yönetimini kolaylaştırır. Genellikle, küçükten orta ölçekli işletmeler veya basit kaynak yapıları için önerilir. Bu yaklaşım, yönetim ve denetim işlemlerini basitleştirerek, Azure kaynaklarının daha hızlı ve etkin bir şekilde yönetilmesine olanak tanır.
+* Azure Flat Hierarchy Design, Azure Management Groups kullanımında basitlik ve esnekliğe odaklanan bir yaklaşımdır. Bu tasarım stratejisi, az sayıda yönetim grubu kullanarak kaynakları organize etmeyi ve yönetmeyi amaçlar. Flat hierarchy, yönetim karmaşıklığını minimize ederken, kaynakların ve aboneliklerin yönetimini kolaylaştırır. Genellikle, küçük, orta ölçekli işletmeler veya basit kaynak yapıları için önerilir. Bu yaklaşım, yönetim ve denetim işlemlerini basitleştirerek, Azure kaynaklarının daha hızlı ve etkin bir şekilde yönetilmesine olanak tanır.
 
 **Örnek: Flat Hierarchy Design Uygulaması**
 
