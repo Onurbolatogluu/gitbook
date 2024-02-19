@@ -41,7 +41,7 @@ Basitçe söylemek gerekirse, Azure Landing Zone şunları sağlar:
 * **Güvenlik:** Sistemlerinizin güvenli bir şekilde çalışmasını sağlar.
 * **Yönetim Kolaylığı:** Kaynaklarınızı daha kolay yönetmenize olanak tanır.
 * **Maliyet Kontrolü:** Maliyetleri daha iyi kontrol etmenizi sağlar.
-* **Hız:** Projelerinizi daha hızlı başlatmanıza yardımcı olur.
+* **Hız:** Projelerinizi daha hızlı deploy etmenize yardımcı olur.
 
 Azure Landing Zone, bir projeyi Azure'da başlatırken izlemeniz gereken adımları ve dikkate almanız gereken önemli noktaları size sunar. Bu sayede, projelerinizin bulut üzerinde sorunsuz ve etkili bir şekilde çalışmasını sağlayacak bir yapı kurmuş olursunuz.
 
