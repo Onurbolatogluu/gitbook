@@ -2,6 +2,8 @@
 
 Azure Policy, Azure kaynaklarınızın kuruluşunuzun iş kuralları ve uyumluluk gereksinimleriyle uyumlu olduğundan emin olmanıza yardımcı olan bir hizmettir. Kurallar ve politikalar belirleyerek kaynakların oluşturulmasını ve yapılandırılmasını otomatik olarak denetlemenizi sağlar.
 
+<figure><img src="../.gitbook/assets/azure-governance.png" alt=""><figcaption></figcaption></figure>
+
 #### Best Pratices:
 
 * Güvenlik düzeylerine göre kaynaklara erişim kısıtlamaları
