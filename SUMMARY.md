@@ -196,3 +196,4 @@
 * [🔑 Desing for Subscriptions](azure-305/desing-for-subscriptions.md)
 * [🍇 Desing for resource groups](azure-305/desing-for-resource-groups.md)
 * [📟 Design for resource tags](azure-305/design-for-resource-tags.md)
+* [🚷 Azure Policy & RBAC](azure-305/azure-policy-and-rbac.md)
