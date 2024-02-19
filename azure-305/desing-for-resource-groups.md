@@ -1,5 +1,7 @@
 # 👆 Desing for resource groups
 
+<figure><img src="../.gitbook/assets/image (236).png" alt=""><figcaption></figcaption></figure>
+
 ### Best Practies:
 
 1. **Proje Bazında Gruplama:** Her bir projeyi kendi Resource Group'unda tutarak, projeler arasında kaynak izolasyonu sağlayabilir ve her bir proje için maliyeti ayrı ayrı izleyebilirsiniz.
