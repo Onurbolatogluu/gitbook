@@ -2,7 +2,9 @@
 
 Azure Blueprints, Azure abonelikleriniz üzerinde tekrarlanabilir, denetlenebilir ve uyumlu ortamlar oluşturmak için kullanılan bir hizmettir. Azure Blueprints, bulut kaynaklarının ve yapılandırmalarının önceden tanımlı bir setini kullanarak, güvenlik, tasarım ve uyumluluk gereksinimlerini karşılayacak şekilde Azure ortamlarını hızlı ve tutarlı bir şekilde kurmanıza olanak tanır. Azure Blueprints, Resource Groups, Role Assignments, Policy Assignments, ARM Templates ve daha fazlasını içerebilir.
 
-<figure><img src="../.gitbook/assets/image (238).png" alt=""><figcaption></figcaption></figure>
+
+
+<figure><img src="../.gitbook/assets/image (237).png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://learn.microsoft.com/en-us/azure/governance/blueprints/overview" %}
 
@@ -14,7 +16,7 @@ Azure Blueprints, Azure abonelikleriniz üzerinde tekrarlanabilir, denetlenebili
 
 Kısacası, Azure Blueprints ve ARM şablonları, Azure kaynaklarını yönetme ve dağıtma sürecinde birlikte çalışabilir. Blueprints, ARM şablonları dahil olmak üzere çeşitli yapılandırma öğelerini bir araya getirerek geniş kapsamlı ortam yapılandırmalarını ve uyumluluğu yönetmenizi sağlar.
 
-
+<figure><img src="../.gitbook/assets/blueprints.png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://www.linkedin.com/pulse/understanding-differences-between-azure-blueprints-arm-jason-zandri/" %}
 
