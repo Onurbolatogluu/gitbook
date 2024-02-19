@@ -19,3 +19,5 @@ Azure kaynak etiketleri (tags), kaynakları kategorilere ayırmak, maliyet tahsi
 
 
 {% embed url="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging" %}
+
+{% embed url="https://blog.hametbenoit.info/2022/12/13/azure-you-can-now-inherit-tags-for-cost-management/" %}
