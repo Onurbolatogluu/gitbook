@@ -1,4 +1,4 @@
-# Desing For Blueprints
+# 🫐 Desing For Blueprints
 
 Azure Blueprints, Azure abonelikleriniz üzerinde tekrarlanabilir, denetlenebilir ve uyumlu ortamlar oluşturmak için kullanılan bir hizmettir. Azure Blueprints, bulut kaynaklarının ve yapılandırmalarının önceden tanımlı bir setini kullanarak, güvenlik, tasarım ve uyumluluk gereksinimlerini karşılayacak şekilde Azure ortamlarını hızlı ve tutarlı bir şekilde kurmanıza olanak tanır. Azure Blueprints, Resource Groups, Role Assignments, Policy Assignments, ARM Templates ve daha fazlasını içerebilir.
 
@@ -32,8 +32,17 @@ Kısacası, Azure Blueprints ve ARM şablonları, Azure kaynaklarını yönetme 
 
 <figure><img src="../.gitbook/assets/cloud-broker-landing-zone.svg" alt=""><figcaption></figcaption></figure>
 
-{% hint style="info" %}
-Azure Landing Zone, Azure bulut platformunda güvenli ve ölçeklenebilir bir altyapı kurulumunu kolaylaştırmak için Microsoft tarafından önerilen bir dizi uygulama ve yönergeler setidir. Bu kavram, kuruluşların Azure'a geçiş yaparken veya bulut altyapılarını genişletirken ihtiyaç duydukları temel yapılandırmaları, güvenlik politikalarını ve yönetim araçlarını içerir. Azure Landing Zone, bir bulut ortamını hızlı bir şekilde kurmanıza ve bu ortamı iş yükleriniz için hazır hale getirmenize yardımcı olur, böylece bulut kaynaklarınızı daha etkin bir şekilde yönetebilirsiniz.
-{% endhint %}
+Azure Landing Zone, Azure'da yeni bir proje başlatırken ihtiyacınız olan her şeyi hazırlamanıza yardımcı olacak bir başlangıç noktasıdır. Bir nevi, bulut üzerinde çalışacak projeleriniz için sağlam ve güvenli bir temel oluşturur. Bu temel, projelerinizin ihtiyaç duyduğu güvenlik, performans ve maliyet yönetimi gibi önemli konularda size rehberlik eder.
+
+Azure Landing Zone kullanmanın amacı, buluta taşınma sürecinizi kolaylaştırmak ve Azure üzerinde çalışacak sistemlerinizin en başından itibaren doğru şekilde kurulmasını sağlamaktır. Böylece, sistemlerinizi daha hızlı, güvenli ve etkili bir şekilde yönetebilirsiniz.
+
+Basitçe söylemek gerekirse, Azure Landing Zone şunları sağlar:
+
+* **Güvenlik:** Sistemlerinizin güvenli bir şekilde çalışmasını sağlar.
+* **Yönetim Kolaylığı:** Kaynaklarınızı daha kolay yönetmenize olanak tanır.
+* **Maliyet Kontrolü:** Maliyetleri daha iyi kontrol etmenizi sağlar.
+* **Hız:** Projelerinizi daha hızlı başlatmanıza yardımcı olur.
+
+Azure Landing Zone, bir projeyi Azure'da başlatırken izlemeniz gereken adımları ve dikkate almanız gereken önemli noktaları size sunar. Bu sayede, projelerinizin bulut üzerinde sorunsuz ve etkili bir şekilde çalışmasını sağlayacak bir yapı kurmuş olursunuz.
 
 {% embed url="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/" %}
