@@ -45,4 +45,8 @@ Basitçe söylemek gerekirse, Azure Landing Zone şunları sağlar:
 
 Azure Landing Zone, bir projeyi Azure'da başlatırken izlemeniz gereken adımları ve dikkate almanız gereken önemli noktaları size sunar. Bu sayede, projelerinizin bulut üzerinde sorunsuz ve etkili bir şekilde çalışmasını sağlayacak bir yapı kurmuş olursunuz.
 
+{% hint style="info" %}
+Azure Landing Zone, tek bir hizmet veya ürün değil, bulut ortamlarını planlama, kurma ve yönetme sürecinde izlenmesi gereken bir dizi yönerge ve metodolojidir. Microsoft tarafından sağlanan bu metodoloji, Azure'da güvenli, ölçeklenebilir ve uyumlu altyapılar oluşturmak için en iyi uygulamaları ve rehberlikleri içerir.
+{% endhint %}
+
 {% embed url="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/" %}
