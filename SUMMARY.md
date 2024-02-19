@@ -195,3 +195,4 @@
 * [💠 Design for Management Groups](azure-305/design-for-management-groups.md)
 * [🔑 Desing for Subscriptions](azure-305/desing-for-subscriptions.md)
 * [🍇 Desing for resource groups](azure-305/desing-for-resource-groups.md)
+* [📟 Design for resource tags](azure-305/design-for-resource-tags.md)

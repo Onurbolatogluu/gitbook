@@ -1,4 +1,4 @@
-# 👆 Desing for resource groups
+# 🍇 Desing for resource groups
 
 <figure><img src="../.gitbook/assets/image (236).png" alt=""><figcaption></figcaption></figure>
 
