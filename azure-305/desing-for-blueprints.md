@@ -21,3 +21,19 @@ Kısacası, Azure Blueprints ve ARM şablonları, Azure kaynaklarını yönetme 
 {% embed url="https://www.linkedin.com/pulse/understanding-differences-between-azure-blueprints-arm-jason-zandri/" %}
 
 {% embed url="https://www.scheer-group.com/en/company/blog/infrastructure-as-a-code-with-azure-blueprint/" %}
+
+
+
+***
+
+
+
+### Bonus:&#x20;
+
+<figure><img src="../.gitbook/assets/cloud-broker-landing-zone.svg" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+Azure Landing Zone, Azure bulut platformunda güvenli ve ölçeklenebilir bir altyapı kurulumunu kolaylaştırmak için Microsoft tarafından önerilen bir dizi uygulama ve yönergeler setidir. Bu kavram, kuruluşların Azure'a geçiş yaparken veya bulut altyapılarını genişletirken ihtiyaç duydukları temel yapılandırmaları, güvenlik politikalarını ve yönetim araçlarını içerir. Azure Landing Zone, bir bulut ortamını hızlı bir şekilde kurmanıza ve bu ortamı iş yükleriniz için hazır hale getirmenize yardımcı olur, böylece bulut kaynaklarınızı daha etkin bir şekilde yönetebilirsiniz.
+{% endhint %}
+
+{% embed url="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/" %}
