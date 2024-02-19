@@ -194,4 +194,4 @@
 * [👑 Governance hierarchy](azure-305/governance-hierarchy.md)
 * [💠 Design for Management Groups](azure-305/design-for-management-groups.md)
 * [🔑 Desing for Subscriptions](azure-305/desing-for-subscriptions.md)
-* [👆 Desing for resource groups](azure-305/desing-for-resource-groups.md)
+* [🍇 Desing for resource groups](azure-305/desing-for-resource-groups.md)
