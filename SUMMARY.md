@@ -184,8 +184,8 @@
 
 * [🆔 identity and access management](azure-305/identity-and-access-management.md)
 * [💼 Desing Azure AD (Entra ID)](azure-305/desing-azure-ad-entra-id.md)
-* [👨💼 Desing For Azure B2B](azure-305/desing-for-azure-b2b.md)
-* [🛃 Desing For Azure B2C](azure-305/desing-for-azure-b2c.md)
+* [👨💼 Desing for Azure B2B](azure-305/desing-for-azure-b2b.md)
+* [🛃 Desing for Azure B2C](azure-305/desing-for-azure-b2c.md)
 * [💳 Design for MFA and Conditional Access](azure-305/design-for-mfa-and-conditional-access.md)
 * [⛑ Design for Identity Protection](azure-305/design-for-identity-protection.md)
 * [🚶 Access Reviews](azure-305/access-reviews.md)
@@ -198,3 +198,4 @@
 * [📟 Design for resource tags](azure-305/design-for-resource-tags.md)
 * [🚷 Azure Policy & RBAC](azure-305/azure-policy-and-rbac.md)
 * [🫐 Desing For Blueprints](azure-305/desing-for-blueprints.md)
+* [🪡 Desing for Virtual Networks](azure-305/desing-for-virtual-networks.md)
