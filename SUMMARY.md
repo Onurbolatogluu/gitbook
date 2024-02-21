@@ -199,3 +199,4 @@
 * [🚷 Azure Policy & RBAC](azure-305/azure-policy-and-rbac.md)
 * [🫐 Desing For Blueprints](azure-305/desing-for-blueprints.md)
 * [🪡 Desing for Virtual Networks](azure-305/desing-for-virtual-networks.md)
+* [🛫 Design for on-premises connectivity to Azure](azure-305/design-for-on-premises-connectivity-to-azure.md)
