@@ -1,10 +1,10 @@
-# 🧑🌾 Load Balancing
+# 🧑‍🌾 Load Balancing
 
 ### Azure Load Balancer;
 
 Azure Load Balancer, Azure bulut hizmetlerinde, gelen ağ trafiğini birden fazla sunucu arasında dağıtarak yükü dengelenmesini ve böylece uygulama performansını ve kullanılabilirliğini artıran bir hizmettir. Azure Load Balancer, ağ katmanında (Layer 4 - TCP/UDP) çalışır. Bu, uygulama katmanı yerine TCP ve UDP protokollerini kullanarak trafik dağıtımı yaptığı anlamına gelir.
 
-<figure><img src="../.gitbook/assets/load-balancer.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/load-balancer (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Azure Load Balancer ve Application Gateway Arasındaki Fark Nedir?
