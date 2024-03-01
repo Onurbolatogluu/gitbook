@@ -84,7 +84,7 @@ Aşağıda basit bir ARM şablon örneği verilmiştir:
 * **resources**: Asıl kaynak olan Azure Storage hesabı tanımlanmıştır. Bu kısımda kaynak tipi, API sürümü, adı, konumu ve SKU'su belirtilmiştir.
 * **outputs**: Şablon çalıştırıldıktan sonra dışarı verilecek olan depolama hesabının anahtarını (key) içerir. Bu, oluşturulan depolama hesabına erişim için gereklidir.
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 **Azure Portal**:
 
@@ -117,7 +117,7 @@ New-AzResourceGroupDeployment -ResourceGroupName <resource-group> -TemplateFile 
 
 #### Exporting deployments as ARM template;
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Azure üzerinde daha önceden gerçekleştirdiğiniz bir deploy işleminin tüm detaylarını içeren bir ARM şablonunun dışarıya çıkarılması sürecini tanımlar. Bu süreç sayesinde, Azure'da deploy edilmiş bir kaynak grubunun tam yapılandırmasını - kaynak tipleri, ayarlar, yapılandırma değerleri ve bağımlılıklar dahil olmak üzere - JSON formatında bir şablona dönüştürebilir ve kaydedebilirsiniz.
 

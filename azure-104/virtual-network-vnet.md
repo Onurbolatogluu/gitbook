@@ -176,7 +176,7 @@ Son olarak, bu kuralların işlemesi için ilgili alt ağlara atanmaları gereki
 
 ### Service Endpoint:
 
-<figure><img src="../.gitbook/assets/vnet-service-endpoint-policies-overview.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/vnet-service-endpoint-policies-overview (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 1. Temel Tanım:
 

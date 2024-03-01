@@ -2,7 +2,7 @@
 
 ### Single network approach;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 Azure'da "Single network approach" (Tek ağ yaklaşımı), tüm kaynakların tek bir sanal ağ içerisinde yerleştirildiği ve ağ segmentasyonunun alt ağlar (subnets) kullanılarak gerçekleştirildiği bir ağ tasarım stratejisini tanımlar. Ekran görüntüsündeki örnekten yola çıkarak, Sanal ağın içinde üç farklı alt ağ (subnet) bulunur: frontendSubnet, midSubnet ve dbSubnet.
 
@@ -16,7 +16,7 @@ Bu yapı, farklı türdeki kaynakları mantıksal olarak ayırarak yönetimi kol
 
 ### Multiple peered networks;
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure'da "Multiple peered networks", birbiriyle eşleştirilmiş birden fazla sanal ağın olduğu bir yapıyı ifade eder. Bu, farklı sanal ağlar arasında doğrudan, güvenli ve özel bir bağlantı kurulmasını sağlar, ve bu Azure'un Virtual Network Peering özelliği aracılığıyla mümkündür.
 
@@ -34,7 +34,7 @@ Virtual Network Peering, Azure'daki ağlar arasında düşük gecikme süresi il
 
 ### Hub spoke architecture;
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure'da "Hub and Spoke architecture" (Merkez ve Spoke mimarisi), bir merkez (Hub) sanal ağın, bir dizi Spoke sanal ağ ile eşleştirildiği bir ağ topolojisini ifade eder. Bu yapı, özellikle geniş ve karmaşık ağ yapılarında tercih edilir. Genel olarak, merkez sanal ağ ortak kaynakları (örneğin, güvenlik hizmetleri, VPN bağlantıları veya Azure'daki diğer ortak hizmetler) barındırırken, Spoke sanal ağlar ise özel iş yüklerini, uygulamaları veya hizmetleri içerir.
 
@@ -68,7 +68,7 @@ Bu üç servis, bir Azure sanal ağının güvenlik, yönetim ve ölçeklenebili
 
 ### Routing;
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 1. **Sistem Yönlendirmesi (System Route)**: Azure, bir sanal ağ oluşturduğunuzda otomatik olarak sistem yönlendirmelerini ekler. Bu yönlendirmeler, sanal ağ içindeki kaynakların birbiriyle ve internetle iletişim kurmasını sağlar. Sanal ağlar arası eşleme yapıldığında, eşlenen ağın adres alanı da bu yönlendirme tablosuna dahil edilir.
 2. **Kullanıcı Tanımlı Yönlendirme (User Defined Route - UDR)**: Sistem yönlendirmelerinin üzerine yazarak daha spesifik trafik akışı kuralları belirlemenizi sağlar. UDR'ler, trafik akışının belirli bir sonraki adıma (next hop) - örneğin bir Azure Firewall'a - yönlendirilmesini sağlamak için kullanılır.
