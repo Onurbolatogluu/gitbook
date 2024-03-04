@@ -203,3 +203,4 @@
 * [🔽 Design for network connectivity](azure-305/design-for-network-connectivity.md)
 * [📦 Design for application delivery](azure-305/design-for-application-delivery.md)
 * [🥞 Design for network security and application protection](azure-305/design-for-network-security-and-application-protection.md)
+* [📕 Choose a compute solution](azure-305/choose-a-compute-solution.md)
