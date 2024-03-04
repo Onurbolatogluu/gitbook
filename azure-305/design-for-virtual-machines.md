@@ -55,3 +55,6 @@ Sanal Makineler (VM'ler) ve Sanal Makine Ölçek Kümeleri (VMSS'ler). VM'ler, k
 * **Tek Konfigürasyonda Yük Dengeleyiciye Ekleme:** VMSS instanceları, tek bir yapılandırma kullanarak bir yük dengeleyiciye otomatik olarak eklenebilir. Bu, yeni instanceların hızlı ve kolay bir şekilde sisteme dahil edilmesini sağlar.
 * **Otomatik Ölçeklendirme:** VMSS'ler, belirli metrikler veya bir zaman çizelgesi temelinde otomatik ölçeklendirme yapabilir. Bu, uygulamanızın ihtiyaç duyduğu kaynakları dinamik olarak ayarlayarak maliyetleri optimize etmenize yardımcı olur.
 
+
+
+**Sanal Makineler** daha çok tekil, detaylı kontrol ve özelleştirme ihtiyacı olan senaryolar için uygunken, **Sanal Makine Ölçek Kümeleri** yüksek oranda otomasyon ve kolay ölçeklendirme gerektiren uygulamalar için idealdir. Ölçeklendirme, yük dengesi ve yüksek kullanılabilirlik gibi özellikler otomatik olarak yönetildiğinden, VMSS'ler, özellikle değişken yük ve büyük ölçekte uygulama dağıtımları için mükemmel bir çözümdür.
