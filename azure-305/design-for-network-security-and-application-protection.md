@@ -12,7 +12,7 @@ Azure Service Endpoint, Azure sanal ağınızdan Azure hizmetlerine doğrudan ve
 
 ### Private Link;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure Private Link, Azure hizmetlerinizi ve Azure üzerinde barındırılan uygulamalarınızı özel ağınız üzerinden güvenli bir şekilde erişilebilir kılan bir hizmettir. Bu hizmet, sanal ağınızdan Azure hizmetlerine özel ve güvenli bir bağlantı kurmanızı sağlar, böylece hizmetlerinizin genel internet üzerinden erişilebilir olmasına gerek kalmaz. Private Link, Azure PaaS hizmetlerini, müşteriye ait veya ortak hizmetleri özel IP adresleri üzerinden doğrudan sanal ağınıza bağlamanıza olanak tanır. Bu, hem güvenlik seviyesini artırır hem de ağ trafiğinin Azure'un ağ omurgası üzerinden geçmesini sağlayarak genel internete maruz kalma riskini azaltır.
 
@@ -30,7 +30,7 @@ Azure Network Security Groups (NSG'ler), Azure sanal ağınızdaki kaynaklara er
 
 ### Azure Firewall;
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure Firewall, Azure tarafından sunulan bulut tabanlı bir güvenlik duvarı servisidir. Bu yönetilen servis, sanal ağ kaynaklarınızın korunmasını sağlar ve geniş ağ trafiği filtreleme kapasitesine sahiptir. Uygulama kuralları, ağ kuralları ve NAT kuralları oluşturmanıza olanak tanıyarak, gelen ve giden ağ trafiğini merkezi olarak yönetmenizi sağlar. Ayrıca, Azure'daki kaynaklarınız arasında zorunlu trafik yolları (forced tunnelling) ayarlayarak, veri sızıntılarını ve diğer güvenlik tehditlerini azaltmaya yardımcı olur. Azure Firewall, kuralları otomatik olarak ölçeklendirir ve bulut kaynaklarınızı korumak için sürekli güncellenir.
 
