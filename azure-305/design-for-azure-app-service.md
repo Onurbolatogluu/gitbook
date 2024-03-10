@@ -9,7 +9,7 @@ Azure App Service'in ana özellikleri arasında:
 3. GitHub, Azure DevOps ve BitBucket gibi popüler kaynak kodu yönetim sistemlerinden doğrudan deploy desteği.
 4. SSL sertifikası desteği, otomatik yazılım güncellemeleri (patch) ve Microsoft'un global veri merkezi ağı sayesinde yüksek erişilebilirlik.
 5. Uygulamanızı özel bir alan adıyla kullanma yeteneği bulunur.
-6. Mobil özgü API'ler ve otantikasyon mekanizmaları gibi mobil uygulama geliştirme için gerekli araçları içerir.
+6. Facebook,Google,Microsoft gibi sosyal platformlardan gelen kimlik bilgilerini kullanarak uygulamalarda otantikasyon (doğrulama) işlemleri için destek sağlar.
 7. Linux/Windows konteynerlerini kullanarak, paketlenmiş(image) uygulamalarınızı Azure App Service'te çalıştırabilirsiniz.
 
 <figure><img src="../.gitbook/assets/slot_flow_code_diagam (1).png" alt=""><figcaption></figcaption></figure>
