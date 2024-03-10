@@ -206,3 +206,4 @@
 * [📕 Choose a compute solution](azure-305/choose-a-compute-solution.md)
 * [🌊 Design for virtual machines](azure-305/design-for-virtual-machines.md)
 * [🔋 Azure Batch Demostration](azure-305/azure-batch-demostration.md)
+* [🛰️ Design for Azure App Service](azure-305/design-for-azure-app-service.md)
