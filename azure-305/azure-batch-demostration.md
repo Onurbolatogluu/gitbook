@@ -2,7 +2,7 @@
 
 <figure><img src="../.gitbook/assets/typical-environment.png" alt=""><figcaption></figcaption></figure>
 
-Azure Batch, Microsoft Azure'un bir parçasıdır. Büyük ölçekli paralel ve yüksek performanslı hesaplama işlerini yönetmek ve çalıştırmak için tasarlanmış bir hizmettir. Kullanıcıların, bilimsel analizler, veri işleme, render işlemleri gibi hesaplama yoğun görevleri, yüzlerce, binlerce hatta on binlerce sanal makine üzerinde kolayca çalıştırmalarına olanak tanır.
+Azure Batch, büyük ölçekli paralel ve yüksek performanslı hesaplama işlerini yönetmek ve çalıştırmak için tasarlanmış bir hizmettir. Kullanıcıların, bilimsel analizler, veri işleme, render işlemleri gibi yoğun görevleri, yüzlerce, binlerce hatta on binlerce sanal makine üzerinde çalıştırmalarına olanak tanır.
 
 1. **Application or Service:** Azure Batch hizmetine bağlanan ve iş yüklerini yöneten bir yazılımdır. Bu, genellikle bir kullanıcının kendi bilgisayarında çalıştırdığı bir komut satırı aracı veya bir web uygulaması olabilir. Uygulama, Azure Batch'de iş oluşturmak, görevleri izlemek ve sonuçları almak için kullanılır.
 2. **Pool:** Azure Batch içindeki "Pool", birden çok sanal makinenin (VM) bir koleksiyonunu ifade eder. Her bir sanal makine, belirli bir iş yükünü çalıştırmak için ayrılmış kaynaklara sahiptir. Kullanıcılar pool oluşturarak, işlerini çalıştıracak VM'lerin sayısını ve tipini belirleyebilirler.
