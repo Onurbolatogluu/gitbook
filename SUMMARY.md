@@ -208,3 +208,4 @@
 * [🔋 Azure Batch Demostration](azure-305/azure-batch-demostration.md)
 * [🛰️ Design for Azure App Service](azure-305/design-for-azure-app-service.md)
 * [⛲ Design for Azure Container Instances](azure-305/design-for-azure-container-instances.md)
+* [🎢 Design for Azure Kubernetes Service](azure-305/design-for-azure-kubernetes-service.md)

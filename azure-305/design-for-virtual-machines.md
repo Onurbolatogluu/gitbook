@@ -15,7 +15,7 @@ Bu durumlar, sanal makinelerin esnekliği ve kontrol seviyesi nedeniyle Azure'da
 
 ### Plan for virtual machines;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 1. **Start with network**: Sanal makinelerinizi kurmadan önce, onların çalışacağı ağ altyapısını planlanmalı. Bu, ağ güvenliği, alt ağlar, IP adresleme planı ve erişim kontrol listeleri(ACL) gibi unsurları içerir.
 2. **Location of the VM**: VM'nin barındırılacağı bölgeyi seçerken, gecikme sürelerini ve veri gizliliği gibi yasal gereklilikleri göz önünde bulundurmalıyız.
