@@ -36,37 +36,36 @@ Azure Functions kullanarak bir web API'si oluşturup. Bu API adresine HTTP istek
 
 ***
 
-Proje hazırlığının yapılması gerekmektedir. Biz örneğimizde, vscode kullanarak bu projeyi deploy edeceğiz.
-
-İlk olarak, aşağıdaki adresten Azure Functions Core Tools paketini çalışmayı yapacağımız cihaza kurmalıyız:&#x20;
+* Proje hazırlığının yapılması gerekmektedir. Biz örneğimizde, vscode kullanarak bu projeyi deploy edeceğiz.
+* İlk olarak, aşağıdaki adresten Azure Functions Core Tools paketini çalışmayı yapacağımız cihaza kurmalıyız:&#x20;
 
 {% embed url="https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?pivots=programming-language-python&tabs=windows,isolated-process,node-v4,python-v2,http-trigger,container-apps" %}
 
-Kurulum tamamlandıktan sonra, Microsoft'un dökümanlarında da bahsettiği gibi gerekli vscode eklentilerini kurmalıyız. Aşağıda kurulması gereken extensionlar hakkında kaynak paylaşıyorum.
+* Kurulum tamamlandıktan sonra, Microsoft'un dökümanlarında da bahsettiği gibi gerekli vscode eklentilerini kurmalıyız. Aşağıda kurulması gereken extensionlar hakkında kaynak paylaşıyorum.
 
 {% embed url="https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-python#configure-your-environment" %}
 
-Ekran görüntüsünde de görüleceği üzere, Azurite,Azure Functions ve python extensionlarını vscode üzerine kurmamız gerekiyor.
+* Ekran görüntüsünde de görüleceği üzere, Azurite,Azure Functions ve python extensionlarını vscode üzerine kurmamız gerekiyor.
 
 <figure><img src="../.gitbook/assets/image (255).png" alt=""><figcaption></figcaption></figure>
 
-Extension kurulumlarını yapıp, işlemlerimize devam ediyoruz. Öncelikle boş bir dizin oluşturup, vscode üzerinde bu boş dizini import ediyoruz.
+* Extension kurulumlarını yapıp, işlemlerimize devam ediyoruz. Öncelikle boş bir dizin oluşturup, vscode üzerinde bu boş dizini import ediyoruz.
 
 <figure><img src="../.gitbook/assets/image (254).png" alt=""><figcaption></figcaption></figure>
 
-Ardından, sol tarafta azure extensionuna tıklayıp, workspace içerisinde azure functions template'i oluşturuyoruz.
+* Ardından, sol tarafta azure extensionuna tıklayıp, workspace içerisinde azure functions template'i oluşturuyoruz.
 
 <figure><img src="../.gitbook/assets/image (256).png" alt=""><figcaption></figcaption></figure>
 
-Create functions butonuna tıklayıp, istenilen bilgileri girmeliyiz. Burada, çalışacağımız dizin, kullanacağımız programlama dili ve versiyonu ve trigger seçenekleri gibi bir çok değeri belirtiyoruz.
+* Create functions butonuna tıklayıp, istenilen bilgileri girmeliyiz. Burada, çalışacağımız dizin, kullanacağımız programlama dili ve versiyonu ve trigger seçenekleri gibi bir çok değeri belirtiyoruz.
 
 <figure><img src="../.gitbook/assets/image (257).png" alt=""><figcaption></figcaption></figure>
 
-Tüm bilgileri girdikten sonra, projemize ait bir template oluşmuş oldu. Şimdi bu bilgileri düzenlememiz gerekiyor.
+* Tüm bilgileri girdikten sonra, projemize ait bir template oluşmuş oldu. Şimdi bu bilgileri düzenlememiz gerekiyor.
 
 <figure><img src="../.gitbook/assets/image (258).png" alt=""><figcaption></figcaption></figure>
 
-Uygulama kodumuzu, function\_app.py dosyası içerisini temizleyip, yapıştırıyoruz.&#x20;
+* Uygulama kodumuzu, function\_app.py dosyası içerisini temizleyip, yapıştırıyoruz.&#x20;
 
 ```python
 import azure.functions as func
@@ -108,7 +107,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
 <figure><img src="../.gitbook/assets/image (259).png" alt=""><figcaption></figcaption></figure>
 
-Ardından, requirements.txt dosyamızın içerisine aşağıdaki modülleri ekliyoruz.
+* Ardından, requirements.txt dosyamızın içerisine aşağıdaki modülleri ekliyoruz.
 
 ```
 azure-storage-blob
@@ -117,7 +116,7 @@ azure-functions
 
 <figure><img src="../.gitbook/assets/image (260).png" alt=""><figcaption></figcaption></figure>
 
-Ardından, function.json adında bir dosya oluşturup, uygulamamıza ait diğer spesifik bilgilerin yer aldığı bazı parametreleri ekliyoruz. (Opsiyonel)
+* Ardından, function.json adında bir dosya oluşturup, uygulamamıza ait diğer spesifik bilgilerin yer aldığı bazı parametreleri ekliyoruz. (Opsiyonel)
 
 ```json
 {
@@ -140,7 +139,7 @@ Ardından, function.json adında bir dosya oluşturup, uygulamamıza ait diğer 
 
 <figure><img src="../.gitbook/assets/image (261).png" alt=""><figcaption></figcaption></figure>
 
-Ardından, değişkenlerimizi ve diğer başlatma seçeneklerimizi ayarladığımız local.settings.json dosyasını düzenliyoruz. Burada AZURE\_STORAGE\_CONNECTION\_STRING değişkeninin değerini işlem yapmak istediğimiz storage hesabı altında, access keys kısmından alıyoruz. Kodumuz, storage connection string'i buradan alacak.
+* Ardından, değişkenlerimizi ve diğer başlatma seçeneklerimizi ayarladığımız **local.settings.json** dosyasını düzenliyoruz. Burada `AZURE_STORAGE_CONNECTION_STRING` değişkeninin değerini işlem yapmak istediğimiz storage hesabı altında, access keys kısmından alıyoruz. Kodumuz, storage connection string'i buradan alacak.
 
 <figure><img src="../.gitbook/assets/image (262).png" alt=""><figcaption></figcaption></figure>
 
@@ -156,19 +155,19 @@ Ardından, değişkenlerimizi ve diğer başlatma seçeneklerimizi ayarladığı
 }
 ```
 
-Şu anda yapılacak tüm değişiklikler bu kadar, şimdi azurite extension'u çalıştırıp, lokal development ortamımızı ayağa kaldırmaya hazırız. vscode ekranında, klavyeden F1 tuşuna basıp azurite extensionunu ayağa kaldırıyoruz.
+* Şu anda yapılacak tüm değişiklikler bu kadar, şimdi azurite extension'u çalıştırıp, lokal development ortamımızı ayağa kaldırmaya hazırız. vscode ekranında, klavyeden F1 tuşuna basıp azurite extensionunu ayağa kaldırıyoruz.
 
 <figure><img src="../.gitbook/assets/image (263).png" alt=""><figcaption></figcaption></figure>
 
-Şimdi sıra geldi projemizi çalıştırmaya, Azure extensionu üzerine tıklayıp, "start debugging to update..." butonuna tıklayıp, gelen uyarıya da "debug anyway" butonuna basıp, uygulamayı ayağa kaldırıyoruz.
+* Şimdi sıra geldi projemizi çalıştırmaya, Azure extensionu üzerine tıklayıp, "start debugging to update..." butonuna tıklayıp, gelen uyarıya da "debug anyway" butonuna basıp, uygulamayı ayağa kaldırıyoruz.
 
 <figure><img src="../.gitbook/assets/image (264).png" alt=""><figcaption></figcaption></figure>
 
-Görüldüğü gibi, uygulama start oldu ve web üzerinden istekleri almaya hazır.&#x20;
+* Görüldüğü gibi, uygulama start oldu ve web üzerinden istekleri almaya hazır.&#x20;
 
 <figure><img src="../.gitbook/assets/image (265).png" alt=""><figcaption></figcaption></figure>
 
-Uygulamamız web'den cevap verdi. Şimdi parametre vererek, storage account üzerinde container oluşturmaya çalışalım.
+* Uygulamamız web'den cevap verdi. Şimdi parametre vererek, storage account üzerinde container oluşturmaya çalışalım.
 
 <figure><img src="../.gitbook/assets/image (266).png" alt=""><figcaption></figcaption></figure>
 
@@ -176,15 +175,12 @@ Uygulamamız web'den cevap verdi. Şimdi parametre vererek, storage account üze
 
 <figure><img src="../.gitbook/assets/image (268).png" alt=""><figcaption></figcaption></figure>
 
-Yukarıda gördüğünüz gibi, uygulamamız başarıyla çalıştı ve containerımız oluştu.
-
-
-
-Fakat bu uygulama şu anda lokalimde çalışıyor, yani bunu henüz azure üzerine deploy etmedik. Bu uygulamayı azure üzerine deploy etmek için Azure portal üzerinden Function App oluşturuyoruz.
+* Yukarıda gördüğünüz gibi, uygulamamız başarıyla çalıştı ve containerımız oluştu.
+* Fakat bu uygulama şu anda lokalimde çalışıyor, yani bunu henüz azure üzerine deploy etmedik. Bu uygulamayı azure üzerine deploy etmek için Azure portal üzerinden Function App oluşturuyoruz.
 
 <figure><img src="../.gitbook/assets/image (269).png" alt=""><figcaption></figcaption></figure>
 
-Azure hesabımız altında bir Function App oluşturduk. Şimdi vscode uygulamamızı tekrar açıp, projemizi azure da oluşturduğumuz "functiondemo0001" Function App 'ine push ediyoruz.
+* Azure hesabımız altında bir Function App oluşturduk. Şimdi vscode uygulamamızı tekrar açıp, projemizi azure da oluşturduğumuz "functiondemo0001" Function App 'ine push ediyoruz.
 
 ```powershell
 func azure functionapp publish functiondemo0001
@@ -192,28 +188,25 @@ func azure functionapp publish functiondemo0001
 
 <figure><img src="../.gitbook/assets/image (270).png" alt=""><figcaption></figcaption></figure>
 
-Uygulamamız push edildi ve functiondemo0001 Function App içerisinde uygulamamız gözüküyor.
+* Uygulamamız push edildi ve functiondemo0001 Function App içerisinde uygulamamız gözüküyor.
 
 <figure><img src="../.gitbook/assets/image (271).png" alt=""><figcaption></figcaption></figure>
 
-Şimdi bir önemli kısımda şu; hatırlarsanız biz storage account bilgisini, local.settings.json dosyası içerisine eklemiştik. Fakat oraya eklediğimiz bilgi sadece lokal development ortamları için geçerli. Biz bu storage account connection string bilgisini, Function App altında, Environment Variables kısmından eklemeliyiz.
+* Şimdi bir önemli kısımda şu; hatırlarsanız biz storage account bilgisini, **local.settings.json** dosyası içerisine eklemiştik. Fakat oraya eklediğimiz bilgi sadece lokal development ortamları için geçerli. Biz bu storage account connection string bilgisini, Function App altında, Environment Variables kısmından eklemeliyiz.
 
 <figure><img src="../.gitbook/assets/image (272).png" alt=""><figcaption></figcaption></figure>
 
-Değişkenimizi ekledik ve Apply butonuna bastık. Şimdi testlerimizi yapabiliriz.
-
-
-
-İlk olarak, Function App Overview kısmından, "main" adındaki uygulamamıza tıklayıp, Code + Test menüsüne gelip, "Get function URL" butonuna basıp, istek yapacağımız adresi kopyalıyoruz.
+* Değişkenimizi ekledik ve Apply butonuna bastık. Şimdi testlerimizi yapabiliriz.
+* İlk olarak, Function App Overview kısmından, "main" adındaki uygulamamıza tıklayıp, Code + Test menüsüne gelip, "Get function URL" butonuna basıp, istek yapacağımız adresi kopyalıyoruz.
 
 <figure><img src="../.gitbook/assets/image (274).png" alt=""><figcaption></figcaption></figure>
 
-&#x20;Ardından istek yaptığımız da container 'ın başarılı bir şekilde oluştuğunu görüyoruz.
+* Ardından kopyaladığımız url'e istek yaptığımız da, container 'ın başarılı bir şekilde oluştuğunu görüyoruz.
 
 <figure><img src="../.gitbook/assets/image (273).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (275).png" alt=""><figcaption></figcaption></figure>
 
-
+***
 
 {% embed url="https://learn.microsoft.com/en-us/azure/azure-functions/" %}
