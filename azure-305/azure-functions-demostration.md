@@ -1,4 +1,4 @@
-# Azure Functions Demostration
+# 📠 Azure Functions Demostration
 
 <figure><img src="../.gitbook/assets/6.webp" alt=""><figcaption></figcaption></figure>
 
