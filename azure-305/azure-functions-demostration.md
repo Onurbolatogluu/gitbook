@@ -65,7 +65,7 @@ Azure Functions kullanarak bir web API'si oluşturup. Bu API adresine HTTP istek
 
 <figure><img src="../.gitbook/assets/image (258).png" alt=""><figcaption></figcaption></figure>
 
-* Uygulama kodumuzu, function\_app.py dosyası içerisini temizleyip, yapıştırıyoruz.&#x20;
+* Uygulama kodumuzu, function\_app.py dosyasının içerisini temizleyip, yapıştırıyoruz.&#x20;
 
 ```python
 import azure.functions as func
