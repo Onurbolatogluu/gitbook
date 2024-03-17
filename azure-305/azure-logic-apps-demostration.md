@@ -1,4 +1,4 @@
-# Azure Logic Apps Demostration
+# 💪 Azure Logic Apps Demostration
 
 <figure><img src="../.gitbook/assets/azure-logic-apps.webp" alt=""><figcaption></figcaption></figure>
 

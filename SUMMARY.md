@@ -210,4 +210,4 @@
 * [⛲ Design for Azure Container Instances](azure-305/design-for-azure-container-instances.md)
 * [🎢 Design for Azure Kubernetes Service](azure-305/design-for-azure-kubernetes-service.md)
 * [📠 Azure Functions Demostration](azure-305/azure-functions-demostration.md)
-* [Azure Logic Apps Demostration](azure-305/azure-logic-apps-demostration.md)
+* [💪 Azure Logic Apps Demostration](azure-305/azure-logic-apps-demostration.md)
