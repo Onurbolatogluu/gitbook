@@ -65,7 +65,7 @@ Azure Front Door, Microsoft Azure'un global CDN hizmetidir. Uygulamalarınıza h
 
 Azure Front Door, özellikle coğrafi olarak dağıtılmış uygulamalar ve mikro hizmet mimarileri için uygundur. Müşterilere düşük gecikme süresiyle hizmet sunarken, uygulamalarınızı siber tehditlere karşı korumak ve yönetimini basitleştirmek isteyen organizasyonlar tarafından sıklıkla kullanılır.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/1_Ft5O2fS9yELy0HsR0II91g.png" alt=""><figcaption></figcaption></figure>
 

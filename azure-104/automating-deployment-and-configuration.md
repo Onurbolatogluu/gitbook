@@ -84,7 +84,7 @@ Aşağıda basit bir ARM şablon örneği verilmiştir:
 * **resources**: Asıl kaynak olan Azure Storage hesabı tanımlanmıştır. Bu kısımda kaynak tipi, API sürümü, adı, konumu ve SKU'su belirtilmiştir.
 * **outputs**: Şablon çalıştırıldıktan sonra dışarı verilecek olan depolama hesabının anahtarını (key) içerir. Bu, oluşturulan depolama hesabına erişim için gereklidir.
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 **Azure Portal**:
 
@@ -117,13 +117,13 @@ New-AzResourceGroupDeployment -ResourceGroupName <resource-group> -TemplateFile 
 
 #### Exporting deployments as ARM template;
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Azure üzerinde daha önceden gerçekleştirdiğiniz bir deploy işleminin tüm detaylarını içeren bir ARM şablonunun dışarıya çıkarılması sürecini tanımlar. Bu süreç sayesinde, Azure'da deploy edilmiş bir kaynak grubunun tam yapılandırmasını - kaynak tipleri, ayarlar, yapılandırma değerleri ve bağımlılıklar dahil olmak üzere - JSON formatında bir şablona dönüştürebilir ve kaydedebilirsiniz.
 
 Bu şablon, daha sonrasında, aynı Azure kaynaklarını farklı bir abonelikte, bölgede veya ortamda (örneğin, geliştirme, test veya prodüksiyon) hızlı bir şekilde ve aynı ayarlarla yeniden oluşturmak için kullanılabilir.&#x20;
 
-<figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Bu özellik, bulut kaynaklarınızın yönetimi ve tekrarlanabilirliği konusunda size büyük esneklik ve hız kazandırır. Örneğin, bir geliştirme ortamında oluşturduğunuz bir uygulama yapılandırmasını test veya prodüksiyon ortamına taşımak istediğinizde, manuel olarak her bir kaynağı tekrar oluşturmak yerine, bu dışa aktarılmış şablonu kullanarak tüm kaynak grubunu tek bir komutla kolayca deploy edebilirsiniz. Bu, zaman tasarrufu sağlar ve yapılandırma hatalarını azaltır, çünkü tüm kaynaklar aynı yapılandırma ile konsistent bir şekilde oluşturulur.
 
@@ -139,7 +139,7 @@ Export-AzResourceGroup -ResourceGroupName <Resource-Group-Name> -Resource <Resou
 
 Yukarıdaki komutu kullanarak, belirli bir kaynağın yapılandırmasını ve özelliklerini bir ARM şablonu olarak dışa aktarabilir, bu yapılandırmayı başka yerlerde yeniden kullanabilirsiniz.
 
-<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://learn.microsoft.com/en-us/powershell/module/az.resources/export-azresourcegroup?view=azps-10.4.1" %}
 

@@ -65,7 +65,7 @@ VNet Peering avantajları şunlardır:
 
 Azure'da "VNet-to-VNet" (Sanal Ağdan Sanal Ağa), iki veya daha fazla Azure Sanal Ağı'nın (VNet) birbirleriyle güvenli bir şekilde bağlantı kurmasını sağlayan bir yöntemdir. Bu, özellikle farklı Azure bölgelerinde veya hatta farklı Azure aboneliklerinde yer alan sanal ağların birbirleriyle iletişim kurabilmesi için kullanılır.
 
-<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>vnet peering vs vnet-to-vnet</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption><p>vnet peering vs vnet-to-vnet</p></figcaption></figure>
 
 VNet-to-VNet VPN bağlantısı, aşağıdaki kullanım senaryoları için kullanışlıdır:
 
@@ -83,7 +83,7 @@ Azure'da VNet-to-VNet VPN bağlantısı oluşturmak ve yönetmek için Azure Por
 
 Azure Site-to-Site (S2S) bağlantısı, Microsoft Azure sanal ağınızı yerel ağınızla (genellikle bir şirket ağı) VPN (Sanal Özel Ağ) üzerinden güvenli bir şekilde bağlamak için kullanılan bir yöntemdir. Bu tür bir bağlantı, şirketinizin yerel ağındaki kaynakların ve uygulamaların Azure'daki sanal makineler ve hizmetlerle sorunsuz bir şekilde iletişim kurmasına olanak tanır.
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Sanal Ağ ve VPN Gateway Oluşturma
 
@@ -128,7 +128,7 @@ Azure Point-to-Site (P2S) VPN, bireysel kullanıcıların Azure sanal ağlarına
 * **Şifreli Tünel**: Bağlantı, kullanıcı cihazı ve Azure VNet arasında güvenli, şifrelenmiş bir tünel üzerinden gerçekleşir.
 * **Erişim Kontrolü**: Yöneticiler, hangi kullanıcıların ve cihazların Azure kaynaklarına erişebileceğini kontrol edebilir.
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Sanal Ağ ve Gateway Oluşturmak
 

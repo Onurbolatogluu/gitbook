@@ -59,7 +59,7 @@ Azure Monitor Alerts, operasyonel verimliliği artırmak ve potansiyel sorunlara
 
 Azure Monitor'ın bir parçası olan ve Azure kaynaklarınızdan toplanan operasyonel verileri ifade eder. Bu günlükler, sanal makineler, uygulamalar, veritabanı hizmetleri ve diğer Azure hizmetleri gibi çeşitli kaynaklardan toplanan olaylar, performans verileri, hatalar ve diğer telemetri verilerini içerir. Bu hizmet, bulut ve on-premise ortamlarınızdan büyük miktarda log verisini toplamanıza, saklamanıza, araştırmanıza ve analiz etmenize olanak tanır.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 1. **Veri Toplama:**
    * Çeşitli kaynaklardan (Azure kaynakları, on-premise sunucular, diğer bulut sağlayıcılarından gelen kaynaklar) log ve telemetri verilerini toplayabilir. Bu veriler güvenlik olayları, uygulama logları, sistem logları ve daha fazlasını içerebilir.

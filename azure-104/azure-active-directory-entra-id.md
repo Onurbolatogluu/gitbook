@@ -1,4 +1,4 @@
-# 👨👨👧👧 Azure Active Directory ( Entra ID )
+# 👨‍👨‍👧‍👧 Azure Active Directory ( Entra ID )
 
 {% embed url="https://learn.microsoft.com/tr-tr/azure/active-directory/fundamentals/new-name" %}
 
@@ -79,7 +79,7 @@ Sonuç olarak, Azure AD ve ADDS, farklı kullanım senaryoları ve ihtiyaçları
 
 #### User Accounts:
 
-<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure Active Directory'deki "user accounts", kullanıcıların sistem ve uygulamalara erişimini sağlamak için kullanılan kimlik bilgilerini içerir. Her kullanıcı hesabı, kullanıcının ismi, kullanıcı adı, parola ve diğer profil bilgilerini içerir ve bu hesaplar, kullanıcılara belirli uygulama ve hizmetlere erişim izni verirken aynı zamanda bu erişimi yönetmeye ve kontrol etmeye de yardımcı olur. Özellikle güvenlik, erişim kontrolü ve kullanıcı aktivitelerinin izlenmesi açısından kritik öneme sahiptirler.
 

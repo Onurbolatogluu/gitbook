@@ -2,7 +2,7 @@
 
 Azure Kubernetes Service (AKS), Microsoft'un bulut platformu Azure üzerinde Kubernetes konteyner orkestrasyon hizmetidir. AKS, uygulamalarınızın konteynerize edilmiş versiyonlarını dağıtmanıza, yönetmenize ve ölçeklendirmenize yardımcı olur.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 1. **Pools**: Bu, aynı yapılandırmaya sahip makinelerin(nodes) mantıksal bir gruplamasıdır. AKS'de bunlar genellikle node pool olarak adlandırılır ve belirli türde iş yüklerini çalıştırmak için optimize edilmiş olabilir.
 2. **Nodes**: Bunlar, konteynerize uygulamaların çalıştığı sanal makinelerdir (VM'ler). Node 'lar, Kubernetes master node(lar) tarafından yönetilir ve bu master node kullanıcıdan gizlidir.
@@ -14,7 +14,7 @@ Her bir node içinde, birden fazla pod bulunabilir ve bir pod içinde bir veya d
 
 AKS, tüm bu kavramları otomatik olarak yöneten ve yüksek kullanılabilirlik, güvenlik, ölçeklenebilirlik gibi özellikleri sağlayan bir hizmettir. Bu sayede, geliştiriciler uygulama koduna odaklanabilir ve altyapı yönetimi ile ilgili zorluklardan kurtulmuş olur.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Kubernetes düğüm havuzları (node pools), farklı tipte iş yüklerini veya uygulama bileşenlerini çalıştırmak için farklı yapılandırmalara sahip düğüm gruplarıdır. Her bir node pool, örneğin CPU veya bellek gibi kaynaklar açısından farklılık gösterebilir.&#x20;
