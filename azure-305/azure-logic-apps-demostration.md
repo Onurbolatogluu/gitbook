@@ -61,7 +61,7 @@ Trigger kısmını hallettikten sonra, "+" butonuna basıp, Action eklemeliyiz. 
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-Eklediğimiz "Initialize variable" action 'u üzerine tıklayıp, düzenlememiz gerekiyor. Burada şunu yapıyoruz: http isteği yaparken, body'de gönderdiğimiz bilgiyi alıp, bunu "containername" adında değişkende tutuyorum. Bunu container isimlerini dinamik olarak vermek için kullanıyorum.
+Eklediğimiz "Initialize variable" action 'u üzerine tıklayıp, düzenlememiz gerekiyor. Burada şunu yapıyoruz: http isteği yaparken, body'de gönderdiğimiz bilgiyi alıp, bunu "containername" adında değişkende tutuyorum. Bunu container isimlerini dinamik olarak vermek için kullanacağız.
 
 <figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
