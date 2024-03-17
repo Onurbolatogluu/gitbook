@@ -98,7 +98,7 @@ Container oluşturma sürecine ait diğer eksik bilgileri de doldurmalıyız, ha
 
 Workflow dashboard'ına gelip, Workflow URL bilgisini alıyoruz.&#x20;
 
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (2).png" alt=""><figcaption></figcaption></figure>
 
 Ardından, url'e post atmalıyız, bunun için terminal kullanabilirsiniz fakat, ben postman aracıyla devam ediyorum. Kopyaladığım linki adres çubuğuna yapıştırıp, POST seçeneğini seçiyorum. Ardından göndereceğim bilgiyi "text" olarak "raw" içerisine ekliyorum. Bu örnekte, "mycontainer1" adında bir bilgi gönderiyorum.&#x20;
 
