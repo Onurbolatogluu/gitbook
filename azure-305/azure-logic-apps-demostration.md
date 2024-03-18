@@ -116,3 +116,14 @@ Tabii ki, bu sadece başlangıç noktası ve Logic Apps ile gerçekleştirilebil
 
 {% embed url="https://learn.microsoft.com/en-us/azure/logic-apps/" %}
 
+#### Azure Functions ve Azure Logic Apps arasındaki temel farklar şunlardır:
+
+* **Azure Functions**, olaylara veya tetikleyicilere yanıt olarak kod çalıştırmaya yönelik bir "sunucusuz compute" platformudur. Kod tabanlı geliştirmeyi destekler ve çeşitli programlama dilleriyle kullanılabilir. Küçük, odaklı görevler için mükemmeldir ve etkinlik odaklı iş yükleri için maliyet etkin bir çözümdür.
+* **Azure Logic Apps**, çeşitli hizmetleri ve sistemleri görsel olarak birbirine bağlayan "sunucusuz iş akışı" orkestrasyonudur. Daha çok tasarımcı odaklı bir yaklaşım sunar ve az kodlama ile karmaşık iş akışları oluşturmak için geniş bir ön yapılmış Connectors kitaplığı sunar. Karmaşık iş akışları tasarlamak ve SaaS uygulamaları ile yerel sistemler arasında kolay entegrasyon sağlamak için idealdir.
+
+**Ne Zaman Hangisini Seçmelisiniz?**
+
+* Eğer kısa, kod tabanlı görevler için bir çözüm arıyorsanız veya olaylara yanıt olarak hızlıca özel API'ler oluşturmanız gerekiyorsa, **Azure Functions** ideal bir seçenektir.
+* Eğer birden fazla sistem arasında karmaşık entegrasyonlar gerçekleştirmeniz ve bu süreci görsel bir yaklaşımla basitleştirmeniz gerekiyorsa, **Azure Logic Apps** daha uygun bir tercih olacaktır.
+
+{% embed url="https://www.educba.com/azure-functions-vs-logic-apps/" %}
