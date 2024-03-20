@@ -212,3 +212,4 @@
 * [📠 Azure Functions Demostration](azure-305/azure-functions-demostration.md)
 * [💪 Azure Logic Apps Demostration](azure-305/azure-logic-apps-demostration.md)
 * [🧑‍💼 Design for data storage](azure-305/design-for-data-storage.md)
+* [🎞️ Design for Azure storage accounts](azure-305/design-for-azure-storage-accounts.md)
