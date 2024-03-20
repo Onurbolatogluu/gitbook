@@ -25,7 +25,7 @@ Bir HTTP trigger tarafından tetiklenen bir Azure Logic App kullanarak, dinamik 
 
 #### Adım 1: Logic App oluşturalım.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure Portal üzerinden, Logic App servisini arattırıp, ekran görüntüsündeki gibi bir logic app oluşturmalıyız. Tüm üst menülerde bulunan ayarlar default kalabilir.&#x20;
 
@@ -33,7 +33,7 @@ Azure Portal üzerinden, Logic App servisini arattırıp, ekran görüntüsünde
 
 #### Adım 2: Oluşturduğumuz Logic App 'i yapılandıralım.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Oluşturduğumuz logic app dasboard'ına gelip, sol menüden, Workflows kısmına tıklıyoruz ve ardından sağ tarafta açılan ekrandan yeni bir workflow oluşturmak için workflow ismini girip devam ediyoruz.
 

@@ -16,7 +16,7 @@ Bu yapı, farklı türdeki kaynakları mantıksal olarak ayırarak yönetimi kol
 
 ### Multiple peered networks;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure'da "Multiple peered networks", birbiriyle eşleştirilmiş birden fazla sanal ağın olduğu bir yapıyı ifade eder. Bu, farklı sanal ağlar arasında doğrudan, güvenli ve özel bir bağlantı kurulmasını sağlar, ve bu Azure'un Virtual Network Peering özelliği aracılığıyla mümkündür.
 
