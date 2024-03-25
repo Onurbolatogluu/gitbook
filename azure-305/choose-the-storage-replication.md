@@ -1,6 +1,6 @@
-# Choose the storage replication
+# 🌟 Choose the storage replication
 
-Genel olarak, Azure kullanıcıları, ihtiyaç duydukları erişilebilirlik ve maliyet faktörlerini dikkate alarak aşağıdaki çeşitli depolama kopyalama stratejileri arasından seçim yaparlar. Örneğin, veri kesintisizliği ve felaket kurtarmaya yüksek önem veriliyorsa GRS veya GZRS tercih edilirken, daha düşük maliyetle yerel koruma yeterliyse LRS uygun bir seçenek olabilir. ZRS ise bölgesel hizmet kesintilerine karşı bir çözüm sunar.
+📂 Azure kullanıcıları, ihtiyaç duydukları erişilebilirlik ve maliyet faktörlerini dikkate alarak aşağıdaki çeşitli depolama kopyalama stratejileri arasından seçim yaparlar. Örneğin, veri kesintisizliği ve felaket kurtarmaya yüksek önem veriliyorsa GRS veya GZRS tercih edilirken, daha düşük maliyetle yerel koruma yeterliyse LRS uygun bir seçenek olabilir. ZRS ise bölgesel hizmet kesintilerine karşı bir çözüm sunar.
 
 1. **Locally-redundant storage (LRS)**: Verilerinizi aynı veri merkezi içinde birden fazla donanım üzerine kopyalar. En düşük maliyetli seçenek olup, temel koruma sağlar ve kritik olmayan senaryolar için önerilir. LRS, veri merkezindeki  "fault domain" içinde üç kez kopyalanır.
 2. **Geo-redundant storage (GRS)**: Verilerinizi birincil bölgede kopyaladıktan sonra, bir felaket anında kullanılmak üzere başka bir coğrafi bölgedeki ikincil bir veri merkezine de kopyalar. GRS, yedekleme senaryoları için önerilir.

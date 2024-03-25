@@ -213,4 +213,4 @@
 * [💪 Azure Logic Apps Demostration](azure-305/azure-logic-apps-demostration.md)
 * [🧑‍💼 Design for data storage](azure-305/design-for-data-storage.md)
 * [🎞️ Design for Azure storage accounts](azure-305/design-for-azure-storage-accounts.md)
-* [Choose the storage replication](azure-305/choose-the-storage-replication.md)
+* [🌟 Choose the storage replication](azure-305/choose-the-storage-replication.md)
