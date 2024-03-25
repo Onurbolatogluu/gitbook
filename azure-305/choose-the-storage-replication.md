@@ -7,7 +7,9 @@
 3. **Zone-redundant storage (ZRS)**: Veriler, aynı coğrafi bölge içinde farklı kullanılabilirlik bölgelerine dağıtılarak kopyalanır. Bu, yüksek erişilebilirlik senaryoları için önerilir.
 4. **Geo-zone-redundant storage (GZRS)**: Bu, GRS ve ZRS'nin bir kombinasyonudur. Veriler önce birincil bölgede farklı kullanılabilirlik bölgelerine kopyalanır, sonra da başka bir coğrafi bölgedeki ikincil veri merkezine. Kritik veri senaryoları için uygundur.
 
-"Fault domain" ise bir hata durumunda etkilenen bileşenlerin kümesidir. Örneğin, bir veri merkezindeki bir sunucu rafı, bir fault domain olarak düşünülebilir. Eğer bu raf da bulunan cihazlar arızalanırsa, LRS stratejisini kullanıyorsanız verilerinize erişemezsiniz. Çünkü tüm kopyalar aynı fault domain içindedir. ZRS ve GZRS gibi stratejiler ise farklı fault domainlerde veri kopyalarını saklayarak tek bir fault domaindeki hata durumundan korunmanızı sağlar.
+Azure, verileri farklı fault domain'ler arasında dağıtarak tek bir hata durumunun birden çok kaynağı etkilemesini önlemeye çalışır. Örneğin, LRS kullanan bir hizmette, verileriniz aynı veri merkezinde, ancak farklı sunuculara veya donanım birimlerine dağıtılır. Bu, bir sunucu arızalandığında dahi veri erişilebilirliğini korumayı amaçlar.
+
+Ancak, bu fiziksel konumda (datacenter) genel bir sorun yaşanırsa (örneğin elektrik kesintisi, doğal afet vb.), tüm sunucular etkilenebilir ve bu da veri kaybına veya kesintiye yol açabilir. Bu nedenle, kritik uygulamalar genellikle ZRS veya GZRS gibi, verileri birden fazla coğrafi konumda veya kullanılabilirlik bölgesinde saklayan stratejileri tercih edilmelidir.
 
 
 
