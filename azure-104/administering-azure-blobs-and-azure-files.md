@@ -16,7 +16,7 @@ Azure File Share, Microsoft Azure'un bulut tabanlı depolama hizmetlerinden biri
 
 ### Azure File Sync;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure File Sync, Azure'un bulut hizmetlerinin bir parçası olarak, şirket içi sunucularınızdaki dosyalarınızı Azure bulut depolama hizmetleriyle senkronize etmenizi sağlayan bir hizmettir. Bu, dosyalarınızı çeşitli lokasyonlarda bulunan sunucular arasında veya on-premise sunucularınız ile Azure bulutu arasında senkronize tutmanıza olanak tanır.
 
@@ -29,7 +29,7 @@ Azure File Sync'in temel özellikleri ve bileşenleri;
 
 Azure File Sync uygulamasının nasıl yapılandırılacağına dair bir yol haritası:
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Bu hizmet, özellikle birden çok lokasyonda çalışan büyük şirketler için dosya yönetimini basitleştirmek ve veri yedekleme süreçlerini kolaylaştırmak için kullanışlıdır. Azure File Sync'in kullanılmasıyla, dosyalarınız otomatik olarak Azure bulutuna senkronize edilir.
 
@@ -37,7 +37,7 @@ Bu hizmet, özellikle birden çok lokasyonda çalışan büyük şirketler için
 
 ### Creating Containers;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 1. **Azure Portalına Giriş Yapın**:
    * [Azure Portal](https://portal.azure.com/) adresine gidin ve Microsoft hesabınız ile giriş yapın.
@@ -107,7 +107,7 @@ Azure Blob Storage için Blob Lifecycle Management (BLM), depolanan blob veriler
 3. **Filtering option**: Policy, depolama alanındaki tüm bloblara uygulayabilir veya filtrelerle belirli blobları hedefleyebilirsiniz.
 4. **Target different types**: Farklı blob tiplerini (block blob, append blob vb.) hedef alabilir ve bunları daha da alt tiplere (temel bloblar, versiyonlar, snapshotlar) bölebilirsiniz.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ekran görüntüsündeki örnekte, bir lifecycle yönetim kuralı şu şekilde tanımlanmıştır:
 

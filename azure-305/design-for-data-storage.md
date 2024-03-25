@@ -12,7 +12,7 @@
 
 ### Storage services:
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 1. **Container**: Azure Blob Storage'ın bir parçası olarak, container'lar, blob olarak adlandırılan nesneleri gruplandıran yapılardır. Blob'lar, büyük boyutlu yapılandırılmamış veri kütlelerini saklamak için uygundur. Örneğin; belgeler, fotoğraflar, videolar, ses dosyaları, yedekleme dosyaları, veritabanları, log kayıtları ve büyük veri setleri (Big Data) blob'lar içinde saklanabilir.
 
