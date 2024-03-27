@@ -121,6 +121,8 @@ Paylaşımı başarılı bir şekilde bağladık. Eğer paylaşıma on-prem sunu
 
 seçeneklerinden birini tercih etmeliyiz. Misal, [https://learn.microsoft.com/tr-tr/azure/storage/files/storage-files-configure-p2s-vpn-linux?WT.mc\_id=Portal-Microsoft\_Azure\_FileStorage](https://learn.microsoft.com/tr-tr/azure/storage/files/storage-files-configure-p2s-vpn-linux?WT.mc\_id=Portal-Microsoft\_Azure\_FileStorage)
 
+<figure><img src="../.gitbook/assets/image (278).png" alt=""><figcaption></figcaption></figure>
+
 
 
 ***
