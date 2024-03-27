@@ -113,7 +113,7 @@ sudo mount -t nfs demoaccountforshare1.file.core.windows.net:/demoaccountforshar
 
 <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-Paylaşımı başarılı bir şekilde bağladık. Eğer on-prem sunucularımızdan ve/ya Azure dışında bulunan sunuculardan bağlanmak istersek,
+Paylaşımı başarılı bir şekilde bağladık. Eğer paylaşıma on-prem sunucularımızdan ve/ya Azure dışında bulunan sunuculardan bağlanmak istersek,
 
 * Azure Express route
 * Site to site VPN&#x20;
@@ -159,7 +159,9 @@ Password kısmına: storage account key bilgisini giriyoruz (key1 veya key2)
 
 Linux (ubuntu 22.04) sunucuya bağlamak için ise, Azure portal 'a gelip,  Paylaşımımızın üzerine tıklayıp, Connect butonuna bastığımızda bize bir script verecek, bu scripti kopyalıyoruz.
 
-<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+
+
+<figure><img src="../.gitbook/assets/image (8) (2).png" alt=""><figcaption></figcaption></figure>
 
 Sunucuya gelip, mount.sh adında bir dosya oluşturup, bu scripti içerisine yapıştırıyoruz.
 
