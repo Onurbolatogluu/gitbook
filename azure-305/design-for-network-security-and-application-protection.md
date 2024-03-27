@@ -12,7 +12,7 @@ Azure Service Endpoint, Azure sanal ağınızdan Azure hizmetlerine doğrudan ve
 
 ### Private Link;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure Private Link, Azure hizmetlerinizi ve Azure üzerinde barındırılan uygulamalarınızı özel ağınız üzerinden güvenli bir şekilde erişilebilir kılan bir hizmettir. Bu hizmet, sanal ağınızdan Azure hizmetlerine özel ve güvenli bir bağlantı kurmanızı sağlar, böylece hizmetlerinizin genel internet üzerinden erişilebilir olmasına gerek kalmaz. Private Link, Azure PaaS hizmetlerini, müşteriye ait veya ortak hizmetleri özel IP adresleri üzerinden doğrudan sanal ağınıza bağlamanıza olanak tanır. Bu, hem güvenlik seviyesini artırır hem de ağ trafiğinin Azure'un ağ omurgası üzerinden geçmesini sağlayarak genel internete maruz kalma riskini azaltır.
 
@@ -30,7 +30,7 @@ Azure Network Security Groups (NSG'ler), Azure sanal ağınızdaki kaynaklara er
 
 ### Azure Firewall;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure Firewall, Azure tarafından sunulan bulut tabanlı bir güvenlik duvarı servisidir. Bu yönetilen servis, sanal ağ kaynaklarınızın korunmasını sağlar ve geniş ağ trafiği filtreleme kapasitesine sahiptir. Uygulama kuralları, ağ kuralları ve NAT kuralları oluşturmanıza olanak tanıyarak, gelen ve giden ağ trafiğini merkezi olarak yönetmenizi sağlar. Ayrıca, Azure'daki kaynaklarınız arasında zorunlu trafik yolları (forced tunnelling) ayarlayarak, veri sızıntılarını ve diğer güvenlik tehditlerini azaltmaya yardımcı olur. Azure Firewall, kuralları otomatik olarak ölçeklendirir ve bulut kaynaklarınızı korumak için sürekli güncellenir.
 
@@ -38,7 +38,7 @@ Azure Firewall, Azure tarafından sunulan bulut tabanlı bir güvenlik duvarı s
 
 ### Web Application Firewall (WAF);
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure Web Application Firewall (WAF) Azure’un güvenlik duvarı servisinin bir parçasıdır ve özellikle web uygulamalarını korumak için tasarlanmıştır. WAF, web uygulamalarınızı yaygın saldırılara ve güvenlik açıklarına karşı korur, örneğin SQL enjeksiyonu ve Cross-Site Scripting (XSS) gibi. Azure WAF, OWASP (Open Web Application Security Project) güvenlik kuralları listesini temel alır ve uygulamanızı bu tür tehditlere karşı proaktif bir şekilde savunur. Kuralları, uygulamanızın gereksinimlerine göre özelleştirebilir ve yönetebilirsiniz, bu da uygulamanızın güvenliğini sürekli olarak sağlamaya yardımcı olur.
 
@@ -46,7 +46,7 @@ Azure Web Application Firewall (WAF) Azure’un güvenlik duvarı servisinin bir
 
 ### DDoS Protection;
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure DDoS Protection, Azure kaynaklarını Distributed Denial of Service (DDoS) saldırılarına karşı korumak için tasarlanmış bir hizmettir. Bu hizmet, Azure platformuna yapılan potansiyel DDoS saldırılarını algılar ve bu saldırılara karşı savunma yaparak Azure uygulamalarınızın sürekli olarak erişilebilir ve performanslı kalmasını sağlar. Azure DDoS Protection, otomatik ağ analizi ve makine öğrenimi ile saldırıları tanır ve uygun savunma mekanizmalarını devreye sokar. Temel koruma varsayılan olarak tüm Azure servislerinde mevcuttur ve gelişmiş koruma seçenekleri ek güvenlik ve özelleştirme için kullanılabilir.
 
@@ -54,7 +54,7 @@ Azure DDoS Protection, Azure kaynaklarını Distributed Denial of Service (DDoS)
 
 ### Azure Bastion;
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure Bastion, Azure sanal makinalarınıza (VM'ler) doğrudan Azure portal üzerinden erişim sağlayan bir hizmettir. Bu tamamen yönetilen bir hizmettir ve kullanıcıların herhangi bir ek istemci yazılımına ihtiyaç duymadan, güvenli bir şekilde VM'lerine SSH veya RDP (Remote Desktop Protocol) ile bağlanmalarına olanak tanır. Azure Bastion, güvenlik duvarlarının arkasında oluşturulur ve VM'lere herhangi bir public IP ataması yapmadan güvenli bir bağlantı noktası sunar.
 

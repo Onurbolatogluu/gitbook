@@ -39,7 +39,7 @@ Azure Portal üzerinden, Azure Storage hesabınızın lifecycle management kural
 
 #### Azure blob immutable storage:
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 1. **Lock Time-based Retention Policy**: Belirli bir süre boyunca blobların (blob1.pdf, blob2.txt, blob3.doc gibi) üzerine yazma veya silme işlemlerinin yapılamayacağı bir süre bazlı saklama politikasını kilitler. Burada gösterilen konteyner, kilitlenmiş politika altında ve bloblar üzerinde okuma işlemleri serbestken, yazma ve silme işlemleri yasaktır.
 2. **Legal Hold**: Bir hukuki bekletme durumunda, blobların üzerine yazma veya silme işlemlerinin yapılamayacağını belirtir. Hukuki tutma devredeyken, veriler yine okunabilir ancak değiştirilemez veya silinemez. Bu, genellikle dava, denetim veya inceleme gibi hukuki süreçler sırasında gereklidir.
@@ -59,15 +59,15 @@ Her iki politika da "Write Once, Read Many" (WORM) formatında depolama sağlar.
 * "Enable versioning for blobs" seçeneği işaretlenmelidir.
 * "Enable version-level immutability support" seçeneği işaretlenmelidir.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 2 - Retention interval süresi belirlemeliyiz. 20 gün boyunca tüm verilerimizin korunmasını istiyoruz. Bunun için, Data protection > Manage policy seçeneklerine tıklıyoruz.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 3 - Ardından "democontainer" adında bir container oluşturup, içerisine bir imaj upload ediyoruz. Ardından yüklediğimiz imajı silmek istediğimizde, gördüğünüz gibi uyarı alacaksınız. Özetle 20 gün boyunca, bu imajı değiştirip, silemeyeceğiz. Sadece okuma yapabiliriz.
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-policy-configure-version-scope?tabs=azure-portal" %}
 
@@ -77,11 +77,11 @@ Her iki politika da "Write Once, Read Many" (WORM) formatında depolama sağlar.
 
 1 - Storage Account ekranında sol menüden, Data management > Lifecycle management ekranına geliyoruz. Burada en önemli kısım, "Enable access tracking"  seçeneğinin aktif olmasıdır. Çünkü dosya erişimlerinin en son ne zaman olduğuna dair bilgileri bu seçenek aktif olduğu sürece alabiliriz.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 2 - Burada ben 3 adet kural oluşturdum. Fakat bir tane de beraber oluşturalım. Bunun için "Add a rule" butonuna tıklıyoruz.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Rule name: move\_to\_cool\_2
 * Rule scope: Apply rule to all blobs in your storage account
@@ -90,11 +90,11 @@ Her iki politika da "Write Once, Read Many" (WORM) formatında depolama sağlar.
 
 Bilgilerini girip sonraki adıma geçiyoruz.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 90 gün boyunca erişilmeyen dosyaları (blobları) cool storage layer'ına taşımasını söylüyorum ve kaydediyorum.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Kuralımız oluştu ve 48 saat içerisinde, istediğimiz şartlara uygun bir dosya/blob varsa taşımaya başlayacak.
 

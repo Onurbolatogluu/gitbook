@@ -1,10 +1,10 @@
-# 6⃣ Config
+# 6️⃣ Config
 
 **Config (Yapılandırma)**
 
 "Config," bir uygulamanın yapılandırma ayarlarını nasıl ele alması gerektiğini tanımlar. Bu ilke, uygulamanın çevresel farklılıklara (development, staging, production) uyum sağlamasını ve yapılandırma ayarlarını kod tabanından ayırmasını hedefler. İşte bu ilkenin anahtar unsurları:
 
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
 
 **1. Çevresel Farklılıkları Ayırma:** Uygulama, farklı çevreler (development, staging, production) için farklı yapılandırma ayarlarına sahip olmalıdır. Bu, her çevrede uygulamanın farklı şekilde davranabilmesini sağlar.
 

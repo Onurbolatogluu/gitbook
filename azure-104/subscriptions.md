@@ -182,7 +182,7 @@ Resource Locks'un avantajları şunlardır:
 
 **Cost Management + Billing (Maliyet Yönetimi + Faturalama)**: Azure Cost Management + Billing, Azure kaynaklarınızın maliyetlerini ve kullanımını izlemenize, analiz etmenize ve raporlamalarını almanıza olanak tanır.
 
-<figure><img src="../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Cost Management ekranı ile ilgili bilgiler:
 

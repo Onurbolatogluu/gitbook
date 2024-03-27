@@ -25,7 +25,7 @@ Bir HTTP trigger tarafından tetiklenen bir Azure Logic App kullanarak, dinamik 
 
 #### Adım 1: Logic App oluşturalım.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure Portal üzerinden, Logic App servisini arattırıp, ekran görüntüsündeki gibi bir logic app oluşturmalıyız. Tüm üst menülerde bulunan ayarlar default kalabilir.&#x20;
 
@@ -33,11 +33,11 @@ Azure Portal üzerinden, Logic App servisini arattırıp, ekran görüntüsünde
 
 #### Adım 2: Oluşturduğumuz Logic App 'i yapılandıralım.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Oluşturduğumuz logic app dasboard'ına gelip, sol menüden, Workflows kısmına tıklıyoruz ve ardından sağ tarafta açılan ekrandan yeni bir workflow oluşturmak için workflow ismini girip devam ediyoruz.
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Gördüğünüz gibi workflow oluşturuldu. Şimdi diğer adıma geçelim.
 
@@ -45,31 +45,31 @@ Gördüğünüz gibi workflow oluşturuldu. Şimdi diğer adıma geçelim.
 
 #### Adım 3: Workflow 'u dizayn edelim.
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 demo workflow'un üzerine tıklayıp, açılan ekranda "designer" menüsüne girmeliyiz.
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ardından, "Add a trigger" seçeneğine tıklayıp, yeni bir trigger oluşturacağız. Bu örneğimizde "When a HTTP request is received" trigger'ını kullanacağız. Yani, http istekleri üzerinden workflow'umuzu devreye girmesini istiyoruz.
 
-<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Trigger kısmını hallettikten sonra, "+" butonuna basıp, Action eklemeliyiz. Yani, http isteği geldikten sonra ne yapacağız sorusunu cevaplamamız gerekiyor. Burada biz, "Initialize variable" action 'u seçiyoruz. Bunu seçmemizin sebebi şu: http isteği yapıldığında, body kısmında bazı bilgiler göndereceğim ve bu bilgileri "Initialize variable" action 'u ile yakalayıp, sonraki aşamalarda kullanacağım.
 
-<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Eklediğimiz "Initialize variable" action 'u üzerine tıklayıp, düzenlememiz gerekiyor. Burada şunu yapıyoruz: http isteği yaparken, body'de gönderdiğimiz bilgiyi alıp, bunu "containername" adında değişkende tutuyorum. Bunu container isimlerini dinamik olarak vermek için kullanacağız.
 
-<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ardından, bir action daha ekliyoruz ve bu action ile gelen isteğin içeriğine göre container instance oluşturacağız. Elbette, container instance servisine bağlanması için gerekli auth metotlarını girmeliyiz.&#x20;
 
 <mark style="color:red;">**Bu oluşturduğumuz MANAGED IDENTITY kimliğine, container oluşturacağımız resource group üzerinde yetki tanımlamalıyız. Aksi halde yetki hatası verecektir!!!**</mark>
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 Container oluşturma sürecine ait diğer eksik bilgileri de doldurmalıyız, hangi subscription, hangi resource group ve container instance sizeları vs. gibi bilgileri de ekliyoruz.
 
@@ -94,7 +94,7 @@ Container oluşturma sürecine ait diğer eksik bilgileri de doldurmalıyız, ha
 
 #### Adım 3: Test edelim.
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 Workflow dashboard'ına gelip, Workflow URL bilgisini alıyoruz.&#x20;
 
@@ -106,7 +106,7 @@ Ardından, url'e post atmalıyız, bunun için terminal kullanabilirsiniz fakat,
 
 
 
-<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 Gördüğünüz üzere, "mycontainer1" adında container instance oluşturulmuş. Böylelikle logic app kullanarak dinamik bir şekilde container instance oluşturabildik.&#x20;
 
