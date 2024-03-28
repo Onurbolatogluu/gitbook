@@ -56,7 +56,14 @@ Bir sonraki okuma isteği için, eğer aynı verilere ihtiyaç varsa ve bu veril
 
 
 {% hint style="info" %}
-SSE Azure'un depolama katmanında şifreleme sağlarken, "Encryption at host" daha yakın bir düzeyde, yani host düzeyinde şifreleme sağlar.
+SSE Azure'un depolama katmanında şifreleme sağlarken, "Encryption at host" daha yakın bir düzeyde, yani host düzeyinde şifreleme sağlar.&#x20;
+
+\
+Server-Side Encryption Azure tarafından yönetilen disklerdeki verileri otomatik olarak şifrelerken, Encryption at host bu şifrelemeyi daha da ileriye götürerek sanal makinenin temp disklerini ve disk önbelleklerini de şifreleme kapsamına alır. \
+\
+ADE ise, sanal makinelerin içinde çalışır ve işletim sistemi düzeyinde şifreleme uygular. Windows VM'ler için BitLocker kullanırken, Linux VM'ler için dm-crypt kullanır.
 {% endhint %}
+
+
 
 {% embed url="https://learn.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview" %}
