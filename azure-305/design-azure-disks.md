@@ -1,4 +1,4 @@
-# Design Azure disks
+# 🕸️ Design Azure disks
 
 Azure Disk, Azure üzerinde depolama sağlayan bir hizmettir. Azure Disk, sanal makinelerin diskleri için depolama alanı sağlar ve çeşitli performans seçenekleri sunar. Bu disklere veri depolamak, sanal makinelerde işletim sistemi ve uygulama verilerini saklamak gibi çeşitli kullanım senaryoları bulunur.
 
@@ -54,5 +54,9 @@ Bir sonraki okuma isteği için, eğer aynı verilere ihtiyaç varsa ve bu veril
 3. **Encryption at Host**: Bu, VM'nin barındırıldığı fiziksel sunucu üzerinde verilerin şifrelendiğini ve Azure'un depolama servisine şifrelenmiş olarak aktarıldığını garanti altına alır. Bu, fiziksel sunucuda potansiyel olarak ortaya çıkabilecek güvenlik risklerine karşı ek bir koruma katmanı sağlar. Docs: [https://learn.microsoft.com/en-us/azure/virtual-machines/disks-enable-host-based-encryption-portal?tabs=azure-powershell](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-enable-host-based-encryption-portal?tabs=azure-powershell)
 
 
+
+{% hint style="info" %}
+SSE Azure'un depolama katmanında şifreleme sağlarken, "Encryption at host" daha yakın bir düzeyde, yani host düzeyinde şifreleme sağlar.
+{% endhint %}
 
 {% embed url="https://learn.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview" %}
