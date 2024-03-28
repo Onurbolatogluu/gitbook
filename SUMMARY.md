@@ -216,3 +216,4 @@
 * [🌟 Choose the storage replication](azure-305/choose-the-storage-replication.md)
 * [📹 Azure blob storage - Lifecycle & immutable demo](azure-305/azure-blob-storage-lifecycle-and-immutable-demo.md)
 * [🥌 Azure Files Demostration](azure-305/azure-files-demostration.md)
+* [Design Azure disks](azure-305/design-azure-disks.md)
