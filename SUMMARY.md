@@ -218,3 +218,4 @@
 * [🥌 Azure Files Demostration](azure-305/azure-files-demostration.md)
 * [🕸️ Design Azure disks](azure-305/design-azure-disks.md)
 * [🦼 Design for storage security](azure-305/design-for-storage-security.md)
+* [🔮 Azure Table Storage And Cosmos DB Demostration](azure-305/azure-table-storage-and-cosmos-db-demostration.md)

@@ -2,7 +2,7 @@
 
 
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 Azure Files, sanal makineler (VM'ler) ve bulut tabanlı uygulamalar gibi çeşitli senaryolarda dosya depolama ihtiyaçlarını karşılamak için kullanılır. Temel olarak, Azure Files, dosyaları bulutta depolamanıza, **paylaşmanıza** ve erişmenize olanak tanır. Azure Files, birçok senaryoda kullanılabilir, örneğin dosya paylaşımı, uygulama veri depolama, yedekleme depolama alanı, web içeriği paylaşımı ve daha fazlası.&#x20;
 
@@ -64,7 +64,7 @@ Aşağıdaki komutu kullanarak, Azure'da "demoaccountforshare" adında bir Premi
 az storage account create --name demoaccountforshare1 --resource-group rg-fileshare-demo-001 --location westeurope --sku Premium_LRS --kind FileStorage
 ```
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Adım 2: Paylaşım oluşturma
 
@@ -76,17 +76,17 @@ Aşağıdaki komut, "demoaccountforshare1" adlı depolama hesabı üzerinde "myn
 az storage share-rm create -g rg-fileshare-demo-001 --storage-account demoaccountforshare1 --name mynfsshare1 --enabled-protocols NFS --quota 100 --root-squash AllSquash
 ```
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Adım 3: NFS network ayarlarının yapılandırılması
 
 Sunucular private endpoint kullanarak bağlanacağı için, Network menüsü altından, yeni bir private endpoint oluşturmalıyız. (Private endpoint kurulumda seçtiğimiz vnet ile, nfs paylaşımına bağlancak sunucular aynı vnet içerisinde olmalı)
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 Secure transfer required özelliği desteklenmediği için devre dışı bırakmalıyız.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Adım 4: Ubuntu 22.04 Paylaşımı mount etme
 
@@ -96,7 +96,7 @@ Aşağıdaki komut ile, storage account ile iletişimimizi kontrol ediyoruz.
 nslookup demoaccountforshare1.file.core.windows.net
 ```
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 Gördüğünüz gibi, iletişim private endpoint kullanarak, aynı vnet üzerinden sağlanılıyor.
 
@@ -111,7 +111,7 @@ sudo mkdir -p /mount/demoaccountforshare1/mynfsshare1
 sudo mount -t nfs demoaccountforshare1.file.core.windows.net:/demoaccountforshare1/mynfsshare1 /mount/demoaccountforshare1/mynfsshare1 -o vers=4,minorversion=1,sec=sys,nconnect=4
 ```
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 Paylaşımı başarılı bir şekilde bağladık. Eğer paylaşıma on-prem sunucularımızdan ve/ya Azure dışında bulunan sunuculardan bağlanmak istersek,
 
@@ -137,13 +137,13 @@ seçeneklerinden birini tercih etmeliyiz. Misal, [https://learn.microsoft.com/tr
 
 smbshare1 adında, smb paylaşımı oluşturuyoruz.
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Adım 2: Paylaşımı mount etmek
 
 Paylaşımı mount edeceğimiz sunucuya bağlanıp, computer'e gelip, "Map network drive" seçeneğini seçiyoruz.
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ardından, Storage account ismimizi ve paylaşım ismimizi girip, "connect using different credentials" seçeneğini seçip, ardından çıkan ekranda, "Use a different account" seçeneğini giriyoruz.
 
@@ -153,11 +153,11 @@ Username kısmına: storage account ismini,
 
 Password kısmına: storage account key bilgisini giriyoruz (key1 veya key2)
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 İşlemler bu kadar, paylaşımımız artık windows sunucumuza bağlandı. fdsf klasörünü test için oluşturdum.&#x20;
 
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 Linux (ubuntu 22.04) sunucuya bağlamak için ise, Azure portal 'a gelip,  Paylaşımımızın üzerine tıklayıp, Connect butonuna bastığımızda bize bir script verecek, bu scripti kopyalıyoruz.
 
