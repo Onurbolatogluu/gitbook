@@ -175,9 +175,7 @@ Azure Table Storage, basit NoSQL tablo depolama hizmetidir. Veriler satır ve s�
 
 Kullanım Örneği: [https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/quickstart-portal](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/quickstart-portal)
 
-
-
-<figure><img src="../.gitbook/assets/Cosmos-DB-containers-architecture.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/CosmosDB-Structure.png" alt=""><figcaption></figcaption></figure>
 
 Azure Cosmos DB'de "Container", verilerin saklandığı birimlerdir. Genellikle bir veritabanıdaki tablolara benzetilebilir. Bir Azure Cosmos DB hesabında birden çok veritabanı olabilir ve her veritabanı içinde birden çok container bulunabilir. &#x20;
 
@@ -189,29 +187,4 @@ Azure Cosmos DB'de "Container", verilerin saklandığı birimlerdir. Genellikle 
 
 {% embed url="https://nealanalytics.com/blog/azure-cosmos-db-and-its-common-industry-use-cases/" %}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{% embed url="https://learn.microsoft.com/en-us/azure/cosmos-db/introduction" %}
