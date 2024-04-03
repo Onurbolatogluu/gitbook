@@ -1,4 +1,4 @@
-# Azure SQL Solutions
+# 🟧 Azure SQL Solutions
 
 <figure><img src="../.gitbook/assets/image-asset.png" alt=""><figcaption></figcaption></figure>
 

@@ -220,3 +220,7 @@
 * [🦼 Design for storage security](azure-305/design-for-storage-security.md)
 * [🔮 Azure Table Storage And Cosmos DB Demostration](azure-305/azure-table-storage-and-cosmos-db-demostration.md)
 * [🟧 Azure SQL Solutions](azure-305/azure-sql-solutions.md)
+* [🎡 Azure SQL Database - Purchasing models](azure-305/azure-sql-database-purchasing-models.md)
+* [🕯️ Database availability](azure-305/database-availability.md)
+* [📜 Data security strategy](azure-305/data-security-strategy.md)
+* [🧮 Azure SQL Edge](azure-305/azure-sql-edge.md)
