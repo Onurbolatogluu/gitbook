@@ -224,3 +224,4 @@
 * [🕯️ Database availability](azure-305/database-availability.md)
 * [📜 Data security strategy](azure-305/data-security-strategy.md)
 * [🧮 Azure SQL Edge](azure-305/azure-sql-edge.md)
+* [🚲 Azure Data Factory](azure-305/azure-data-factory.md)
