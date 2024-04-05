@@ -8,6 +8,12 @@ Azure Data Factory, büyük veri işleme ve entegrasyon senaryoları için kulla
 * Verileri işleyerek, analiz için uygun hale getirir. SQL, Python gibi dilleri kullanarak veri üzerinde dönüşümler ve hesaplamalar yapılabilir.
 * Veri işleme işlemlerini planlama ve otomatize etme yeteneği sağlar, böylece manuel müdahaleye olan ihtiyacı azaltır.
 
+
+
+Örneğin, Bir firma, SQL veritabanında saklanan müşteri bilgilerini düzenli olarak incelemek ve analiz etmek için Azure Data Factory (ADF) kullanmaya karar verir. Firma, 'Copy Data' aktivitesi aracılığıyla SQL veritabanındaki müşteri bilgilerini her hafta otomatik olarak Azure Data Lake Storage veya Azure SQL Data Warehouse gibi bir veri deposuna aktarmayı planlar. Aktarım işlemi tamamlandıktan sonra, 'Data Flow' aktivitesi kullanılarak veriler üzerinde çeşitli dönüştürme ve temizleme işlemleri gerçekleştirilir. Bu süreç, müşteri verilerini analize uygun hale getirir ve firmanın müşteri hareketliliği, satın alma eğilimleri gibi kritik metrikler üzerinde analizler yapmasına olanak tanır. Bu analizler sayesinde firma, pazarlama kampanyalarını daha etkin bir şekilde yönetebilir.
+
+
+
 **Azure Data Factory'nin ana bileşenleri**:
 
 #### 1. **Pipeline**
