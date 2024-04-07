@@ -2,7 +2,7 @@
 
 Azure Data Factory, büyük veri işleme ve entegrasyon senaryoları için kullanılabilecek bulut tabanlı bir veri entegrasyon hizmetidir. Verileri farklı veri kaynaklarından toplayabilir, işleyebilir ve ardından bu verileri analiz ve raporlama için farklı hedeflere aktarabilir. Azure Data Factory'nin güçlü yönlerinden biri, karmaşık ETL (Extract, Transform, Load) işlemlerini görsel bir arayüz aracılığıyla kolayca tasarlamanıza ve yönetmenize olanak tanımasıdır.
 
-<figure><img src="../.gitbook/assets/image (281).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Snip20200727_47-1024x482.webp" alt=""><figcaption></figcaption></figure>
 
 * Farklı veri kaynaklarından verileri toplar ve bunları merkezi bir konumda birleştirir.
 * Verileri işleyerek, analiz için uygun hale getirir. SQL, Python gibi dilleri kullanarak veri üzerinde dönüşümler ve hesaplamalar yapılabilir.
@@ -10,7 +10,7 @@ Azure Data Factory, büyük veri işleme ve entegrasyon senaryoları için kulla
 
 
 
-Örneğin, Bir firma, SQL veritabanında saklanan müşteri bilgilerini düzenli olarak incelemek ve analiz etmek için Azure Data Factory (ADF) kullanmaya karar verir. Firma, 'Copy Data' aktivitesi aracılığıyla SQL veritabanındaki müşteri bilgilerini her hafta otomatik olarak Azure Data Lake Storage veya Azure SQL Data Warehouse gibi bir veri deposuna aktarmayı planlar. Aktarım işlemi tamamlandıktan sonra, 'Data Flow' aktivitesi kullanılarak veriler üzerinde çeşitli dönüştürme ve temizleme işlemleri gerçekleştirilir. Bu süreç, müşteri verilerini analize uygun hale getirir ve firmanın müşteri hareketliliği, satın alma eğilimleri gibi kritik metrikler üzerinde analizler yapmasına olanak tanır. Bu analizler sayesinde firma, pazarlama kampanyalarını daha etkin bir şekilde yönetebilir. Tüm bu süreçler, ADF içinde bir pipeline olarak tasarlanmış olup ve her hafta belirli bir zaman diliminde otomatik olarak çalışacak şekilde planlanmıştır.
+Örneğin, Bir firma, SQL veritabanında saklanan müşteri bilgilerini düzenli olarak incelemek ve analiz etmek için Azure Data Factory (ADF) kullanmaya karar verir. Firma, 'Copy Data' aktivitesi aracılığıyla SQL veritabanındaki müşteri bilgilerini her hafta otomatik olarak çeker. Verilerin çekme işlemi tamamlandıktan sonra, 'Data Flow' aktivitesi kullanılarak veriler üzerinde çeşitli dönüştürme ve temizleme işlemleri gerçekleştirilir. Bu süreç, müşteri verilerini analize uygun hale getirir ve firmanın müşteri hareketliliği, satın alma eğilimleri gibi kritik metrikler üzerinde analizler yapmasına olanak tanır. Bu analizler sayesinde firma, pazarlama kampanyalarını daha etkin bir şekilde yönetebilir. Tüm bu süreçler, ADF içinde bir pipeline olarak tasarlanmış olup ve her hafta belirli bir zaman diliminde otomatik olarak çalışacak şekilde planlanmıştır.
 
 
 
