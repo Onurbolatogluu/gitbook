@@ -225,3 +225,5 @@
 * [📜 Data security strategy](azure-305/data-security-strategy.md)
 * [🧮 Azure SQL Edge](azure-305/azure-sql-edge.md)
 * [🚲 Azure Data Factory](azure-305/azure-data-factory.md)
+* [🔅 Azure Data Lake Storage](azure-305/azure-data-lake-storage.md)
+* [🧘‍♂️ Azure Databricks](azure-305/azure-databricks.md)
