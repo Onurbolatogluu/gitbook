@@ -227,3 +227,6 @@
 * [🚲 Azure Data Factory](azure-305/azure-data-factory.md)
 * [🔅 Azure Data Lake Storage](azure-305/azure-data-lake-storage.md)
 * [🧘‍♂️ Azure Databricks](azure-305/azure-databricks.md)
+* [🎒 Azure Synapse Analytics](azure-305/azure-synapse-analytics.md)
+* [🅰️ Azure Stream Analytics](azure-305/azure-stream-analytics.md)
+* [📼 Data flow strategy](azure-305/data-flow-strategy.md)
