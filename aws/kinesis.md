@@ -2,7 +2,7 @@
 
 Veri üretici ve veri tüketici arasında mesajları yayınlamak için kanal görevi gören akışkan gerçek zamanlı veri toplama ve dağıtma sistemidir.&#x20;
 
-![](<../.gitbook/assets/architecture (2).png>)
+![](<../.gitbook/assets/architecture (2) (1).png>)
 
 Kinesis sistem ve ya web günlüklerini sosyal ağ verileri finansal ticaret bilgileri, cografi veriler, mobil uygulama verileri ve ya bağlı IOT cihazlarından telemetri verileri gibi verileri gerçek zamanlı olarak toplayarak belirli bir süre üzerinde barındırmaya ve daha sonra bunu veri tüketicilere ulaştırmaya yarıyor.
 

@@ -135,7 +135,7 @@ Azure sanal makinelerine (VM) bağlanmanın çeşitli yolları vardır, her biri
 
 1. **Azure Bastion Kullanarak Bağlantı:**
 
-<figure><img src="../.gitbook/assets/architecture.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/architecture (2).png" alt="" width="563"><figcaption></figcaption></figure>
 
 * Azure Bastion, Azure portalı üzerinden doğrudan RDP ve SSH oturumları başlatmanıza olanak tanıyan tamamen yönetilen bir hizmettir.
 * Bu hizmet, sanal makinelerinize genel IP adresi ataması yapmadan güvenli bir bağlantı sunar.

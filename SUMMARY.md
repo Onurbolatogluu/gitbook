@@ -232,3 +232,5 @@
 * [📼 Data flow strategy](azure-305/data-flow-strategy.md)
 * [🍥 Cloud Adoption Framework](azure-305/cloud-adoption-framework.md)
 * [☣️ Azure Migration Framework](azure-305/azure-migration-framework.md)
+* [🦿 Assessing workloads](azure-305/assessing-workloads.md)
+* [🪡 Migration tools](azure-305/migration-tools.md)
