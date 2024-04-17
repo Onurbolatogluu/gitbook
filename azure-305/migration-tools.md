@@ -4,7 +4,7 @@
 
 #### 1. Azure Migrate: Discovery and Assessment
 
-Bu araç, şirketlerin on-premises (yerinde) sunucularını, uygulamalarını keşfetmelerine, performanslarını değerlendirmelerine ve Azure'a taşınma maliyetlerini hesaplamalarına olanak tanır. Çeşitli detaylar sağlayarak, hangi kaynakların buluta taşınabileceğini ve bu sürecin nasıl optimize edilebileceğini gösterir.
+Bu araç, şirketlerin on-premises (yerinde) sunucularını, uygulamalarını keşfetmelerine, performanslarını değerlendirmelerine ve Azure'a taşınma maliyetlerini hesaplamalarına olanak tanır.&#x20;
 
 #### 2. Azure Migrate: Server Migration
 
