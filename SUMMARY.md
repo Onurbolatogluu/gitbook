@@ -230,3 +230,5 @@
 * [🎒 Azure Synapse Analytics](azure-305/azure-synapse-analytics.md)
 * [🅰️ Azure Stream Analytics](azure-305/azure-stream-analytics.md)
 * [📼 Data flow strategy](azure-305/data-flow-strategy.md)
+* [🍥 Cloud Adoption Framework](azure-305/cloud-adoption-framework.md)
+* [☣️ Azure Migration Framework](azure-305/azure-migration-framework.md)
