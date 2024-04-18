@@ -29,7 +29,7 @@ Microsoft Azure Backup Server (MABS) ve Microsoft Azure Recovery Services (MARS)
 
 * MABS, MARS’tan daha geniş bir yelpazede teknoloji ve uygulama desteği sunar. MABS, MARS'ın sağladığı yalnızca dosya ve sistem durumu yedeklemelerinin ötesine geçerek, sanal makineler ve kurumsal uygulamalar için de yedekleme imkanı sağlar.
 * MARS sadece Azure'a yedekleme yaparken, MABS yerel ve bulut depolama seçeneklerini destekler.
-* MABS, daha karmaşık kurulum ve yönetim gereksinimleri ile gelir, ancak bu sayede daha esnek ve güçlü bir yedekleme çözümü sunar. MARS ise daha basit, doğrudan ve daha az yönetim gerektiren bir çözümdür.
+* MABS, daha karmaşık kurulum ve yönetim gereksinimleri ile gelir, ancak bu sayede daha esnek ve güçlü bir yedekleme çözümü sunar. MARS ise daha basit ve daha az yönetim gerektiren bir çözümdür.
 
 
 
