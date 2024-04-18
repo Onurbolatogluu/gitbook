@@ -1,4 +1,4 @@
-# Azure Database migration
+# 🤖 Azure Database migration
 
 Azure veritabanı taşıma süreci, verilerinizi mevcut bir kaynaktan Azure bulut hizmetlerine etkin bir şekilde taşımanıza olanak tanır. Bu süreçte iki ana taşıma türü kullanılabilir: online taşıma ve offline taşıma.
 
