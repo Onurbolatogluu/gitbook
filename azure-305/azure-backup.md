@@ -25,7 +25,7 @@ Azure'da "vault" terimi, verilerin yedeklenmesi ve gerektiğinde geri yüklenmes
 
 Microsoft Azure Backup Server (MABS) ve Microsoft Azure Recovery Services (MARS), Microsoft'un sağladığı yedekleme ajanlarıdır. MABS, yerel sunucuları ve Microsoft uygulamalarını yedeklemek için kullanılırken, MARS ise Windows işletim sistemlerinde dosya ve sistem durumu yedeklemelerini gerçekleştirir. MABS, yerel ve bulut tabanlı yedekleme seçenekleri sunarken, MARS sadece Azure bulutuna yedekleme yapar. Her iki çözüm de Microsoft'un Azure Backup hizmetiyle entegre çalışır.
 
-#### Temel Farklar
+#### Temel Farklar,
 
 * MABS, MARS’tan daha geniş bir yelpazede teknoloji ve uygulama desteği sunar. MABS, MARS'ın sağladığı yalnızca dosya ve sistem durumu yedeklemelerinin ötesine geçerek, sanal makineler ve kurumsal uygulamalar için de yedekleme imkanı sağlar.
 * MARS sadece Azure'a yedekleme yaparken, MABS yerel ve bulut depolama seçeneklerini destekler.
