@@ -235,3 +235,4 @@
 * [🦿 Assessing workloads](azure-305/assessing-workloads.md)
 * [🪡 Migration tools](azure-305/migration-tools.md)
 * [🤖 Azure Database migration](azure-305/azure-database-migration.md)
+* [👥 Storage migration](azure-305/storage-migration.md)
