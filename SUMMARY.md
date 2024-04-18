@@ -234,3 +234,4 @@
 * [☣️ Azure Migration Framework](azure-305/azure-migration-framework.md)
 * [🦿 Assessing workloads](azure-305/assessing-workloads.md)
 * [🪡 Migration tools](azure-305/migration-tools.md)
+* [Azure Database migration](azure-305/azure-database-migration.md)
