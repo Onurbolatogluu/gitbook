@@ -64,7 +64,7 @@ Aşağıdaki komutu kullanarak, Azure'da "demoaccountforshare" adında bir Premi
 az storage account create --name demoaccountforshare1 --resource-group rg-fileshare-demo-001 --location westeurope --sku Premium_LRS --kind FileStorage
 ```
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Adım 2: Paylaşım oluşturma
 
@@ -76,7 +76,7 @@ Aşağıdaki komut, "demoaccountforshare1" adlı depolama hesabı üzerinde "myn
 az storage share-rm create -g rg-fileshare-demo-001 --storage-account demoaccountforshare1 --name mynfsshare1 --enabled-protocols NFS --quota 100 --root-squash AllSquash
 ```
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Adım 3: NFS network ayarlarının yapılandırılması
 

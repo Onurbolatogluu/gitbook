@@ -16,7 +16,7 @@ Bu yapı, farklı türdeki kaynakları mantıksal olarak ayırarak yönetimi kol
 
 ### Multiple peered networks;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure'da "Multiple peered networks", birbiriyle eşleştirilmiş birden fazla sanal ağın olduğu bir yapıyı ifade eder. Bu, farklı sanal ağlar arasında doğrudan, güvenli ve özel bir bağlantı kurulmasını sağlar, ve bu Azure'un Virtual Network Peering özelliği aracılığıyla mümkündür.
 
@@ -34,7 +34,7 @@ Virtual Network Peering, Azure'daki ağlar arasında düşük gecikme süresi il
 
 ### Hub spoke architecture;
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure'da "Hub and Spoke architecture" (Merkez ve Spoke mimarisi), bir merkez (Hub) sanal ağın, bir dizi Spoke sanal ağ ile eşleştirildiği bir ağ topolojisini ifade eder. Bu yapı, özellikle geniş ve karmaşık ağ yapılarında tercih edilir. Genel olarak, merkez sanal ağ ortak kaynakları (örneğin, güvenlik hizmetleri, VPN bağlantıları veya Azure'daki diğer ortak hizmetler) barındırırken, Spoke sanal ağlar ise özel iş yüklerini, uygulamaları veya hizmetleri içerir.
 
