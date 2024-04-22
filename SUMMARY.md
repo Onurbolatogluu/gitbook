@@ -238,3 +238,7 @@
 * [👥 Storage migration](azure-305/storage-migration.md)
 * [👜 Azure Backup](azure-305/azure-backup.md)
 * [⏲️ Azure Blob Backup and Recovery](azure-305/azure-blob-backup-and-recovery.md)
+* [💈 Azure files backup and recovery](azure-305/azure-files-backup-and-recovery.md)
+* [🎞️ Azure VM backup and recovery](azure-305/azure-vm-backup-and-recovery.md)
+* [🧺 Azure SQL backup and recovery](azure-305/azure-sql-backup-and-recovery.md)
+* [⏰ Azure Site Recovery](azure-305/azure-site-recovery.md)
