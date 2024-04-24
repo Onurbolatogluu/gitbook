@@ -242,3 +242,4 @@
 * [🎞️ Azure VM backup and recovery](azure-305/azure-vm-backup-and-recovery.md)
 * [🧺 Azure SQL backup and recovery](azure-305/azure-sql-backup-and-recovery.md)
 * [⏰ Azure Site Recovery](azure-305/azure-site-recovery.md)
+* [📩 Differentiate event and message](azure-305/differentiate-event-and-message.md)
