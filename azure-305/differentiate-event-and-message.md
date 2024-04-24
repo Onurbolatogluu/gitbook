@@ -24,15 +24,18 @@ Bu örnekte, event, gerçekleşen bir durumu (ürünün sepete eklenmesi) temsil
 * Bir message, veriye ek olarak, verinin nasıl işleneceğine dair meta veriler veya komutlar da içerebilir.
 * Message tabanlı sistemlerde, bir message genellikle bir işlemin tamamlanması için gerekli olan tüm bilgileri içerir ve bu mesajın alıcısı tarafından işlenmesi beklenir.
 
-Misal: Bir işletmenin, siparişlerini işlemek için kullanılan bir iç sipariş yönetim sistemi olsun. Bir müşteri sipariş verdiğinde, ön uç sistemi bir message oluşturur ve bu mesaj, siparişi işlemek üzere sipariş yönetim sistemine gönderilir. Bu message aşağıdaki bilgileri içerebilir:
+Misal: Bir uygulamada kullanıcının profili güncellendiğinde, bu değişiklikleri veritabanında saklamak üzere bir mesaj gönderilir. Mesaj, şu bilgileri içerebilir:
 
-* **Müşteri Bilgileri:** Müşterinin adı, adresi ve iletişim bilgileri.
-* **Sipariş Detayları:** Satın alınan ürünler, miktarlar, fiyatlar ve ödeme bilgileri.
-* **Teslimat Seçenekleri:** Teslimat için istenen zaman aralığı ve diğer özel talimatlar.
+* **Kullanıcı ID:** Hangi kullanıcının profili güncellendiğini tanımlar.
+* **Güncellenen Bilgiler:** Yeni kullanıcı adı, e-posta adresi veya profil fotoğrafı gibi güncellenen veriler.
 
-Sipariş yönetim sistemi, bu mesajı alır ve siparişin hazırlanması, ödemenin işlenmesi ve teslimatın planlanması gibi gerekli işlemleri gerçekleştirir. Bu süreçte, mesaj içindeki bilgiler aktif olarak kullanılır ve siparişin her adımını takip etmek ve yürütmek için kritik önem taşır.
+Bir kullanıcı arayüzünden "Profilimi Güncelle" butonuna bastığında, uygulama bu bilgileri içeren bir mesajı arka uç sistemine (örneğin bir API'ye) gönderir. API bu mesajı alır ve kullanıcının veritabanı kaydını bu yeni bilgilerle günceller. Bu mesajın temel amacı, kullanıcının güncellenmiş profil bilgilerini taşımaktır ve veritabanı bu bilgilerle güncellenene kadar bu mesaj önemlidir.
 
-Bu örnekte, message, bir süreci başlatmak ve tamamlamak için gereken veri ve talimatları taşır ve belirli bir işlem veya iş akışı içinde kullanılır.
+Bu senaryoda, mesaj belirli bir eylemi tetiklemek için gönderilen ve işlenmesi gereken bilgileri içerir; yani kullanıcının profilinin güncellenmesi sürecini başlatır.
+
+
+
+
 
 Kısacası, bir "event" genellikle bir sistemin durumunda bir değişikliği bildirirken, bir "message" genellikle iki bileşen arasında daha ağır veri alışverişi için kullanılır. Eventler genellikle "fire and forget" yaklaşımına dayalıdır, yani yayınlandıktan sonra yayıncı tarafından daha fazla işlem yapılmaz. Mesajlar ise genellikle daha güvenilir teslimat gerektirir ve genellikle işlemleri veya iş akışlarını tetiklemek için kullanılır.
 

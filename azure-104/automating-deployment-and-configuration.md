@@ -84,7 +84,7 @@ Aşağıda basit bir ARM şablon örneği verilmiştir:
 * **resources**: Asıl kaynak olan Azure Storage hesabı tanımlanmıştır. Bu kısımda kaynak tipi, API sürümü, adı, konumu ve SKU'su belirtilmiştir.
 * **outputs**: Şablon çalıştırıldıktan sonra dışarı verilecek olan depolama hesabının anahtarını (key) içerir. Bu, oluşturulan depolama hesabına erişim için gereklidir.
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 **Azure Portal**:
 

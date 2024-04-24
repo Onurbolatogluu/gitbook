@@ -60,7 +60,7 @@ Verdiğimiz futbolcu bilgilerini bir tablo üzerinde, key-value eşlenikleri şe
 az storage account create --name storageaccount35623 --resource-group rg-demo-tables-and-CosmosDB-001 --location eastus --sku Standard_LRS --kind StorageV2
 ```
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 2 - **Table oluşturma:** Aşağıdaki komutu kullanarak, storage account içerisinde, "footballPlayers" adında tablo oluşturuyoruz.
 
@@ -68,7 +68,7 @@ az storage account create --name storageaccount35623 --resource-group rg-demo-ta
 az storage table create --name footballPlayers --account-name storageaccount35623
 ```
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 3 - **Connection String Bilgisi:** Table storage bağlantısı kurmak için, connection string ihtiyacımız bulunmaktadır. Bunun için, aşağıdaki komutu çalıştırıp, storage account connection string bilgisini almalıyız.
 
@@ -76,7 +76,7 @@ az storage table create --name footballPlayers --account-name storageaccount3562
 az storage account show-connection-string --name storageaccount35623 --resource-group rg-demo-tables-and-CosmosDB-001
 ```
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 4 - **Kodumuzu test edelim:** Kodumuzu çalıştırıp, bizden istediği bilgileri girelim. Öncelikle, kodumuzun çalışması için gerekli olan extensionları yükleyelim.
 
@@ -84,7 +84,7 @@ az storage account show-connection-string --name storageaccount35623 --resource-
 pip install azure-data-tables
 ```
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 azure-data-tables extension'u pip ile sistemimize yükledik. Şimdi kodumuzu çalıştırıp, testimizi yapabiliriz. Öncelikle, çalıştırdığım kodu aşağıda paylaşıyorum:
 

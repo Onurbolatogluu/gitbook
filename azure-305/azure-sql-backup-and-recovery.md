@@ -25,7 +25,7 @@ Azure SQL veritabanları iki tür yedekleme saklama **Policy**'ını destekler:
 
 Örneğin,&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 * **Weekly LTR Backups**: Bu bölümdeki "90 Days" seçeneği, haftalık yedeklerin 90 gün boyunca saklanacağını belirtir. Yani, sistem her hafta bir yedek alacak ve bu yedekleri en fazla 90 gün saklayacak. 90 günün sonunda, her yeni yedekle birlikte en eski haftalık yedek silinecektir.
 * **Monthly LTR Backups**: "52 Weeks" seçeneği, her ayın ilk yedeğinin 52 hafta (yaklaşık 1 yıl) boyunca saklanacağını belirtir. Böylece, her ayın ilk haftasında alınan yedekler bir yıl (52 hafta) boyunca muhafaza edilir.
