@@ -38,7 +38,7 @@ Azure Service Bus, uygulamalar arasında güvenli ve güvenilir iletişim kurmay
 
 
 
-<figure><img src="../.gitbook/assets/111topic.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Azure Service Bus (1).webp" alt=""><figcaption></figcaption></figure>
 
 * **Topics ve Subscriptions**: pub-sub modelini destekler. Bir konu, birden fazla aboneliği olan bir yayın kanalı gibi düşünülebilir. Göndericiler mesajlarını konuya gönderir ve bu mesajlar daha sonra konuya abone olan tüm alıcılara iletilir. Bu, bir mesajın birden fazla alıcıya dağıtılmasını sağlar.
 
