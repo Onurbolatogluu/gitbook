@@ -2,7 +2,7 @@
 
 ### Azure Queue storage:
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure Queue Storage, hizmetler ve uygulamalar arasında mesajların asenkron olarak iletilmesini sağlayan bir hizmettir.&#x20;
 

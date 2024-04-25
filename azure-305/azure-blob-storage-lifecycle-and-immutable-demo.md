@@ -81,7 +81,7 @@ Her iki politika da "Write Once, Read Many" (WORM) formatında depolama sağlar.
 
 2 - Burada ben 3 adet kural oluşturdum. Fakat bir tane de beraber oluşturalım. Bunun için "Add a rule" butonuna tıklıyoruz.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Rule name: move\_to\_cool\_2
 * Rule scope: Apply rule to all blobs in your storage account

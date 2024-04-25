@@ -247,3 +247,7 @@
 * [🚜 Event Hub](azure-305/event-hub.md)
 * [🥍 Application optimization solution](azure-305/application-optimization-solution.md)
 * [🎁 Application lifecycle](azure-305/application-lifecycle.md)
+* [📺 Azure Monitor](azure-305/azure-monitor.md)
+* [🅱️ Log Analytics](azure-305/log-analytics.md)
+* [👥 Azure workbooks and Insights](azure-305/azure-workbooks-and-insights.md)
+* [🚌 Azure Data Explorer](azure-305/azure-data-explorer.md)
