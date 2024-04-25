@@ -244,3 +244,6 @@
 * [⏰ Azure Site Recovery](azure-305/azure-site-recovery.md)
 * [📩 Differentiate event and message](azure-305/differentiate-event-and-message.md)
 * [✈️ Azure messaging solutions](azure-305/azure-messaging-solutions.md)
+* [🚜 Event Hub](azure-305/event-hub.md)
+* [🥍 Application optimization solution](azure-305/application-optimization-solution.md)
+* [🎁 Application lifecycle](azure-305/application-lifecycle.md)
