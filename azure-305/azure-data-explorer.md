@@ -12,5 +12,5 @@ Kullanım akışı şu şekildedir:
 
 1. İlk adım, verilerinizi saklamak ve analiz etmek için bir Azure Data Explorer kümesi ve veritabanı oluşturmaktır.
 2. Daha sonra, verilerinizi Azure Data Explorer'ye yüklersiniz. Bu veriler, loglar, telemetri verileri veya herhangi bir yapılandırılmamış veri olabilir.
-3. **KQL Kullanarak Veritabanında Sorgulama**: Verilerinizi yükledikten sonra, Kusto Query Language (KQL) kullanarak veritabanınızda sorgular çalıştırabilirsiniz. KQL, verileri analiz etmek ve içgörüler elde etmek için güçlü ve esnek bir sorgu dilidir.
+3. Verilerinizi yükledikten sonra, Kusto Query Language (KQL) kullanarak veritabanınızda sorgular çalıştırabilirsiniz. KQL, verileri analiz etmek ve içgörüler elde etmek için güçlü ve esnek bir sorgu dilidir.
 
