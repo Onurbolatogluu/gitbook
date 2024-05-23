@@ -2,6 +2,10 @@
 
 * [🦁 Başlarken](README.md)
 
+## 🟧 DevOps Pre-Requisite
+
+* [❤️ Why Linux? Linux Basics #1](devops-pre-requisite/why-linux-linux-basics-1.md)
+
 ## 🍎 Kubernetes
 
 * [🍏 Kubernetes: Nedir ?](kubernetes/kubernetes-nedir.md)
