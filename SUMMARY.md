@@ -4,7 +4,8 @@
 
 ## 🟧 DevOps Pre-Requisite
 
-* [❤️ Why Linux? Linux Basics #1](devops-pre-requisite/why-linux-linux-basics-1.md)
+* [❤️ Why Linux? | Linux Basics #1](devops-pre-requisite/why-linux-or-linux-basics-1.md)
+* [💛 Vi Editor | Linux Basics #2](devops-pre-requisite/vi-editor-or-linux-basics-2.md)
 
 ## 🍎 Kubernetes
 
