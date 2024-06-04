@@ -7,7 +7,7 @@
 * [❤️ Why Linux? | Linux Basics #1](devops-pre-requisite/why-linux-or-linux-basics-1.md)
 * [💛 Vi Editor | Linux Basics #2](devops-pre-requisite/vi-editor-or-linux-basics-2.md)
 * [💙 Basics Commands | Linux Basics #3](devops-pre-requisite/basics-commands-or-linux-basics-3.md)
-* [🧡 Package Managers (yum-rpm) | Linux Basics #4](devops-pre-requisite/package-managers-yum-rpm-or-linux-basics-4.md)
+* [🧡 Package Managers | Linux Basics #4](devops-pre-requisite/package-managers-or-linux-basics-4.md)
 
 ## 🍎 Kubernetes
 
