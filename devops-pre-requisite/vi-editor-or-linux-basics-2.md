@@ -20,7 +20,7 @@ VI/Vim editörü, Unix ve Linux sistemlerinde yaygın olarak kullanılan, güçl
 2. Silme (Delete):
    - x: İmleç altındaki karakteri siler.
    - dd: Bulunduğunuz satırı siler.
-   - 5,10d: 5 ile 10 arasındaki satırları siler.
+   - :5,10d: 5 ile 10 arasındaki satırları siler.
 
 3. Kopyalama ve Yapıştırma (Copy &#x26; Paste):
    - yy: Satırı kopyalar.
