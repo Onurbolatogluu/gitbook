@@ -8,6 +8,7 @@
 * [💛 Vi Editor | Linux Basics #2](devops-pre-requisite/vi-editor-or-linux-basics-2.md)
 * [💙 Basics Commands | Linux Basics #3](devops-pre-requisite/basics-commands-or-linux-basics-3.md)
 * [🧡 Package Managers | Linux Basics #4](devops-pre-requisite/package-managers-or-linux-basics-4.md)
+* [💚 Services | Linux Basics #5](devops-pre-requisite/services-or-linux-basics-5.md)
 
 ## 🍎 Kubernetes
 
