@@ -84,7 +84,6 @@ Address: 93.184.216.34
 # Bir alan adının IP adresini öğrenmek için kullanılır.
 dig example.com
 
-
 # Çıktı
 ; <<>> DiG 9.11.3-1ubuntu1.11-Ubuntu <<>> example.com
 ;; global options: +cmd
@@ -103,8 +102,6 @@ example.com.            10368   IN      A       93.184.216.34
 ;; WHEN: Mon Jan 20 14:55:07 UTC 2024
 ;; MSG SIZE  rcvd: 56
 ```
-
-
 
 ```bash
 # Bir IP adresinin hangi alan adına karşılık geldiğini öğrenmek için kullanılır.
