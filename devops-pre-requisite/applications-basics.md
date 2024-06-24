@@ -198,5 +198,30 @@ Bu diyagram, `python hello-world.py` komutunun Python'daki derleme ve yorumlama 
 2. **Derleme (Compilation)**: Kaynak kod, bytecode'a dönüştürülür.
 3. **Yorumlama ve Yürütme (Interpretation and Execution)**: Bytecode, Python VM tarafından yorumlanarak çalıştırılır ve makine koduna dönüştürülür.
 
+***
 
+#### Packages/Modules/Libraries
+
+* **Filesystems**: Dosya sistemleriyle etkileşim kurmayı sağlayan kütüphaneler ve modüller. Örneğin, dosya okuma/yazma işlemleri, dosya ve dizin yönetimi gibi.
+* **Math**: Matematiksel işlemleri gerçekleştirmek için kullanılan modüller ve kütüphaneler. Örneğin, Python'da `math` modülü, gelişmiş matematiksel fonksiyonlar sağlar.
+* **Operating System**: İşletim sistemi ile etkileşimi kolaylaştıran modüller. Örneğin, `os` modülü ile Python'da dosya sistemine ve işletim sistemi düzeyinde işlevlere erişilebilir.
+* **HTTP**: HTTP protokolü üzerinden web istekleri yapmak ve yanıtları işlemek için kullanılan kütüphaneler. Örneğin, Python'da `requests` modülü.
+* **Security**: Güvenlik ile ilgili işlemleri gerçekleştiren kütüphaneler. Örneğin, encrypt işlemleri için kullanılan kütüphaneler.
+* **Networking**: Ağ ile ilgili işlemleri gerçekleştirmek için kullanılan kütüphaneler. Örneğin, socket programlama için kullanılan modüller.
+
+{% hint style="info" %}
+* **Modül**: Tek bir `.py` dosyası, belirli işlevler için fonksiyonlar ve sınıflar içerir.
+* **Paket**: İlgili modüllerin bir koleksiyonu, genellikle bir klasör içinde düzenlenir.
+* **Kütüphane**: Belirli bir amaca yönelik kapsamlı araçlar sunan birçok modül ve paketin birleşimi.
+{% endhint %}
+
+#### Build
+
+Bu bölümde, yazılımın derlenmesi (build) süreci hakkında bilgi verilmektedir. Bir yazılımın derlenmesi, kaynak kodun çalıştırılabilir bir forma dönüştürülmesi sürecidir.
+
+* **Compile**: Kaynak kodun makine diline veya bytecode'a dönüştürülmesi işlemi. Örneğin, Java'da `javac` komutu ile kaynak kod derlenir.
+* **Run Tests**: Derlenen kodun çalıştırılarak test edilmesi. Bu aşama, yazılımın beklenildiği gibi çalışıp çalışmadığını kontrol eder.
+* **Package**: Derlenen ve test edilen yazılımın paketlenmesi. Paketleme, yazılımın dağıtılabilir bir forma getirilmesidir.
+* **Delivery**: Paketlenmiş yazılımın son kullanıcılara veya hedef ortama teslim edilmesi süreci.
+* **Check build procedure for different types of applications**: Farklı türdeki uygulamalar için derleme prosedürlerinin kontrol edilmesi.
 
