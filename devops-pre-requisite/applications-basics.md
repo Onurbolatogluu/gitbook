@@ -121,7 +121,7 @@ if __name__ == '__main__':
 
 2 - **Derleme (Compilation):**
 
-Python'da kaynak kod, bir derleyici tarafından **ara kod** olarak adlandırılan bir biçime dönüştürülür. Bu ara kod, makine tarafından doğrudan yürütülemez ancak yorumlayıcı tarafından okunabilir. Bu ara kod genellikle **bytecode** olarak adlandırılır.
+Python'da kaynak kod, bir derleyici tarafından **ara kod** olarak adlandırılan bir biçime dönüştürülür. Bu ara kod, makine tarafından doğrudan yürütülemez ancak yorumlayıcı tarafından okunabilir. Bu ara kod **bytecode** olarak adlandırılır.
 
 Ara Kod (Intermediary Bytecode),
 
