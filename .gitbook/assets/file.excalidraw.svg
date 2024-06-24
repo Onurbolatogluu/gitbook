@@ -1,0 +1,21 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.7778015136719 230.00001525878906" width="267.7778015136719" height="230.00001525878906">
+  <!-- svg-source:excalidraw -->
+  <!-- payload-type:application/vnd.excalidraw+json --><!-- payload-version:2 --><!-- payload-start -->eyJ2ZXJzaW9uIjoiMSIsImVuY29kaW5nIjoiYnN0cmluZyIsImNvbXByZXNzZWQiOnRydWUsImVuY29kZWQiOiJ4nH1SzY7bIFx1MDAxOLznKSzvtfJcdTAwMDJcdTAwMGXGzrG7VZXLSlVcdTAwMGWtWu2BXHUwMDE41kYmYFx1MDAwMUk2XeXdXHUwMDBiJDFupNaWkJjvb+ZjPlx1MDAxNlmWu9PI81WW8/eWSsFcZj3mn1x1MDAwMn7gxlxurXxcYsW71XvTxszeudGuXHUwMDFlXHUwMDFm6ThcdTAwMTadcFuth6LVu0tcdTAwMTmXfMeVsz7xl79n2Uc8Z4NcZm9cdTAwMWRVneSxIIZms+p78EWrOHZZ4Vx1MDAwNtawJlOCsM9+muPMR9+otDxFXHUwMDAylKP1+if58dwz9pU2h29IypctSEPfhJRcdTAwMWJ3kpGU1V57illn9MC/XHUwMDBi5vrbXHUwMDAyZvi/qozed73iNoiHXHUwMDEzqkfaXG53XG5cdTAwMThcdTAwMDBcdTAwMTN62cAqS8h7mIRJXHUwMDAxYVxyMEFcdTAwMTg0pMLVXHUwMDE0XHUwMDBlXHJcdTAwMTBERUXKXG4uMYBcci7hPbMnLbVcdMxcdTAwMWUgXHUwMDBmf+K2pe3QeYKKTTnOUGVHavxzpbzjTTMgXHUwMDA1IaRcdTAwMDZcdTAwMTDDslwisE5cdTAwMGbTc9H1LughoFx1MDAwMP6DXHUwMDE44ZrUXHJIbC2Pz+JcdFdcdTAwMDQ1pGymSCAxrlk0yGt6XGZDd3xcdTAwMWRK1F7K+UZcdTAwMTW7bvRmpGSl8oqck8qQ/2VmwTRhPzJ68VxuJLBB3kpLXHUwMDA0Z4ylUMP9eKnbIdkromd/xqa5t//G+ZZcdTAwMTM1L02wjfjN/2qTXHUwMDFmXHUwMDA0P37+//ZcdTAwMTdXXHLBkzxqPS/Of1x1MDAwMPgk7WoifQ==<!-- payload-end -->
+  <defs>
+    <style class="style-fonts">
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://unpkg.com/@excalidraw/excalidraw@undefined/dist/excalidraw-assets/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://unpkg.com/@excalidraw/excalidraw@undefined/dist/excalidraw-assets/Cascadia.woff2");
+      }
+      @font-face {
+        font-family: "Assistant";
+        src: url("https://unpkg.com/@excalidraw/excalidraw@undefined/dist/excalidraw-assets/Assistant-Regular.woff2");
+      }
+    </style>
+    
+  </defs>
+  <rect x="0" y="0" width="267.7778015136719" height="230.00001525878906" fill="transparent"/><g stroke-linecap="round" transform="translate(30 30) rotate(0 103.88890075683594 85.00000762939453)"><path d="M32 0 C75.41 -1.39, 119.74 0.3, 175.78 0 M32 0 C74.66 1.31, 116.66 0.97, 175.78 0 M175.78 0 C197.25 1.1, 207.61 9.78, 207.78 32 M175.78 0 C195.97 -1.94, 205.77 10.37, 207.78 32 M207.78 32 C207.46 64.93, 206.72 100.06, 207.78 138 M207.78 32 C209.21 55, 207.77 76.65, 207.78 138 M207.78 138 C207.58 157.39, 197.55 168.88, 175.78 170 M207.78 138 C206.16 160.78, 199.32 169.63, 175.78 170 M175.78 170 C139.15 172.2, 103.94 168.73, 32 170 M175.78 170 C133.26 168.8, 88.64 168.86, 32 170 M32 170 C8.83 168.13, 0.48 157.78, 0 138 M32 170 C9.29 170.49, 2.29 160.24, 0 138 M0 138 C1.31 104.16, 2.66 70.96, 0 32 M0 138 C-1.45 115.64, -1.02 91.43, 0 32 M0 32 C0.06 10.5, 10.53 0, 32 0 M0 32 C0.73 11.35, 11.42 -0.7, 32 0" stroke="#1e1e1e" stroke-width="2" fill="none"/></g></svg>
