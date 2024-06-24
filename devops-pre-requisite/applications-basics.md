@@ -217,7 +217,7 @@ Bu diyagram, `python hello-world.py` komutunun Python'daki derleme ve yorumlama 
 
 #### Build
 
-Bu bölümde, yazılımın derlenmesi (build) süreci hakkında bilgi verilmektedir. Bir yazılımın derlenmesi, kaynak kodun çalıştırılabilir bir forma dönüştürülmesi sürecidir.
+Bir yazılımın derlenmesi, kaynak kodun çalıştırılabilir bir forma dönüştürülmesi sürecidir.
 
 * **Compile**: Kaynak kodun makine diline veya bytecode'a dönüştürülmesi işlemi. Örneğin, Java'da `javac` komutu ile kaynak kod derlenir.
 * **Run Tests**: Derlenen kodun çalıştırılarak test edilmesi. Bu aşama, yazılımın beklenildiği gibi çalışıp çalışmadığını kontrol eder.
