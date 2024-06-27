@@ -13,6 +13,7 @@
 * [🤎 DNS Basics](devops-pre-requisite/dns-basics.md)
 * [🩶 Applications Basics](devops-pre-requisite/applications-basics.md)
 * [🟨 Java introduction](devops-pre-requisite/java-introduction.md)
+* [🟩 NodeJS Introduction](devops-pre-requisite/nodejs-introduction.md)
 
 ## 🍎 Kubernetes
 
