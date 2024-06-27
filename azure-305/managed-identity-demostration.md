@@ -1,6 +1,6 @@
 # 🚦 Managed identity Demostration
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Azure Managed Identity, Azure kaynaklarınıza kimlik doğrulama ve yetkilendirme işlemlerini basitleştirmek için kullanılan bir Azure hizmetidir. Azure kaynaklarınızın (örneğin VM'ler, App Services veya Function Apps gibi) diğer Azure hizmetlerine güvenli bir şekilde erişmesini sağlar. Managed Identity, iki ana türde sunulur: System Assigned ve User Assigned.
 
@@ -82,7 +82,7 @@ Bu demoda, bir Azure VM'nin System Assigned Managed Identity kullanarak Azure St
 
 
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 apt update -y && apt upgrade -y && sudo apt install python3 -y && apt install python3-pip -y
@@ -99,7 +99,7 @@ pip install azure-identity
 
 
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Adım 3:** Storage Account oluşturup ve içerisine blob container oluşturuyoruz. Test için içerisine 3 adet dosya upload ediyoruz.
 
