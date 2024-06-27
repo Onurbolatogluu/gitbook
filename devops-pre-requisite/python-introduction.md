@@ -120,6 +120,29 @@ Pip ile kurulan paketler, Python'ın kurulumuna ve işletim sistemine bağlı ol
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
+***
+
+***
+
+`sys.path`, Python'un modül aramak için kullandığı dizinlerin bir listesidir. Python bir modülü içe aktardığında, önce bu listede yer alan dizinlerde arar. Bu liste, Python'un hangi dizinlerde modül aradığını ve hangi yolların Python tarafından kullanıldığını gösterir.
+
+```bash
+python3 -c "import sys; print(sys.path)"
+```
+
+<figure><img src="../.gitbook/assets/image (309).png" alt=""><figcaption></figcaption></figure>
+
+* **Boş Dize (`''`)**: Geçerli çalışma dizinini temsil eder.
+* **`/usr/lib/python310.zip`**: Python modüllerinin sıkıştırılmış bir dosyada bulunduğu yeri temsil eder.
+* **`/usr/lib/python3.10`**: Python'un kurulu olduğu dizin ve standart kütüphaneler.
+* **`/usr/lib/python3.10/lib-dynload`**: Dinamik olarak yüklenebilir modüller.
+* **`/usr/local/lib/python3.10/dist-packages`**: Kullanıcı tarafından yüklenen paketlerin bulunduğu yer.
+*   **`/usr/lib/python3/dist-packages`**: Sistem paket yöneticisi tarafından yüklenen Python paketleri.
+
+
+
+
+
 #### requirements.txt,
 
 `requirements.txt` dosyası, Python projelerinde kullanılan ve projeye bağımlı olan tüm paketlerin ve bu paketlerin sürümlerinin listesini içeren bir dosyadır. Bu dosya, projeyi başka bir ortama taşırken veya başka bir geliştiricinin projeyi çalıştırması gerektiğinde, projeye gerekli tüm bağımlılıkların kolayca kurulmasını sağlar.&#x20;
