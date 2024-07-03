@@ -15,6 +15,7 @@
 * [🟨 Java introduction](devops-pre-requisite/java-introduction.md)
 * [🟩 NodeJS Introduction](devops-pre-requisite/nodejs-introduction.md)
 * [🟦 Python Introduction](devops-pre-requisite/python-introduction.md)
+* [🟪 GIT Introduction](devops-pre-requisite/git-introduction.md)
 
 ## 🍎 Kubernetes
 
