@@ -17,6 +17,7 @@
 * [🟦 Python Introduction](devops-pre-requisite/python-introduction.md)
 * [🟪 GIT Introduction](devops-pre-requisite/git-introduction.md)
 * [🟧 Apache Web Server Introduction](devops-pre-requisite/apache-web-server-introduction.md)
+* [⬛ Apache Tomcat](devops-pre-requisite/apache-tomcat.md)
 
 ## 🍎 Kubernetes
 
