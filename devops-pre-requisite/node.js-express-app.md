@@ -4,8 +4,6 @@ Node.js Express App, Node.js üzerinde çalışan bir web uygulama framework'ü 
 
 Node.js uygulamalarının processlerini yönetmek için, aşağıda yer alan popüler araçları kullanabilirsiniz.
 
-*
-
 {% code title="app.js" %}
 ```javascript
 const express = require('express');
