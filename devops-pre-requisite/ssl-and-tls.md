@@ -1,4 +1,4 @@
-# 🔺 SSL & TLS
+# 🟨 SSL & TLS
 
 #### Symmetric Encryption:
 
