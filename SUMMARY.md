@@ -23,7 +23,7 @@
 * [🟨 Databases](devops-pre-requisite/databases.md)
 * [🟩 MySQL](devops-pre-requisite/mysql.md)
 * [🟪 MongoDB](devops-pre-requisite/mongodb.md)
-* [Page 1](devops-pre-requisite/page-1.md)
+* [🔺 SSL & TLS](devops-pre-requisite/ssl-and-tls.md)
 
 ## 🍎 Kubernetes
 
