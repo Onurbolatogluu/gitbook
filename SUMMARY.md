@@ -22,6 +22,7 @@
 * [🟥 Node.js Express App](devops-pre-requisite/node.js-express-app.md)
 * [🟨 Databases](devops-pre-requisite/databases.md)
 * [🟩 MySQL](devops-pre-requisite/mysql.md)
+* [🟪 MongoDB](devops-pre-requisite/mongodb.md)
 
 ## 🍎 Kubernetes
 
