@@ -20,6 +20,7 @@
 * [⬛ Apache Tomcat](devops-pre-requisite/apache-tomcat.md)
 * [🟫 Python Flask](devops-pre-requisite/python-flask.md)
 * [🟥 Node.js Express App](devops-pre-requisite/node.js-express-app.md)
+* [🟨 Databases](devops-pre-requisite/databases.md)
 
 ## 🍎 Kubernetes
 

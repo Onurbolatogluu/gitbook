@@ -1,10 +1,10 @@
 # 🕯️ Database availability
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Standard Model – General Purpose / Standard / Basic
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Topoloji, Azure region içinde bir uygulamanın mimari yapısını göstermektedir. Uygulamadan gelen veritabanı istekleri, Control ring üzerinden yük dengeleyicilere (GW) yönlendirilir. İstekler, birincil replika üzerinden işlenir. Eğer birincil replika kullanılamaz hale gelirse yapılandırılmış failover mekanizmaları devreye girer ve yedek nodelardan biri birincil replika olarak devreye alınır.&#x20;
 

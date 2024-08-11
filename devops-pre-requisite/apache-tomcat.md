@@ -1,6 +1,6 @@
 # ⬛ Apache Tomcat
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Apache Software Foundation tarafından geliştirilen Tomcat, dinamik Java tabanlı web uygulamalarını çalıştırmak için yaygın olarak kullanılır.
 

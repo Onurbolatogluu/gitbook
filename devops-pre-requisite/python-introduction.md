@@ -118,7 +118,7 @@ Pip ile kurulan paketler, Python'ın kurulumuna ve işletim sistemine bağlı ol
 
 `pip show package_name`
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 

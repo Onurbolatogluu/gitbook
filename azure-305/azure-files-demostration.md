@@ -64,7 +64,7 @@ Aşağıdaki komutu kullanarak, Azure'da "demoaccountforshare" adında bir Premi
 az storage account create --name demoaccountforshare1 --resource-group rg-fileshare-demo-001 --location westeurope --sku Premium_LRS --kind FileStorage
 ```
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Adım 2: Paylaşım oluşturma
 
