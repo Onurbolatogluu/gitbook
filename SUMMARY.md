@@ -21,6 +21,7 @@
 * [🟫 Python Flask](devops-pre-requisite/python-flask.md)
 * [🟥 Node.js Express App](devops-pre-requisite/node.js-express-app.md)
 * [🟨 Databases](devops-pre-requisite/databases.md)
+* [🟩 MySQL](devops-pre-requisite/mysql.md)
 
 ## 🍎 Kubernetes
 
