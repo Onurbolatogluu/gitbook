@@ -25,6 +25,7 @@
 * [🟪 MongoDB](devops-pre-requisite/mongodb.md)
 * [🟨 SSL & TLS](devops-pre-requisite/ssl-and-tls.md)
 * [🟦 YAML & JSON - JSON Path](devops-pre-requisite/yaml-and-json-json-path.md)
+* [⬛ Labs Resources](devops-pre-requisite/labs-resources.md)
 
 ## 🍎 Kubernetes
 
