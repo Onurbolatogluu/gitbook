@@ -2,6 +2,10 @@
 
 * [🦁 Başlarken](README.md)
 
+## 🛠️ Others
+
+* [Google Cloud Directory Sync ( GCDS )](others/google-cloud-directory-sync-gcds.md)
+
 ## 🟧 DevOps Pre-Requisite
 
 * [❤️ Why Linux? | Linux Basics #1](devops-pre-requisite/why-linux-or-linux-basics-1.md)
