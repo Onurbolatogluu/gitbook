@@ -4,8 +4,6 @@ icon: google
 
 # Google Cloud Directory Sync ( GCDS )
 
-<figure><img src="../.gitbook/assets/1_NLyhaKsf48o6GfCteeeWOA.png" alt=""><figcaption></figcaption></figure>
-
 ### Nedir?
 
 Google Cloud Directory Sync ( GCDS ) Google Workspace ile yerel kullanıcı dizininizi ( AD veya LDAP ) senkronize etmenizi sağlar. GCDS, kullanıcılar, gruplar, takma adlar (alias) ve paylaşılan kişileri google hesabınız ile eşleştirir. Kurallar ve hariç tutmalarla özelleştirilebilir. Tek yönlü senkronizasyon yapar ve LDAP sunucusundaki verileri değiştirmez. Senkronizasyon sonrası raporlar sağlar.
