@@ -93,7 +93,82 @@ Bir kişi 'user@gmail.com' gibi kişisel bir google hesabı kullanır. Bu hesap,
 
 {% embed url="https://support.google.com/a/answer/6178640?sjid=7451417005967322826-EU" %}
 
+### Adım Adım Ön hazırlık ve Kontroller;
 
+* LDAP sunucunuzun yapısı hakkında bilgi toplamak için bir LDAP tarayıcı indirip, yükleyin. Örneğin Softerra LDAP Administrator veya JXplorer gibi araçları kullanabilirsiniz. LDAP tarayıcıları, LDAP dizininizdeki kullanıcılar, gruplar ve diğer nesneler hakkında bilgi toplamanıza ve bunları incelemenize olanak tanır. Bu araçları kullanarak, LDAP sunucunuzun yapısını daha iyi anlayabilir ve yönetebilirsiniz.
+* LDAP sunucuya bağlantı sağlamak için kullanılan hostname adı veya IP adresi gerekli.
+* Standart LDAP bağlantısı mı, yoksa SSL üzerinden LDAP bağlantısı mı kullanmamız gerektiğini belirlemeliyiz.
+* GCDS 'in LDAP sunucusundaki kullanıcı ve grup bilgilerini senkronize edebilmesi için, LDAP sunucuda okuma izinlerine sahip bir hesap oluşturması veya varsa mevcut bir sınırlı izinlere sahip yönetici hesabı kullanabiliriz. Bu hesap, GCDS 'in gerekli verileri okuyabilmesini sağlar. Eğer sadece belirli kullanıcıları ve grupları senkronize etmek istiyorsak, bu hesap için ouma izinlerini sınırlandırabiliriz.
+* GCDS, sadece tek bir LDAP dizininden veri alabilir. Birden fazla LDAP dizini varsa, LDAP sunucusu verilerini tek bir dizinde birleştirmeliyiz.
+* Tam bir senkronizasyon yapmadan önce, bunu kapsamlı bir şekilde test etmeliyiz (simülasyon yaparak). Bunun nedeni global katalogdan gelen verilerin ana LDAP dizinindeki verilerden farklı olabilme ihtimalidir. Bu farklılıklar senkronizasyon işleminde sorunlara yol açabilir.
+* GCDS, LDAP sorguları için temel DN'yi (Base DN) en üst düzey olarak kullanır. GCDS kullanıcıları ve grupları bu temel DN 'den arar, bu yüzden senkronize etmek istediğiniz kullanıcılar ve grupları içeren bir düzeyde temel DN belirltmeliyiz.
+  * Bir yapılandırmada birden fazla temel DN kullanabiliriz. Her senkronizasyon kuralı için ayrı bir temel DN belirtebiliriz.
+* Senkronize etmek istediğimiz kullanıcılar ve gruplar için hangi bilgileri önemli olduğunu belirtmek gerekiyor. Bu bilgiler LDAP dizininde "öznitelik" olarak adlandırılır. Öznitelikler, kullanıcı adı, e-posta adresi, telefon numarası gibi bilgiler içerir. Bu bilgileri bulmak için, bir LDAP tarayıcı kullanarak LDAP dizini incelenmelidir. Yani, LDAP dizininde örnek kullanıcıları ve grupları açıp, hangi bilgilerin orada bulunduğunu ve hangi bilgilerin senkronize edilmesi gerektiğini kontrol etmeliyiz. Örneğin, bu kullanıcı hangi grupta? Bu kullanıcının e-posta adresi ne? gibi soruları cevaplamaya çalışmalıyız ki bu adım senkronize etmek istediğimiz bilgileri netleştirmek içindir.
+* Şİrket içerisinde belirli kullanıcıları veya kaynakları yöneten gruplar vardır. Bu gruplar security group olarak geçer. Bu gruplar genellikle belirli yetkilere veya güvenlik ayarlarına sahip kullanıcıları içerir. Senkronizasyon sırasında bu grupların da Google Workspace 'e aktarılmasını istiyorsanız, hani grupların senkronize etmek istediğinizi belirlemek gerekir. Bu grupların Google Workspace ile doğru bir şekilde senkronize olabilmesi için, her grubun kendi benzersiz bir e-posta adresi olmalıdır. Örneğin, "Güvenlik Grubu 1" adında bir grubumuz varsa, bu grubun "securitygroup1@domain.com" gibi bir benzersiz e-posta adresine sahip olması gerekir. Bu e-posta adresi, grubun Google Workspace 'de doğru bir şekilde tanınmasını ve senkronize edilmesini sağlar. Özetle, senkronize etmek istediğiniz güvenlik gruplarının her biri için benzersiz bir e-posta adresi ayarlamak gerekmektedir.
+* LDAP içerisinde deskteklenmeyen karakterler olmadığından emin olunmalı. [https://support.google.com/a/answer/9193374?sjid=7451417005967322826-EU](https://support.google.com/a/answer/9193374?sjid=7451417005967322826-EU)
+
+
+
+Senkronizasyon yapmadan önce aşağıdaki adımlardan ilham alarak kullanıcıları işaretleyebiliriz.
+
+* LDAP dizininde, Google ile senkronize etmeyi planladığımız kullanıcıları belirlemek için onlara  "GoogleUsers" gibi özel bir isim veya etiket vermeliyiz. Senkronizasyon işlemi başarılı bir şekilde tamamlandıktan sonra, bu kullanıcıları "GoogleActiveUsers" gibi farklı bir isimle etiketleyerek aktif Google kullanıcılarını ayırt edebiliriz. Bu şekilde, hangi kullanıcıların Google ile senkronize edildiğini ve aktif olarak kullanıldığını takip ederiz.
+* LDAP üzerinde bir OU oluşturup ve taşınacak kullanıcıları bu OU altına taşıyabiliriz. GCDS 'i yalnızca bu grubun üyelerini okuyacak şekilde ayarlayabiliriz.
+* Taşınacak kullanıcılar için, özel bir öznitelik oluşturup ve bu özniteliği yeni kullanıcılar için ayarlayabilir ardından GCDS 'yi yanlızca bu özniteliğe sahip kullanıcıları okuyacak şekilde ayarlayabiliriz.
+
+#### Hangi Kullanıcı Verileri Senkronize Edilmeli?
+
+* Kullanıcılar: LDAP dizininizdeki kullanııcları bir LDAP tarayıcı kullanarak gözden geçirmeliyiz ve doğru sayıda kullanıcıyı sync ettiğimizden emin olmalıyız. Lisans sayısından fazla kullanıcı içe aktarırsak, senkronizasyon sırasında hatalarla karşılaşabiliriz.
+* Kullanıcı Profilleri: Eğer LDAP dizininizde adresler, telefon numaraları veya diğer iletişim bilgileri gibi ek bilgiler varsa, bu bilgileri de senkronize edebiliriz.
+* Aliases: LDAP dizininde takma ad özniteliklerini Google adres takma adlarına senkronie edebiliriz.
+* Unique ID:  Eğer kullanıcıların kullanıcı adlarını (e-posta adreslerini) değiştirme olasılığı varsa, senkronizasyonu ayarlamadan önce bir "Unique ID" özniteliği oluşturulmalı (varsa gerek yok). Bu, kullanıcı bilgileri kaybolmadan e-posta değişikliği yapabilmemizi sağlar. Bu ayarlama yapılmazsa, sistem o kullanıcıyı yeni bir kullanıcı olarak algılar ve aynı kullanıcı için yeni bir hesap oluşturabilir. Bu durumda eski hesapta yer alan veriler kaybolabilir. Unique ID ile, kullanıcı e-posta aresi değişse bile,  kullanıcının tüm verilerini koruyarak aynı kişi olarak tanımasını sağlar.
+
+
+
+* LDAP sunucudan Google hesabına senkronize etmek istediğiniz mailing list'leri belirlemek gerekmektedir. LDAP sunucusundaki mailing listler, Google hesabında gruplar olarak içe aktarılır.
+* Bazı mailing listeleri doğrudan e-posta adresi içerir ve şu formatta olabilir: 'user@example.com' Bazıları ise tanımlanmış isim (DN) referansı içerir ve şu formatta olabilir `cn=Terri Smith,ou=Executive Team,dc=example,dc=com`."
+*   Mailing listelerini Google hesabında korumak istersek,
+
+    * Mailing listelerinin üyelerini içeren öznitelik (genellikle 'member veya 'MailAddress' özniteliği) bulun.
+    * LDAP' üzerinde mailing listesi için kullanılan özniteliğin bir e-posta adresi mi yoksa bir DN mi içerdiğini öğrenin.
+
+
+
+**Organizasyon Yapısı**
+
+* &#x20;**Varsayılan olarak**, GCDS (Google Cloud Directory Sync), tüm kullanıcıları tek bir düz yapı içinde senkronize eder. Bu, küçük bir organizasyonunuz varsa veya tüm kullanıcıların aynı ayar ve haklara sahip olmasını istiyorsanız işe yarar. Ayrıca, daha büyük bir yayılımdan önce küçük bir grup üzerinde test yapıyorsanız da uygundur.
+* Eğer Google Hesabınızda bir OU hiyerarşisi kullanmak istiyorsanız, organizasyon hiyerarşisini LDAP dizin sunucunuzdan Google Hesabınıza senkronize edebilirsiniz. Bunu yapmadan önce, LDAP tarayıcı ile OU 'ları gözden geçirin ve doğru yapıyı senkronize ettiğinizden emin olun. Örneğin, yazıcılar için özel bir OU olabilir ve bu birimi Google Hesabınıza aktarmak istemeyebilirsiniz.
+* Eğer OUları Google Hesabınızda manuel olarak oluşturmak isterseniz, bunları Google'da ayarlayabilir ve ardından GCDS'yi kullanıcıları mevcut organizasyonlara taşıyacak şekilde yapılandırabilirsiniz. Mevcut organizasyonları değiştirmeden bu seçeneği ayarlamak için Configuration Manager'da **Org Units** sayfasını seçin. Her kullanıcı arama kuralı için, kullanıcıların hangi organizasyona ait olacağını veya uygun organizasyonun adını içeren bir LDAP özniteliğini belirtin.
+
+#### Parolaları Nasıl Senkronize Ediliyor?
+
+* GCDS, sınırlı sayıda parola işlemini destekler. Parolaları yalnızca düz metin (plain text), Base64, MD5 veya SHA-1 gibi ek güvenlik katmanları (salt) eklenmemiş formatlarda depolayan bir LDAP özniteliğinden içe aktarabilir. Daha karmaşık şifreleme yöntemleriyle korunmuş parolalar desteklenmez.
+
+### Google Cloud Directory Sync (GCDS) ile Neler Senkronize Edilebilir?
+
+#### **Gruplar ve Organizasyon Birimleri**
+
+* **Organizational Units:** LDAP dizinindeki organizasyon birimlerini Google Hesabınıza senkronize edebilirsiniz.
+* **Mailing Lists**: LDAP'taki posta listeleri, Google Grupları olarak senkronize edilebilir.
+* **Desteklenmeyen Özellikler**: GCDS, güvenlik gruplarını (security groups) senkronize etmez. LDAP'taki bir güvenlik grubu, Google'da normal bir grup olarak senkronize edilir.
+
+#### **Kullanıcılar**
+
+* **Kullanıcılar**: LDAP dizinindeki kullanıcılar, Google Hesabınıza senkronize edilebilir. Bu senkronizasyona yönetici yetkilerine sahip kullanıcılar da dahildir.
+* **User Aliases**: Birden fazla kullanıcı takma adını Google e-posta takma adları olarak senkronize edebilirsiniz.
+* **Extended User Information**: Telefon numaraları, adresler ve diğer LDAP bilgileri Google kullanıcı profiline senkronize edilebilir.
+
+#### **Takvim**
+
+* **Odalar ve Diğer Takvim Kaynakları**: Toplantı odaları gibi takvim kaynakları, Google Takvim kaynakları olarak senkronize edilebilir.
+
+#### **Kişiler**
+
+* **Shared Contacts**: LDAP dizinindeki paylaşılan harici kişiler, Google Hesabınıza senkronize edilebilir.
+* **Desteklenmeyen Özellikler**: GCDS, kişisel kişileri senkronize etmez. Kişisel kişiler için alternatif bir geçiş aracı kullanılması gereklidir.
+
+#### **Parolalar**
+
+* **Parolalar**: LDAP dizinindeki parolalar Google Hesabınıza senkronize edilebilir, ancak GCDS tüm parola formatlarını desteklemez. Eğer Microsoft Active Directory kullanıyorsanız, parolaları Password Sync aracı ile senkronize edebilirsiniz.
 
 ***
 
@@ -104,3 +179,5 @@ Bir kişi 'user@gmail.com' gibi kişisel bir google hesabı kullanır. Bu hesap,
 {% embed url="https://support.google.com/a/answer/6152425?sjid=7451417005967322826-EU" %}
 
 {% embed url="https://support.google.com/a/answer/106368?hl=en&ref_topic=2679497&sjid=7451417005967322826-EU" %}
+
+{% embed url="https://support.google.com/a/answer/6126578?hl=en&ref_topic=6126585&sjid=17751314726558257934-EU" %}
