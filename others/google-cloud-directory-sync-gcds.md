@@ -53,3 +53,54 @@ GCDS, e-posta mesajları, takvim etkinlikleri veya dosyalar gibi içerikleri Goo
 * Eğer LDAP dizinimizde bulunmayan, ancak Google Workspace'te mevcut olan kullanıcı hesapları veya gruplar varsa, bu hesapların silinmesini önlemek için **dışlama (exclude) kuralları** kullanmalıyız. Bu kurallar, belirli kullanıcı veya grupların senkronizasyon sırasında silinmemesini sağlar.&#x20;
 * Eğer LDAP dizinimizdeki bazı kullanıcı veya grupların Google hesabına senkronize edilmesini istemiyorsak, bu verileri hariç tutmak için **odaklanmış arama kurallarını** kullanabiliriz. Bu kurallar, belirli kullanıcıları veya grupları seçerek senkronizasyon dışında bırakmamızı sağlar.
 
+### Gereksinimler,
+
+#### Google Hesabı
+
+* Google hesabı veya Cloud identity hesabı.
+* Bir Google Workspace veya Cloud identity süper yönetici hesabı.
+* GCDS Windows Client ve Server sürümlerini destekler.
+* Linux Desktop 32 ve 64 bit sürümlerini destekler. (GUI Şart)
+
+#### Donanım Gereksinimleri
+
+* Minimum 2 çekirdekli bir işlemci.
+* Log dosyaları için en az 5 GB disk alanı.
+* Ram mikrarı, verilerin boyutuna bağlıdır.
+  * 10.000'den az varlık: 1 GB RAM
+  * 10.000-200.000 varlık: 2-4 GB RAM
+  * 200.000'den fazla varlık 8 GB RAM
+
+NOT: Memory kullanımı bu süreç zarfında dikkatli bir şekilde takip edilmelidir.
+
+#### LDAP Sunucusu
+
+* AZURE AD desteklemez, eğer AZURE AD ile senkronizasyon yapmak istiyorsanız Directory Sync kullanılmalıdır.
+* Tüm LDAP sürümleri desteklenir. Aşağıdaki bilgilere ihtiyacımız olacak;
+  * LDAP sunucu üzerinde, LDAP yönetici erişimi.
+  * LDAP sunucusuna ağ erişimi. (GCDS 'yi LDAP sunucunuzda çalıştırmanız gerekmez)
+  * Senkronize etmek istediğiniz OU 'lar için, LDAP sunucusunda okuma izinleri gerekli.
+  * LDAP üzerinde verileri incelemek ve teyit etmek için LDAP tarayıcısına ihtiyaç gerekli.
+  * GCDS 'nin LDAP üzerinde bulunan bilgilere ve verilere erişimi olmaldır.
+
+
+
+### Yönetilmeyen Hesaplar Hakkında,
+
+Bir kişi 'user@gmail.com' gibi kişisel bir google hesabı kullanır. Bu hesap, google tarafından yönetilir ve kişisin kontrolündedir. Ancak bu kişi, şirketinizin alan adını kullanarak örneğin 'user@domain.com' gibi bir google hesabı oluşturmuş olabilir. Bu hesap, şirketin Google workspace yönetiminden bağımsız olarak oluşturulmuş olur. Bu durumda, 'user@domain.com' adresi ile açılan Google hesabı, şirketinizin Workspace yöneticileri tarafından kontrol edilemez ve yönetilemez. Bu nedenle bu tür hesaplar "Yönetilemeyen hesaplar" olarak adlandırılır.
+
+Özetle, yönetilemeyen hesaplar demek, bir kişisinin şirketin alan adıyla açtığı Google hesabının, şirketin Workspace yöneticileri tarafından kontrol edilmediği anlamına gelir. Bu hesaplar kişisel hesaplardır ve şirket tarafından yönetilmezler. Bu sorunu çözmek işin 2 adet yol bulunmaktadır. BKNZ:&#x20;
+
+{% embed url="https://support.google.com/a/answer/6178640?sjid=7451417005967322826-EU" %}
+
+
+
+***
+
+***
+
+{% embed url="https://support.google.com/a/answer/6258071?sjid=7451417005967322826-EU#user&zippy=%2Cuser-attribute-settings" %}
+
+{% embed url="https://support.google.com/a/answer/6152425?sjid=7451417005967322826-EU" %}
+
+{% embed url="https://support.google.com/a/answer/106368?hl=en&ref_topic=2679497&sjid=7451417005967322826-EU" %}
