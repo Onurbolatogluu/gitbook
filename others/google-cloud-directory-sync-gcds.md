@@ -32,3 +32,24 @@ GCDS, e-posta mesajları, takvim etkinlikleri veya dosyalar gibi içerikleri Goo
 4. GCDS, bu listeleri karşılaştırır ve Google hesabımızı LDAP sunucumuzdaki verilerle eşleşecek şekilde günceller.
 5. Senkronizasyondan sonra, süreci izleyebilmemiz için bir e-posta raporu alırısınız.
 
+
+
+### GCDS Ön Hazırlık,
+
+* Ram miktarına dikkat edilmeli. Eğer LDAP dizininden çok sayıda varlık senkronize etmeyi planlıyorsak, ram kullanımı burada önemli olacaktır.
+* GCDS 'nin kullanıldığı makinenin güvenliğinden emin olmak gerekmektedir. Yetkisiz olmayan dış kullanıcıların sunucu'ya bağlantı kurmaması gerekmektedir.
+* LDAP verilerinizin hazır olduğundan emin olduktan sonra; ayarlarınızdan emin olmak için senkronizasyon simülasyonu çalıştırılmalıdır. Ardından, Google hesabınıza güncellemeleri aktarmak için gerçek bir senkronizasyon çalıştırılmaldır.
+* GCDS senkronizasyonu yapmadan önce, yönetilmeyen kulanıcıları tespit etmeniz gerekmektedir ve gerekirse bu kullanıcılara kuruluşunuzun alan adı için davet göndermeniz gerekir. Kullanıcılar bu davetle kendi kişisel Gmail hesaplarını organizasyonunuzun yönetilen Google hesabına (yani Google Workspace hesabına) transfer edebilirler. Bu transfer işlemi, senkronizasyon sırasında bu kullanıcıların hesaplarıyla çakışan yeni hesaplar oluşturulmasını engeller.
+
+### Hesapları Yönetme,
+
+* LDAP dizininizde artık bulunmayan kullanıcı hesaplarınız varsa, GCDS 'yi bu hesapları silmek yerine askıya alacak şekilde ayarlayın. Çünkü silinen hesaplar 20 gün sonra geri getirilemez ve bu hesaplara ait tüm veriler kalıcı olarak kaybolur.  Ancak askıya alınan hesaplar için veriler saklanır ve bu verilere ( örneğin e-posta ve google drive içerikleri ) hala erişebilir veya bunları başka bir hesaba aktarabilirsiniz. Bu yanlışlıkla veri kaybını önlemek için önemli bir güvenlik önlemidir.
+* LDAP dizininde bir kullanıcı hesabı oluşturulduğunda veya değiştirildiğinde, bu değişiklikleri hızlıca Google Workspace 'e yansıtmak için kullanıcı hesaplarını daha sık bir aralıkta senkronize edebilirsiniz. Örneğin, grup üyelikleri ve diğer acil olmayan değişiklikler daha seyrek aralıklarla senkronize edilebilir. Eğer sadece kullanıcı hesaplarını senkronize etmek istersek, bunu komut satırı kullanarak yapabiliriz.
+* GCDS, LDAP dizininizde yer almayan Google yönetici hesaplarını varsayılan olarak askıya almaz veya silmez. Bu ayarı korumak önemlidir. Çünkü böylece yönetici hesaplarının yanlışlıkla silinmesini veya askıya alınmasını önleyebiliriz.
+
+### Kurallar ve Limitler,
+
+* GCDS, senkronizasyon sırasında belirli sayıda kullanıcı hesabını veya diğer öğeleri silebilir. Bu silme işlemlerinin yanlışlıkla çok fazla öğeyi silmesini önlemek için bir limit ayarlayabiliriz. Bu limiti kuruluşumuzun hesap sayısı ve silme işleminin etkileyeceği öğelerin sayısına göre belirlemeliyiz. Böylece GCDS belirlenen limiti aşmaya çalıştığımızda bizi uyarır ve kazara büyük miktarda veri kaybını önleyebiliriz. Peki ya GCDS neden hesaplarımızı silsin? Misal, eğer bir kullanıcı hesabı veya grup LDAP dizininden kaldırılırsa, GCDS bu değişikliği Google Workspace'e yansıtmak için ilgili hesabı veya grubu silmeye çalışır. Bu örneğin, işten ayrılan bir çalışan veya artık kullanılmayan bir grup için geçerli olabilir. Veya, LDAP dizininde yanlışlıkla yapılan bir değişiklik (örneğin, bir grup veya kullanıcının yanlışlıkla silinmesi) GCDS tarafından senkronize edilirse, bu hatalı değişiklik Google workspace'teki hesapları da etkileyebilir. Veya, En basit haliyle bir kullanıcının artık LDAP dizininde yer almaması durumunda bu kullanıcının Google Workspace'teki hesabı da silinir.
+* Eğer LDAP dizinimizde bulunmayan, ancak Google Workspace'te mevcut olan kullanıcı hesapları veya gruplar varsa, bu hesapların silinmesini önlemek için **dışlama (exclude) kuralları** kullanmalıyız. Bu kurallar, belirli kullanıcı veya grupların senkronizasyon sırasında silinmemesini sağlar.&#x20;
+* Eğer LDAP dizinimizdeki bazı kullanıcı veya grupların Google hesabına senkronize edilmesini istemiyorsak, bu verileri hariç tutmak için **odaklanmış arama kurallarını** kullanabiliriz. Bu kurallar, belirli kullanıcıları veya grupları seçerek senkronizasyon dışında bırakmamızı sağlar.
+
