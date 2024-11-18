@@ -280,3 +280,4 @@
 ## Github Actions
 
 * [Github Actions Nedir?](github-actions/github-actions-nedir.md)
+* [Workflow & Schedule Triggers](github-actions/workflow-and-schedule-triggers.md)
