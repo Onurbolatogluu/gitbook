@@ -90,7 +90,7 @@ jobs:
 
 ```
 
-* **Tetikleme:**
+* **Trigger:**
   * Bu workflow, her hafta:
     * Pazartesi ve Çarşamba 05:30'da.
     * Salı ve Perşembe 05:30'da tetiklenir.
@@ -98,7 +98,7 @@ jobs:
   * İlk adım (`Not on Monday or Wednesday`):
     * Pazartesi ve Çarşamba günlerinde bu adımı atlar.
   * İkinci adım (`Every time`):
-    * Her tetikleme sırasında çalışır.
+    * Her trigger sırasında çalışır.
 
 
 
