@@ -276,3 +276,7 @@
 * [🅱️ Log Analytics](azure-305/log-analytics.md)
 * [👥 Azure workbooks and Insights](azure-305/azure-workbooks-and-insights.md)
 * [🚌 Azure Data Explorer](azure-305/azure-data-explorer.md)
+
+## Github Actions
+
+* [Github Actions Nedir?](github-actions/github-actions-nedir.md)
