@@ -281,3 +281,4 @@
 
 * [Github Actions Nedir?](github-actions/github-actions-nedir.md)
 * [Workflow & Schedule Triggers](github-actions/workflow-and-schedule-triggers.md)
+* [Single and Multiple Events](github-actions/single-and-multiple-events.md)
