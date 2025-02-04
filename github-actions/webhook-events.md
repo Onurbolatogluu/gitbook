@@ -12,7 +12,7 @@ GitHub Actions’ı “dış dünyadan” bir HTTP isteği ile tetiklemek istiyo
 name: Workflow on Repository Dispatch
 on:
   repository_dispatch:
-    types: [webhook]
+    types: [custom_webhook]
 
 jobs:
   respond-to-dispatch:
@@ -24,7 +24,7 @@ jobs:
         run: echo "Event of type ${GITHUB_EVENT_NAME}"
 ```
 
-* `on.repository_dispatch.types: [webhook]` diyerek, `event_type` değeri `webhook` olan dış istekleri yakalıyoruz.
+* `on.repository_dispatch.types: [custom_webhook]` diyerek, `event_type` değeri custom\_`webhook` olan dış istekleri yakalıyoruz.
 * `GITHUB_EVENT_NAME` gibi değişkenlerle, gelen isteğin türünü veya payload verisini Workflow içinde kullanabiliriz.
 
 #### **HTTP isteği (curl) örneği**:
@@ -33,13 +33,13 @@ jobs:
 curl -X POST \
   -H "Accept: application/vnd.github+json" \
   -H "Authorization: token PERSONAL_ACCESS_TOKEN" \
-  -d '{"event_type": "webhook", "client_payload": {"key": "value"}}' \
+  -d '{"event_type": "custom_webhook", "client_payload": {"key": "value"}}' \
   https://api.github.com/repos/OWNER/REPO/dispatches
 ```
 
 * `https://api.github.com/repos/{owner}/{repo}/dispatches` GitHub’ın “repository dispatch” endpoint’i.
 * `-H "Authorization: token ..."` kısmına, **repo’ya yazma izni** olan bir **Personal Access Token** eklememiz gerekiyor.
-* `-d '{"event_type": "webhook", ...}'` ile, `event_type` değerini `webhook` (veya istediğin başka bir isim) verip, **ek payload** gönderebiliyoruz.
+* `-d '{"event_type": "custom_webhook", ...}'` ile, `event_type` değerini custom\_`webhook` (veya istediğin başka bir isim) verip, **ek payload** gönderebiliyoruz.
 * Bu istek başarıyla yapılırsa, GitHub Actions senin tanımladığın `repository_dispatch` Workflow’unu tetikler.
 
 
@@ -53,7 +53,7 @@ name: Handle External Dispatch (Webhook Example)
 
 on:
   repository_dispatch:
-    types: [webhook]  # Dışarıdan tetiklemede 'event_type' olarak "webhook" beklendiğini ifade eder
+    types: [custom_webhook]  # Dışarıdan tetiklemede 'event_type' olarak "webhook" beklendiğini ifade eder
 
 jobs:
   handle_webhook:
@@ -67,8 +67,8 @@ jobs:
 
 ```
 
-* `on.repository_dispatch.types: [webhook]`:\
-  `event_type` değeri “webhook” olan bir dış çağrı geldiğinde bu Workflow tetiklenecek.
+* `on.repository_dispatch.types: [custom_webhook]`:\
+  `event_type` değeri “custom\_webhook” olan bir dış çağrı geldiğinde bu Workflow tetiklenecek.
 * `github.event.client_payload.*`:\
   `repository_dispatch` ile gelen **ek parametreleri** okuyabileceğimiz yerdir. Örneğin yukarıda `version`, `environment`, `anyOtherKey` gibi alanlara değer girersek, Workflow bunları terminale yazacak.
 
@@ -89,8 +89,8 @@ curl -X POST \
   https://api.github.com/repos/OWNER/REPO/dispatches
 ```
 
-* `"event_type": "webhook"`:\
-  Buradaki değer, Workflow’da `types: [webhook]` satırıyla eşleştiği için tetikleme gerçekleşir.
+* `"event_type": "custom_webhook"`:\
+  Buradaki değer, Workflow’da `types: [custom_webhook]` satırıyla eşleştiği için tetikleme gerçekleşir.
 * `"client_payload": {...}`:\
   Bu alana eklediğin anahtar-değer çiftleri, GitHub Actions içinde `github.event.client_payload` üzerinden okunabilir. Örnekte `"version": "1.2.3"`, `"environment": "staging"`, `"anyOtherKey": "örnek bir değer"` gönderiyoruz.
 * **Token Gereksinimi**:\
