@@ -82,7 +82,7 @@ node_filesystem_avail_bytes{fstype="ext4"} and node_filesystem_size_bytes{fstype
 
 <figure><img src="../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
 
-Bu "and" sorgusu olarak bilinen iki farklı metrik etiketi arasında bir kesişim bulmaya çalışır. Sonuç olarak, bu sorgu "ext4" dosya sistemi türüne sahip disk bölümlerinin mevcut ve toplam bayt sayılarının kesişimini verir ve <mark style="color:red;">**sonuçlar her zaman**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**`and`**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**ifadesinin ilk vektöründen gelir.**</mark>
+Bu "and" sorgusu olarak bilinen iki farklı metrik etiketi arasında bir kesişim bulmaya çalışır. Sonuç olarak, bu sorgu "ext4" dosya sistemi türüne sahip disk bölümlerinin mevcut ve toplam bayt sayılarının kesişimini verir ve <mark style="color:red;">**sonuçlar her zaman**</mark><mark style="color:red;">**&#x20;**</mark><mark style="color:red;">**`and`**</mark><mark style="color:red;">**&#x20;**</mark><mark style="color:red;">**ifadesinin ilk vektöründen gelir.**</mark>
 
 Özetle,
 
@@ -105,7 +105,7 @@ Yukarıdaki sorgunun çıktısı, ext4 dosya sistem türüne sahip olan bir ciha
 node_filesystem_avail_bytes{mountpoint="/"} and node_filesystem_size_bytes{mountpoint="/"}
 ```
 
-Bu sorgu, `node_filesystem_avail_bytes` ve `node_filesystem_size_bytes` metriklerini `mountpoint="/"`, yani kök dizin için filtreler. `and` operatörü ile bu iki metriğin tam olarak eşleşen etiket kümelerine sahip olan öğelerini seçer ve diğer öğeleri atar. <mark style="color:red;">**Sonuçlar her zaman**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**`and`**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**ifadesinin ilk vektöründen gelir.**</mark>
+Bu sorgu, `node_filesystem_avail_bytes` ve `node_filesystem_size_bytes` metriklerini `mountpoint="/"`, yani kök dizin için filtreler. `and` operatörü ile bu iki metriğin tam olarak eşleşen etiket kümelerine sahip olan öğelerini seçer ve diğer öğeleri atar. <mark style="color:red;">**Sonuçlar her zaman**</mark><mark style="color:red;">**&#x20;**</mark><mark style="color:red;">**`and`**</mark><mark style="color:red;">**&#x20;**</mark><mark style="color:red;">**ifadesinin ilk vektöründen gelir.**</mark>
 
 
 

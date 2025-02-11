@@ -9,7 +9,7 @@
 * Eventler genellikle sistemin belirli bir durum değişikliğini bildirmek için kullanılır ve sistemdeki diğer bileşenler bu evente yanıt verebilir.
 * Event tabanlı sistemlerde, eventler genellikle sadece bir bildirim içerir ve genellikle bir payload (yani taşıdıkları veri) içermezler ya da çok hafif bir payload taşırlar.
 
-Misal**:** Bir e-ticaret web sitesi düşünün. Bir kullanıcı, bir ürünü sepetine eklediğinde, sistem bir "Ürün Sepete Eklendi" eventi yayınlar. Bu evente, çeşitli servisler abone olabilir. Örneğin:
+Misa&#x6C;**:** Bir e-ticaret web sitesi düşünün. Bir kullanıcı, bir ürünü sepetine eklediğinde, sistem bir "Ürün Sepete Eklendi" eventi yayınlar. Bu evente, çeşitli servisler abone olabilir. Örneğin:
 
 * **Analitik Servisi:** Bu servis, ürün sepete eklendiğinde kullanıcı davranışlarını izlemek için bu eventi dinleyebilir ve analiz etmek üzere verileri toplayabilir.
 * **Stok Yönetim Servisi:** Stok düzeylerini güncellemek için bu eventi dinleyebilir ve ilgili ürünün stok sayısını azaltabilir.

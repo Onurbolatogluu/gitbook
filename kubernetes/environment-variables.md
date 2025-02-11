@@ -38,7 +38,7 @@ spec:
         value: "testdb.example.com"
 ```
 
-Pod tanımları içerisinde, Environment variable'lar_, container tanımı altında, env parametresi ile tanımlanıyor. env parametresi altında list şeklinde, tüm_ Environment variable 'larımızı tanımlıyoruz.
+Pod tanımları içerisinde, Environment variable'la&#x72;_, container tanımı altında, env parametresi ile tanımlanıyor. env parametresi altında list şeklinde, tüm_ Environment variable 'larımızı tanımlıyoruz.
 
 Öncelikle tanımlamak istediğimiz Environment variable 'ın ismini giriyor ve ardından da, value opsiyonu ile buna atamak istediğimiz değeri giriyoruz.
 

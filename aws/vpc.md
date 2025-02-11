@@ -78,7 +78,7 @@ Network ACL de kurallar baştan sona bakılır. Kurallar ACL de yoksa paket (ist
 
 **NACL, alt ağ düzeyinde çalışır ve bu nedenle önce trafiğe erişim sağlar. Bu, trafiği bir sonraki seviyeye, yani Güvenlik grubuna ulaşmadan önce filtrelemesine izin verir. NACL tarafından herhangi bir trafik reddedilirse, güvenlik grubu bunu asla görmez. Güvenlik grubu, NACL tarafından izin verilen trafiği yine de reddedebilir.**
 
-Normal de Public bir blokta bulunan sunucular her restart ettiğimizde IP adresleri değişiyor. Sunucularımızın da sabit bir IP adresi olmasını istersek aşağıda bulunan adımları yapmalıyız**.**
+Normal de Public bir blokta bulunan sunucular her restart ettiğimizde IP adresleri değişiyor. Sunucularımızın da sabit bir IP adresi olmasını istersek aşağıda bulunan adımları yapmalıyı&#x7A;**.**
 
 * Elastic IPs
 * Allocate new address
