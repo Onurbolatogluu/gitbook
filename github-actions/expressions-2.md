@@ -107,3 +107,4 @@ Bu şekilde event içeriğini JSON formatında görürsün.
     key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 ```
 
+{% embed url="https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions" %}
