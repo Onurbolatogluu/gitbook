@@ -289,3 +289,4 @@
 * [Expressions - 2](github-actions/expressions-2.md)
 * [Runners](github-actions/runners.md)
 * [Workflow Commands](github-actions/workflow-commands.md)
+* [Workflow Context](github-actions/workflow-context.md)
