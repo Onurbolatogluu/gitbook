@@ -292,4 +292,4 @@
 * [Workflow Context](github-actions/workflow-context.md)
 * [Dependent Jobs](github-actions/dependent-jobs.md)
 * [Encrypted Secrets](github-actions/encrypted-secrets.md)
-* [Configuration Variab](github-actions/configuration-variab.md)
+* [Configuration Variables](github-actions/configuration-variab.md)
