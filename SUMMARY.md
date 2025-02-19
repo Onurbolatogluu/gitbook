@@ -294,3 +294,4 @@
 * [Encrypted Secrets](github-actions/encrypted-secrets.md)
 * [Configuration Variables](github-actions/configuration-variab.md)
 * [Default & Custom Env Varb](github-actions/default-and-custom-env-varb.md)
+* [Set Env Varb with Workflow Commands](github-actions/set-env-varb-with-workflow-commands.md)
