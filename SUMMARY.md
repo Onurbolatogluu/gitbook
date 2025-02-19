@@ -293,3 +293,4 @@
 * [Dependent Jobs](github-actions/dependent-jobs.md)
 * [Encrypted Secrets](github-actions/encrypted-secrets.md)
 * [Configuration Variables](github-actions/configuration-variab.md)
+* [Default & Custom Env Varb](github-actions/default-and-custom-env-varb.md)
