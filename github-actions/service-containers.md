@@ -75,6 +75,34 @@ jobs:
 
 Böylece **her push**’ta “sıfırdan” temiz bir Redis ortamı oluşturulup test edilir, test sonra biter bitmez container kaldırılır. Bu yaklaşım, CI/CD’de paylaşılan veritabanı/servis kalıntılarından kaçınarak **izole, tekrarlanabilir test ortamı** sağlar.
 
+#### Uses Case 2
+
+```yaml
+jobs:
+  test-with-db:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:13
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: myuser
+          POSTGRES_PASSWORD: mypass
+          POSTGRES_DB: mydb
+        options: >-
+          --health-cmd "pg_isready -U myuser" 
+          --health-interval 10s 
+          --health-timeout 5s 
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Tests
+        run: npm test
+```
+
 ### 2) Nasıl Çalışır?
 
 1. **Job Başlarken**
