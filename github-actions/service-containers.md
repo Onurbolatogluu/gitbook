@@ -2,7 +2,7 @@
 icon: box-open
 ---
 
-# Service Contain
+# Service Containers
 
 **Service containers**, GitHub Actions içinde bir job’un yanına tanımlayabileceğin **ek Docker konteynerleri**dir. Örneğin, **test** aşamasında bir **veritabanı** (MySQL, PostgreSQL), **cache** (Redis), **message broker** (RabbitMQ) vb. hizmete ihtiyaç duyarsan, bu hizmeti “service” olarak tanımlarsın ve aynı job içinde, test kodun bu konteynerle iletişime geçer. Aşağıda konuyu özetliyorum:
 
