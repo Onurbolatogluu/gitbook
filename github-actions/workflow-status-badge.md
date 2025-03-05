@@ -18,7 +18,7 @@ icon: signal-bars
    *   URL genelde şu formatta olur:
 
        ```
-       bashCopyhttps://github.com/<owner>/<repo>/actions/workflows/<workflow_file_name>/badge.svg
+       https://github.com/<owner>/<repo>/actions/workflows/<workflow_file_name>/badge.svg
        ```
    * İsteğe bağlı olarak `?branch=<branch_name>` veya `?event=<event_type>` gibi parametreler ekleyebilirsin.
 
