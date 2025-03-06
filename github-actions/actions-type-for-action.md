@@ -1,3 +1,7 @@
+---
+icon: location-pin
+---
+
 # Actions type for Action
 
 **Action Types**, GitHub Actions içindeki **özel actions** (ör. “actions/checkout”, “actions/setup-node” gibi) **yaratırken** seçebileceğin **yöntemler**dir.&#x20;
