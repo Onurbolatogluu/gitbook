@@ -307,3 +307,5 @@
 * [Workflow Status Badge](github-actions/workflow-status-badge.md)
 * [Env Protection](github-actions/env-protection.md)
 * [Job Matrix Configuration](github-actions/job-matrix-configuration.md)
+* [Disable & Delete Workflows](github-actions/disable-and-delete-workflows.md)
+* [Actions type for Action](github-actions/actions-type-for-action.md)
