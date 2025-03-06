@@ -309,4 +309,4 @@
 * [Job Matrix Configuration](github-actions/job-matrix-configuration.md)
 * [Disable & Delete Workflows](github-actions/disable-and-delete-workflows.md)
 * [Actions type for Action](github-actions/actions-type-for-action.md)
-* [Inputs and Outputs for act](github-actions/inputs-and-outputs-for-act.md)
+* [Inputs and Outputs for actions](github-actions/inputs-and-outputs-for-actions.md)
