@@ -23,7 +23,7 @@ Başlıca 3 tür bulunur:
    * Docker veya JavaScript yazmadan, YAML step’lerini “composite” haline getirirsin.
    * Linux, macOS ve Windows’ta çalışabilir.
 
-**Custom Actions**, GitHub Actions ekosisteminde kendi oluşturduğun (veya başkalarının oluşturup paylaştığı) **yeniden kullanılabilir komut setleridir**. Yani, Actions’ın “modüler bileşenleri” gibi düşünülebilir. Varsayılan olarak GitHub “actions/checkout”, “actions/setup-node” gibi resmî actions 'lar sunar. Fakat ihtiyacın doğrultusunda **kendin** de bir aksiyon geliştirebilirsin.
+**Custom Actions**, GitHub Actions ekosisteminde kendi oluşturduğun (veya başkalarının oluşturup paylaştığı) **yeniden kullanılabilir komut setleridir**. Yani, Actions’ın “modüler bileşenleri” gibi düşünülebilir. Varsayılan olarak GitHub “actions/checkout”, “actions/setup-node” gibi resmî actions 'lar sunar. Fakat ihtiyacın doğrultusunda **kendin** de bir actions geliştirebilirsin.
 
 
 
