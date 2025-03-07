@@ -310,3 +310,7 @@
 * [Disable & Delete Workflows](github-actions/disable-and-delete-workflows.md)
 * [Actions type for Action](github-actions/actions-type-for-action.md)
 * [Inputs and Outputs for actions](github-actions/inputs-and-outputs-for-actions.md)
+* [Action Versions](github-actions/action-versions.md)
+* [Files and Directories for Actions](github-actions/files-and-directories-for-actions.md)
+* [Exit Codes](github-actions/exit-codes.md)
+* [Reusable Workflow & Reuse Templates for Actions and Workflows](github-actions/reusable-workflow-and-reuse-templates-for-actions-and-workflows.md)
