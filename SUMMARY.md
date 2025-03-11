@@ -319,3 +319,4 @@
 ## Loki
 
 * [What is Loki?](loki/what-is-loki.md)
+* [Architecture of Loki](loki/architecture-of-loki.md)
