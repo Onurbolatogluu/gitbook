@@ -22,11 +22,10 @@ wget https://github.com/grafana/loki/releases/download/<sürüm>/loki-linux-amd6
 
 ### 3. Arşiv Dosyasının Çıkarılması
 
-İndirdiğiniz `loki-linux-amd64.zip` dosyasını bir klasöre çıkarın ve o klasöre geçiş yapın:
+İndirdiğiniz `loki-linux-amd64.zip` dosyasını bir klasöre çıkarın:
 
 ```bash
 unzip loki-linux-amd64.zip
-cd <klasör_adı>
 ```
 
 > **Not**: Eğer Promtail de indirdiyseniz, onun arşivini de aynı klasöre çıkarmak faydalı olacaktır.
