@@ -320,3 +320,4 @@
 
 * [What is Loki?](loki/what-is-loki.md)
 * [Architecture of Loki](loki/architecture-of-loki.md)
+* [Install Loki For Ubuntu](loki/install-loki-for-ubuntu.md)
