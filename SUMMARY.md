@@ -323,3 +323,5 @@
 * [Install Loki For Ubuntu](loki/install-loki-for-ubuntu.md)
 * [Install Promtail For Ubuntu](loki/install-promtail-for-ubuntu.md)
 * [Querying Logs](loki/querying-logs.md)
+* [Loki in Kubernetes](loki/loki-in-kubernetes.md)
+* [Deploying Loki in Kubernetes](loki/deploying-loki-in-kubernetes.md)
