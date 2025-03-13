@@ -99,18 +99,5 @@ Bu düzen sayesinde, Promtail tüm node’lardaki log’ları okur ve Loki’ye 
 * **Helm install** komutuyla tek seferde Loki, Grafana ve Promtail’i Kubernetes üzerinde çalışır hale getirdik.
 * **kubectl get all** komutuyla, StatefulSet (Loki), Deployment (Grafana) ve DaemonSet (Promtail) kaynaklarının başarılı şekilde oluşturulduğunu doğruladık.
 
-{% hint style="info" %}
-Varsayılan olarak `values.yml` dosyasında **Promtail’in** hangi dizinleri okuyacağına dair özel bir “scrape\_configs” veya “path” tanımı bulunmuyor. Buna rağmen Promtail hâlâ node’lardaki logları toplar, çünkü Helm chart’ının **varsayılan** yapılandırması devreye girer.
-
-\
-Grafana/Loki-stack chart’ında (Promtail bölümü için) **özel bir ayar** eklemediğinizde, Promtail’in “Kubernetes modu” devreye girer ve Kubernetes’in standart log dizini olan:\
-\
-/var/log/containers/\*.log \
-\
-dosyalarını okur. Bu dizin, her pod’un container loglarını sembolik linklerle barındıran tipik bir Kubernetes yolu olduğundan, varsayılan config ile Kubernetes üzerinde çalışan tüm container logları otomatik olarak toplanır.\
-\
-**Kısacası**: Bu `values.yml` dosyasında Promtail için özel bir log path’i tanımlamadığınızdan, _Helm chart’ının_ **varsayılan Kubernetes log path’ini** (`/var/log/containers`) kullanan yapılandırma aktif olur ve tüm container loglarını buradan toplar.
-{% endhint %}
-
 
 
