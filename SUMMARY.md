@@ -328,3 +328,7 @@
 * [Connecting to Grafana](loki/connecting-to-grafana.md)
 * [Viewing Kubernetes logs](loki/viewing-kubernetes-logs.md)
 * [Promtail Customize & Pipeline](loki/promtail-customize-and-pipeline.md)
+
+## Ansible
+
+* [Ansible Introduction](ansible-1/ansible-introduction.md)
