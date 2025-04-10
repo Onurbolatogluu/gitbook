@@ -334,3 +334,4 @@
 * [Ansible Introduction](ansible-1/ansible-introduction.md)
 * [Introduction to Ansible Configuration Files](ansible-1/introduction-to-ansible-configuration-files.md)
 * [Ansible Inventory](ansible-1/ansible-inventory.md)
+* [Inventory Formats](ansible-1/inventory-formats.md)
