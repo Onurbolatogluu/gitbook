@@ -337,3 +337,4 @@
 * [Inventory Formats](ansible-1/inventory-formats.md)
 * [Ansible Variables](ansible-1/ansible-variables.md)
 * [Variable Types](ansible-1/variable-types.md)
+* [Registering Variables and Variable Precedence](ansible-1/registering-variables-and-variable-precedence.md)
