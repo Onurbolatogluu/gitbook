@@ -338,3 +338,6 @@
 * [Ansible Variables](ansible-1/ansible-variables.md)
 * [Variable Types](ansible-1/variable-types.md)
 * [Registering Variables and Variable Precedence](ansible-1/registering-variables-and-variable-precedence.md)
+* [Variable Scoping](ansible-1/variable-scoping.md)
+* [Magic Variables](ansible-1/magic-variables.md)
+* [Ansible Facts](ansible-1/ansible-facts.md)
