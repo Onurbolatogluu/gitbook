@@ -109,6 +109,8 @@ ansible-playbook <playbook_ismi>.yml --syntax-check
 
 ***
 
+### Örnek,
+
 ```bash
 $ ansible-playbook install_nginx.yml --check
 PLAY [webservers] ****************************************************************
@@ -143,4 +145,14 @@ webserver1 : ok=2    changed=1    unreachable=0    failed=0    skipped=0    resc
   * Ansible’ın **blocks** yapısında bir hata olduğunda `rescue:` bölümü çalışabilir. Bu sayılar “rescue” mekanizmasının kaç kere tetiklendiğini gösterir. “0” demek, hiç devreye girmedi.
 * **ignored=0**
   * `ignore_errors: yes` gibi ayarlar varsa ve bir görev hata alırsa “ignored” sayısı artar. Burada “0” demek, öyle bir durum da yaşanmamış.
+{% endhint %}
+
+{% hint style="info" %}
+#### Özetle
+
+* “ok=2, changed=1” → İki görevin gayet sorunsuz çalıştığını ve bir tanesinin “değişiklik gerektireceğini” (dry-run’da “olabilirdi” şeklinde) gösterir.
+* `unreachable=0, failed=0` → Bağlantı ve hata yok.
+* `skipped=0, rescued=0, ignored=0` → Hiçbir görev atlanmamış, hata kurtarma veya hata göz ardı etme yaşanmamış.
+
+Check mode’da “changed=1”, size “normalde bu host’ta nginx yok, kuracaktım” mesajıdır. Gerçek kurulumu uygulamak isterseniz `--check` olmadan aynı komutu çalıştırırsınız.
 {% endhint %}
