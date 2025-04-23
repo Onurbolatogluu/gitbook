@@ -341,3 +341,4 @@
 * [Variable Scoping](ansible-1/variable-scoping.md)
 * [Magic Variables](ansible-1/magic-variables.md)
 * [Ansible Facts](ansible-1/ansible-facts.md)
+* [Ansible Playbooks](ansible-1/ansible-playbooks.md)
