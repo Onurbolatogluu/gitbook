@@ -343,3 +343,4 @@
 * [Ansible Facts](ansible-1/ansible-facts.md)
 * [Ansible Playbooks](ansible-1/ansible-playbooks.md)
 * [Verifying Playbooks](ansible-1/verifying-playbooks.md)
+* [Ansible lint](ansible-1/ansible-lint.md)
