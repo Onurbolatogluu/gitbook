@@ -345,3 +345,5 @@
 * [Verifying Playbooks](ansible-1/verifying-playbooks.md)
 * [Ansible lint](ansible-1/ansible-lint.md)
 * [Ansible Conditionals](ansible-1/ansible-conditionals.md)
+* [Ansible Conditionals based on facts, variables, re-use](ansible-1/ansible-conditionals-based-on-facts-variables-re-use.md)
+* [Ansible Loops](ansible-1/ansible-loops.md)
