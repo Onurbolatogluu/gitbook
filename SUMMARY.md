@@ -347,3 +347,4 @@
 * [Ansible Conditionals](ansible-1/ansible-conditionals.md)
 * [Ansible Conditionals based on facts, variables, re-use](ansible-1/ansible-conditionals-based-on-facts-variables-re-use.md)
 * [Ansible Loops](ansible-1/ansible-loops.md)
+* [Ansible Modules](ansible-1/ansible-modules.md)
