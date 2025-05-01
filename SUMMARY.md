@@ -349,3 +349,4 @@
 * [Ansible Loops](ansible-1/ansible-loops.md)
 * [Ansible Modules](ansible-1/ansible-modules.md)
 * [Introduction to Ansible Plugins](ansible-1/introduction-to-ansible-plugins.md)
+* [Modules and Plugins Index](ansible-1/modules-and-plugins-index.md)
