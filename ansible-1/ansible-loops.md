@@ -133,9 +133,9 @@ Bu “with\_\*” yöntemleri, Ansible’ın **lookup plugin** yapısına dayan�
 4. **with\_items** gibi eski yöntemler benzer amaçla kullanılır, **loop** daha güncel ve önerilir.
 5. Diğer “with\_” direktifleri (like `with_file`, `with_url`) → Spesifik data kaynağına iterasyon uygular.
 
-
-
 ***
+
+### Lookup Plugin
 
 Ansible’daki **lookup plugin**’ler, “harici bir kaynaktan veya farklı bir veri biçiminden” bilgiyi alıp Ansible içerisinde kullanmanızı sağlayan ufak eklentilerdir. Örneğin `with_file`, `with_url`, `with_k8s` gibi “with\_” direktiflerini gördüğünüzde, aslında bunlar birer **lookup plugin** çağırır ve iterasyona (döngüye) uygun veriyi döndürür.
 
