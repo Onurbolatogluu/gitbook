@@ -350,3 +350,6 @@
 * [Ansible Modules](ansible-1/ansible-modules.md)
 * [Introduction to Ansible Plugins](ansible-1/introduction-to-ansible-plugins.md)
 * [Modules and Plugins Index](ansible-1/modules-and-plugins-index.md)
+* [Introduction to Handlers](ansible-1/introduction-to-handlers.md)
+* [Ansible Roles](ansible-1/ansible-roles.md)
+* [Ansible Collections](ansible-1/ansible-collections.md)
