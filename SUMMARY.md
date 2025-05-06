@@ -353,3 +353,4 @@
 * [Introduction to Handlers](ansible-1/introduction-to-handlers.md)
 * [Ansible Roles](ansible-1/ansible-roles.md)
 * [Ansible Collections](ansible-1/ansible-collections.md)
+* [Introduction to Templating](ansible-1/introduction-to-templating.md)
