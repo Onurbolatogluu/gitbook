@@ -354,3 +354,4 @@
 * [Ansible Roles](ansible-1/ansible-roles.md)
 * [Ansible Collections](ansible-1/ansible-collections.md)
 * [Introduction to Templating](ansible-1/introduction-to-templating.md)
+* [Jinja2 Templates for Dynamic Configs](ansible-1/jinja2-templates-for-dynamic-configs.md)
