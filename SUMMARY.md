@@ -355,3 +355,7 @@
 * [Ansible Collections](ansible-1/ansible-collections.md)
 * [Introduction to Templating](ansible-1/introduction-to-templating.md)
 * [Jinja2 Templates for Dynamic Configs](ansible-1/jinja2-templates-for-dynamic-configs.md)
+
+## 🅰️ Ansible Advanced
+
+* [Playbook run options](ansible-advanced/playbook-run-options.md)
