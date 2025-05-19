@@ -10,7 +10,7 @@
 
 ### **Versioning,**
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Azure'da her bir blob için yapılan değişiklikler otomatik olarak yeni bir sürüm olarak kaydedilir.
 * Bir blob güncellendiğinde veya üzerine yazıldığında, eski versiyonlar saklanır ve bu eski sürümlere istenildiği zaman erişilebilir.

@@ -60,7 +60,7 @@ Verdiğimiz futbolcu bilgilerini bir tablo üzerinde, key-value eşlenikleri şe
 az storage account create --name storageaccount35623 --resource-group rg-demo-tables-and-CosmosDB-001 --location eastus --sku Standard_LRS --kind StorageV2
 ```
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 2 - **Table oluşturma:** Aşağıdaki komutu kullanarak, storage account içerisinde, "footballPlayers" adında tablo oluşturuyoruz.
 
