@@ -361,3 +361,6 @@
 * [Playbook run options](ansible-advanced/playbook-run-options.md)
 * [Facts](ansible-advanced/facts.md)
 * [Configuration files](ansible-advanced/configuration-files.md)
+* [Install required packages](ansible-advanced/install-required-packages.md)
+* [SSH keys to managed nodes](ansible-advanced/ssh-keys-to-managed-nodes.md)
+* [Adhoc Commands](ansible-advanced/adhoc-commands.md)
