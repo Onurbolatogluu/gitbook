@@ -116,5 +116,4 @@ msg: DNS Server IP: {{ dns_server_ip }}
 2. **Üç tire (---)** opsiyonel, genellikle birden fazla YAML dokümanı birleştirmek içindir.
 3. **`{{ }}`** (çift süslü parantez) değişken interpolasyonu için kullanılır. Ancak `when:` ve `debug: var=` gibi belirli durumlarda gerekmez.
 4. **`ansible_password`** tercih edin; `ansible_ssh_pass` eski yöntemin adı.
-5. **Büyük alıştırmalar** sizi YAML ve Ansible mantığını kusursuz kavramaya hazırlayacak.
 
