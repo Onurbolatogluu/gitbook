@@ -364,3 +364,6 @@
 * [Install required packages](ansible-advanced/install-required-packages.md)
 * [SSH keys to managed nodes](ansible-advanced/ssh-keys-to-managed-nodes.md)
 * [Adhoc Commands](ansible-advanced/adhoc-commands.md)
+* [Commands with shell scripts](ansible-advanced/commands-with-shell-scripts.md)
+* [Privilege Escalation](ansible-advanced/privilege-escalation.md)
+* [Frequently Asked Questions](ansible-advanced/frequently-asked-questions.md)
