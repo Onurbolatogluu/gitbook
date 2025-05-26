@@ -49,9 +49,6 @@ Burada `state: installed` parametresi, paketin kurulu olmasını istediğimizi b
 
 Programları kurduktan sonra bazen onları çalıştırmamız, durdurmamız veya yeniden başlatmamız gerekir. İşte **servis modülü** tam da bu işe yarar! Ayrıca, bir servisin bilgisayar her açıldığında otomatik olarak başlamasını da bu modülle sağlayabilirsin.
 
-* **start:** Servisi başlatır.
-* **stop:** Servisi durdurur.
-* **restart:** Servisi yeniden başlatır.
 * **enabled: yes:** Servisin sistem açılışında otomatik başlamasını sağlar.
 
 **Örnek:** `httpd` (web sunucusu) servisini çalıştırmak ve açılışta otomatik başlamasını sağlamak:
