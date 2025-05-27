@@ -369,3 +369,6 @@
 * [Frequently Asked Questions](ansible-advanced/frequently-asked-questions.md)
 * [Additional Modules](ansible-advanced/additional-modules.md)
 * [Variable Precedence](ansible-advanced/variable-precedence.md)
+* [Variable Scope](ansible-advanced/variable-scope.md)
+* [Use variables to retrieve the results of running commands](ansible-advanced/use-variables-to-retrieve-the-results-of-running-commands.md)
+* [Magic Variables](ansible-advanced/magic-variables.md)
