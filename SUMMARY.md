@@ -368,3 +368,4 @@
 * [Privilege Escalation](ansible-advanced/privilege-escalation.md)
 * [Frequently Asked Questions](ansible-advanced/frequently-asked-questions.md)
 * [Additional Modules](ansible-advanced/additional-modules.md)
+* [Variable Precedence](ansible-advanced/variable-precedence.md)
