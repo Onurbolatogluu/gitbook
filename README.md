@@ -1,15 +1,14 @@
 # 🦁 Başlarken
 
-Selamlar, burada sizlerle kurslardan ve araştırmalarımdan edindiğim notları paylaşacağım.
+Selamlar 👋\
+\
+Bu sayfada sizlerle eğitimlerden ve araştırmalarımdan edindiğim notları ve faydalı kaynakları paylaşacağım.
 
+💻 **Faydalı Bağlantılar**:
 
+* ☕[ Buy Me a Coffee](https://buymeacoffee.com/onurbolatogluu)
 
-Docker için dökümantasyon : [https://onurbolatoglu.medium.com/](https://onurbolatoglu.medium.com/)
+📚 **Diğer Platformlarım**:
 
-Nginx için Dökümantasyon :   [https://github.com/Onurbolatogluu/Nginx](https://github.com/Onurbolatogluu/Nginx)
-
-Bash Script Örneklemeleri  :   [https://github.com/Onurbolatogluu/BashScripts](https://github.com/Onurbolatogluu/BashScripts)
-
-{% embed url="https://onurbolatoglu.medium.com" %}
-
-{% embed url="https://github.com/Onurbolatogluu" %}
+* ✍️ [Medium - Onur BOLATOĞLU](https://medium.com/@onurbolatoglu)
+* 🐙 [GitHub - Onurbolatogluu](https://github.com/Onurbolatogluu)
