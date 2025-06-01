@@ -372,3 +372,6 @@
 * [Variable Scope](ansible-advanced/variable-scope.md)
 * [Use variables to retrieve the results of running commands](ansible-advanced/use-variables-to-retrieve-the-results-of-running-commands.md)
 * [Magic Variables](ansible-advanced/magic-variables.md)
+* [Jinja2 Basics](ansible-advanced/jinja2-basics.md)
+* [Jinja2 in Ansible](ansible-advanced/jinja2-in-ansible.md)
+* [Templating use cases](ansible-advanced/templating-use-cases.md)
