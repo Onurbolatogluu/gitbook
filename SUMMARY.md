@@ -375,3 +375,5 @@
 * [Jinja2 Basics](ansible-advanced/jinja2-basics.md)
 * [Jinja2 in Ansible](ansible-advanced/jinja2-in-ansible.md)
 * [Templating use cases](ansible-advanced/templating-use-cases.md)
+* [Use conditionals to control play execution](ansible-advanced/use-conditionals-to-control-play-execution.md)
+* [Blocks](ansible-advanced/blocks.md)
