@@ -377,3 +377,5 @@
 * [Templating use cases](ansible-advanced/templating-use-cases.md)
 * [Use conditionals to control play execution](ansible-advanced/use-conditionals-to-control-play-execution.md)
 * [Blocks](ansible-advanced/blocks.md)
+* [Configure error handling](ansible-advanced/configure-error-handling.md)
+* [Manage parallelism](ansible-advanced/manage-parallelism.md)
