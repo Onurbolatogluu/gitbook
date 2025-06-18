@@ -137,3 +137,11 @@ Proje içi `roles/` klasörü _her zaman_ ilk bakılan yerlerden biridir.
     ```
 6. Çalıştır, web sunucularında 80 portundan nginx geldiğini test et.
 
+#### Özet:
+
+* **Role** = belirli görevi (mysql, nginx, backup…) gerçekleştiren dosya grubu.
+* İskelet: `tasks`, `handlers`, `templates`, `vars`, `defaults`, …
+* Yazması: `ansible-galaxy init role_name`.
+* Kullanması: playbook’ta `roles:` listesine ekle.
+* Paylaşması/indirmesi: `ansible-galaxy install`, `ansible-galaxy list`.
+
