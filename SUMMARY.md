@@ -379,3 +379,5 @@
 * [Blocks](ansible-advanced/blocks.md)
 * [Configure error handling](ansible-advanced/configure-error-handling.md)
 * [Manage parallelism](ansible-advanced/manage-parallelism.md)
+* [Ansible File Separation](ansible-advanced/ansible-file-separation.md)
+* [Ansible Roles](ansible-advanced/ansible-roles.md)
