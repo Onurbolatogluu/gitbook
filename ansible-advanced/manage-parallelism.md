@@ -1,3 +1,7 @@
+---
+icon: laravel
+---
+
 # Manage parallelism
 
 ### 1. Strategy nedir?
