@@ -381,3 +381,5 @@
 * [Manage parallelism](ansible-advanced/manage-parallelism.md)
 * [Ansible File Separation](ansible-advanced/ansible-file-separation.md)
 * [Ansible Roles](ansible-advanced/ansible-roles.md)
+* [Ansible Vault](ansible-advanced/ansible-vault.md)
+* [Dynamic Inventory](ansible-advanced/dynamic-inventory.md)
