@@ -93,9 +93,7 @@ Debug sırasında _“Bu variable nereden gelmiş?”_ diyorsan en hızlı yol.
 
 ***
 
-#### AWS EC2 için Dinamik Envanter - Adım Adım Süper Basit Rehber
-
-Aşağıdaki 5 adımı uygula; kodları kopyala-yapıştır, çalıştır, bitti.
+#### AWS EC2 için Dinamik Envanter
 
 ***
 
@@ -181,6 +179,3 @@ ansible-playbook -i aws_ec2.yml site.yml
 3. `aws_ec2.yml` içinde `plugin: amazon.aws.aws_ec2` satırını yaz, gerekli filtreleri ekle.
 4. `ansible-inventory -i aws_ec2.yml --list` ile test et.
 5. `ansible-playbook -i aws_ec2.yml ...` → dinamik envanter hazır.
-
-
-
