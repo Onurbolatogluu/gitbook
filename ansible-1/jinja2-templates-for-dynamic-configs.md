@@ -107,11 +107,9 @@ Jinja2, `for` veya `if` gibi yapıları da destekler.
 **Örnek**: Birtakım DNS kayıtlarını döngüyle yazmak (ör. `resolv.conf.j2`):
 
 ```jinja
-{% raw %}
 {% for ns in name_servers %}
 nameserver {{ ns }}
 {% endfor %}
-{% endraw %}
 ```
 
 Playbook’ta:

@@ -1,6 +1,8 @@
-# Linux I/O redirection
+# Linux I/O redirection nedir?
 
 Linux komut satırında **I/O yönlendirme (input/output redirection)**, komutların standart giriş ve çıkış akışlarını yeniden yönlendirme işlemidir. Varsayılan olarak her program üç özel akış kullanır: **stdin**, **stdout** ve **stderr**.&#x20;
+
+<figure><img src="../.gitbook/assets/input-output.png.png" alt=""><figcaption></figcaption></figure>
 
 ### stdin, stdout, stderr Kavramları ve File Descriptor (FD) Yapısı
 

@@ -386,4 +386,4 @@
 
 ## ⭐ Others
 
-* [Linux I/O redirection](others/linux-i-o-redirection.md)
+* [Linux I/O redirection nedir?](others/linux-i-o-redirection-nedir.md)

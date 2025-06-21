@@ -76,11 +76,9 @@ port {{ redis_port | default("6379") }}
 
 ```jinja
 <!-- resolv.conf.j2 -->
-{% raw %}
 {% for ns in nameservers %}
 nameserver {{ ns }}
 {% endfor %}
-{% endraw %}
 ```
 
 * `nameservers` bir liste olduğu varsayılırsa (ör. `[ "8.8.8.8", "8.8.4.4" ]`), döngü her eleman için bir `nameserver` satırı ekler.
@@ -214,13 +212,11 @@ http {
     server {
         listen {{ nginx_port }};
 
-        {% raw %}
-{% if nginx_ssl_enabled %}
+        {% if nginx_ssl_enabled %}
         listen 443 ssl;
         ssl_certificate /etc/nginx/ssl/{{ inventory_hostname }}.crt;
         ssl_certificate_key /etc/nginx/ssl/{{ inventory_hostname }}.key;
         {% endif %}
-{% endraw %}
 
         server_name {{ nginx_domain }};
 

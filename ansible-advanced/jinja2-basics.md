@@ -83,11 +83,9 @@ Jinja2, tıpkı bir mini programlama dili gibi _if_, _for_ gibi yapıları da de
 #### a) For Loop
 
 ```jinja
-{% raw %}
 {% for i in range(1, 4) %}
 Number: {{ i }}
 {% endfor %}
-{% endraw %}
 ```
 
 * `range(1, 4)` → `[1,2,3]` üretir.
@@ -96,11 +94,9 @@ Number: {{ i }}
 #### b) If Statement
 
 ```jinja
-{% raw %}
 {% if i == 2 %}
   Number is TWO
 {% endif %}
-{% endraw %}
 ```
 
 * Koşul doğruysa ilgili metin/komut çalışır.
@@ -128,12 +124,10 @@ Number: {{ i }}
 datadir = {{ datadir|default("/var/lib/mysql") }}
 buffer_pool = {{ buffer_pool|default("256MB") }}
 
-{% raw %}
 {% if replication_enabled %}
 server-id = 1
 log_bin = /var/log/mysql/mysql-bin.log
 {% endif %}
-{% endraw %}
 ```
 
 * Eğer `replication_enabled` değişkeni **true** ise, `server-id` satırı eklenir; yoksa eklenmez.

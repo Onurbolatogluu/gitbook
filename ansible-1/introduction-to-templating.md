@@ -80,24 +80,20 @@ Jinja2, “\{% ... %\}” blok sözdizimiyle **if**, **for** gibi yapıların ku
 1.  **Döngü (for)**
 
     ```django
-    {% raw %}
     {% for item in my_list %}
     - {{ item }}
     {% endfor %}
-    {% endraw %}
     ```
 
     * Bu, `my_list` içindeki elemanları tek tek yazar.
 2.  **Koşul (if)**
 
     ```django
-    {% raw %}
     {% if number == 2 %}
     This is 2
     {% else %}
     Not 2
     {% endif %}
-    {% endraw %}
     ```
 
     * “number” değişkeni 2 ise “This is 2” yazar, değilse “Not 2”.
@@ -108,11 +104,9 @@ Jinja2, “\{% ... %\}” blok sözdizimiyle **if**, **for** gibi yapıların ku
 # config_file.j2
 [mysqld]
 datadir={{ datadir }}
-{% raw %}
 {% if innodb == true %}
 innodb_buffer_pool_size=1G
 {% endif %}
-{% endraw %}
 ```
 
 Varsayılan: `innodb=true, datadir="/var/lib/mysql"`
@@ -155,11 +149,9 @@ my-ansible-project/
 [mysqld]
 datadir={{ datadir }}
 
-{% raw %}
 {% if innodb %}
 innodb_buffer_pool_size=1G
 {% endif %}
-{% endraw %}
 
 user=mysql
 port=3306
