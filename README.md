@@ -4,8 +4,6 @@ Selamlar 👋\
 \
 Bu sayfada sizlerle eğitimlerden ve araştırmalarımdan edindiğim notları ve faydalı kaynakları paylaşacağım.
 
-💻 **Faydalı Bağlantılar**:
-
 * ☕[ Buy Me a Coffee](https://buymeacoffee.com/onurbolatogluu)
 
 📚 **Diğer Platformlarım**:

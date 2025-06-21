@@ -383,3 +383,7 @@
 * [Ansible Roles](ansible-advanced/ansible-roles.md)
 * [Ansible Vault](ansible-advanced/ansible-vault.md)
 * [Dynamic Inventory](ansible-advanced/dynamic-inventory.md)
+
+## ⭐ Others
+
+* [Linux I/O redirection](others/linux-i-o-redirection.md)
