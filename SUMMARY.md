@@ -392,3 +392,4 @@
 
 * [Introduction to Jenkins](jenkins/introduction-to-jenkins.md)
 * [Basics of SCM](jenkins/basics-of-scm.md)
+* [Basics of CICD](jenkins/basics-of-cicd.md)
