@@ -387,3 +387,4 @@
 ## ⭐ Others
 
 * [Linux I/O redirection nedir?](others/linux-i-o-redirection-nedir.md)
+* [SSH Kullanırken Hız, Güvenlik ve Kararlılık Sağlayan Ayarlar](others/ssh-kullanirken-hiz-guvenlik-ve-kararlilik-saglayan-ayarlar.md)
