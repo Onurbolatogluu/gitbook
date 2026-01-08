@@ -36,8 +36,7 @@ Kubernetes üzerinde çalışan Promtail’in varsayılan konfigürasyon dosyas�
     kubectl create secret generic loki-promtail --from-file=./promtail.yaml
     ```
 
-    Böylece Promtail Pod’una yeni YAML konfigürasyonu enjekte edilir.\
-
+    Böylece Promtail Pod’una yeni YAML konfigürasyonu enjekte edilir.<br>
 
     <figure><img src="../.gitbook/assets/Screenshot 2025-03-14 at 01.45.36.png" alt=""><figcaption></figcaption></figure>
 4.  **Tüm Pod’ları Sırasıyla Yeniden Başlatma (Tek bir pod varsa direkt olarak delete yapabilirsiniz)**

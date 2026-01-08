@@ -73,8 +73,7 @@ Oturum sürekliliği, özellikle kullanıcı oturumunun durum bilgisini korumas�
 {% hint style="warning" %}
 Azure Load Balancer SSL sonlandırmayı doğrudan desteklemez. Azure Load Balancer, ağ katmanında (Layer 4) çalışır ve TCP/UDP trafik yük dengelemesi sağlar. Bu, yalnızca ağ trafiğinin dağıtımıyla ilgilendiği ve uygulama katmanı protokollerini (örneğin HTTP/HTTPS) veya bu protokollerle ilişkili işlemleri (örneğin SSL sonlandırma) işlemediği anlamına gelir.
 
-SSL sonlandırması uygulama katmanında (Layer 7) gerçekleşir. Azure'da SSL sonlandırması yapmak için genellikle Azure Application Gateway kullanılır. Azure Application Gateway, HTTP, HTTPS ve Websocket trafiğini yönetebilir ve SSL sonlandırması, URL tabanlı yönlendirme, özel çerezler, HTTP başlıklarına göre yönlendirme ve Web Application Firewall (WAF) gibi daha gelişmiş özellikler sunar.\
-
+SSL sonlandırması uygulama katmanında (Layer 7) gerçekleşir. Azure'da SSL sonlandırması yapmak için genellikle Azure Application Gateway kullanılır. Azure Application Gateway, HTTP, HTTPS ve Websocket trafiğini yönetebilir ve SSL sonlandırması, URL tabanlı yönlendirme, özel çerezler, HTTP başlıklarına göre yönlendirme ve Web Application Firewall (WAF) gibi daha gelişmiş özellikler sunar.<br>
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/osi-model-7-layers-1.png" alt="" width="450"><figcaption></figcaption></figure>

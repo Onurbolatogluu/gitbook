@@ -26,4 +26,4 @@ Her bir yapılandırmanın lokal olarak yedeklenmiş depolama (LRS) özelliği b
 
 {% embed url="https://learn.microsoft.com/en-us/azure/well-architected/service-guides/storage-accounts/security" %}
 
-\
+<br>

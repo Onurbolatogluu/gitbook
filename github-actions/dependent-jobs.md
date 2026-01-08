@@ -86,8 +86,7 @@ needs: job1
 GitHub Actions’da iki önemli “katman” vardır:
 
 1. **Job’lar (jobs)**: Aynı workflow içinde tanımlanan bölümler.
-2. **Adımlar (steps)**: Bir job’un içindeki, sırasıyla yürütülen komut veya eylemler.\
-
+2. **Adımlar (steps)**: Bir job’un içindeki, sırasıyla yürütülen komut veya eylemler.<br>
 
 **Adımlar (steps) her zaman sırayla (top-down) çalışır**, yani job içindeki Step 1 → Step 2 → Step 3 şeklinde. Fakat **job’lar** (örneğin `job1`, `job2`, `job3`), aynı workflow içinde paralel olarak başlarlar. Yani “job1” bitene kadar “job2” otomatik beklemeye girmiyor; GitHub ikisini aynı anda koşturmaya çalışır.
 {% endhint %}

@@ -91,8 +91,7 @@ Bu Prometheus yapılandırması, "advanced-federation" olarak adlandırılan bir
 
 <figure><img src="../.gitbook/assets/image (112).png" alt=""><figcaption></figcaption></figure>
 
-\
-
+<br>
 
 
 

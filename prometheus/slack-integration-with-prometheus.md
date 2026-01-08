@@ -1,8 +1,7 @@
 # ⏰ Slack integration with Prometheus
 
 Slack ile Prometheus entegrasyonu yapmak için aşağıdaki adımları takip etmeniz gerekmektedir:\
-\
-
+<br>
 
 <figure><img src="../.gitbook/assets/image (148).png" alt=""><figcaption></figcaption></figure>
 

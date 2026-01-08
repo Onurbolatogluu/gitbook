@@ -1,4 +1,4 @@
-# 🖊 Alıştırma
+# 🖊️ Alıştırma
 
 #### Check if node memory is less than 20% or not.
 
@@ -72,4 +72,4 @@ Bu sorgu, Prometheus gibi bir zaman serisi veritabanında, "node\_cpu\_seconds\_
 
 <mark style="color:green;">Ancak, bu ifade sonucunda elde edilen değer doğrudan kullanım yüzdesi değil, kullanım yüzdesinin tamamlayıcısıdır (yani, boşta geçirilen zamanın yüzdesidir). Bu nedenle, hesaplanan değeri doğrudan kullanım yüzdesi olarak kullanmak için, sonuç 100'den çıkarılır. Örneğin, eğer</mark> <mark style="color:green;"></mark><mark style="color:green;">`irate(node_cpu_seconds_total{mode="idle"}[10m])`</mark> <mark style="color:green;"></mark><mark style="color:green;">ifadesi ile elde edilen sonuç %20 ise,</mark> <mark style="color:green;"></mark><mark style="color:green;">`100 - 20 = 80`</mark> <mark style="color:green;"></mark><mark style="color:green;">ile CPU kullanım yüzdesi %80 olarak hesaplanır.</mark>
 
-\
+<br>

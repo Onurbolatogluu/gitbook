@@ -12,8 +12,7 @@ Azure Management Groups, Microsoft Azure bulut platformunda bulunan kaynakların
 
 **Örnek: Flat Hierarchy Design Uygulaması**
 
-* Bir teknoloji startup'ı düşünelim, bu şirket Microsoft Azure üzerinde birkaç farklı servisi barındırmaktadır: bir web uygulaması, bir API ve bir veritabanı. Bu şirketin yönetim kolaylığı için tüm Azure kaynaklarını bir tek yönetim grubu altında toplaması idealdir.\
-
+* Bir teknoloji startup'ı düşünelim, bu şirket Microsoft Azure üzerinde birkaç farklı servisi barındırmaktadır: bir web uygulaması, bir API ve bir veritabanı. Bu şirketin yönetim kolaylığı için tüm Azure kaynaklarını bir tek yönetim grubu altında toplaması idealdir.<br>
 * **Yönetim Grubu:** TechStartupMG
   *   **Abonelikler:**
 
@@ -34,8 +33,7 @@ Azure Management Groups, Microsoft Azure bulut platformunda bulunan kaynakların
 
 #### **Use geographic structure with separate group for production:**
 
-* Azure Yönetim Gruplarını, coğrafi bir yapı ile ortamlara göre hiyerarşik olarak kullanmak, Azure kaynaklarınızı coğrafi konumlarına göre organize etmenize olanak tanırken aynı zamanda production kaynaklarını belirgin bir grupta izole etmenizi sağlar. Bu yöntem, kaynakları coğrafi olarak ve ortam (prod, test) bazında kategorize ederek yönetim verimliliğini, güvenliğini ve politika uygulamasını kolaylaştırır. Basitleştirilmiş bir örnek:\
-
+* Azure Yönetim Gruplarını, coğrafi bir yapı ile ortamlara göre hiyerarşik olarak kullanmak, Azure kaynaklarınızı coğrafi konumlarına göre organize etmenize olanak tanırken aynı zamanda production kaynaklarını belirgin bir grupta izole etmenizi sağlar. Bu yöntem, kaynakları coğrafi olarak ve ortam (prod, test) bazında kategorize ederek yönetim verimliliğini, güvenliğini ve politika uygulamasını kolaylaştırır. Basitleştirilmiş bir örnek:<br>
 * **Tenant Root Group**
   * **North America**
     * **Production**

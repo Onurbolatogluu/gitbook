@@ -1,7 +1,6 @@
 # 🌐 Network Policy
 
-Bölüm öncesi notlar;\
-
+Bölüm öncesi notlar;<br>
 
 {% hint style="info" %}
 > Kubernetes cluster altında, her podun uniq kendine ait bir IP adresi bulunmaktadır.

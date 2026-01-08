@@ -161,4 +161,4 @@ Yukarıdaki sorgu, son 1 dakika içinde "/a" ile başlayan handler'lar için yap
 windows_service_state{state!~".*d"}
 ```
 
-Yukarıdaki sorgu, "state" etiketi "d" ile bitmeyen Windows hizmetlerinin durumunu gösterir. `!~` kullanılarak negatif bir regular expression araması yapılır. Bu sorgunun sonucu, "state" etiketi "d" ile bitmeyen tüm Windows hizmetlerinin durumlarını içerecektir.\
+Yukarıdaki sorgu, "state" etiketi "d" ile bitmeyen Windows hizmetlerinin durumunu gösterir. `!~` kullanılarak negatif bir regular expression araması yapılır. Bu sorgunun sonucu, "state" etiketi "d" ile bitmeyen tüm Windows hizmetlerinin durumlarını içerecektir.<br>

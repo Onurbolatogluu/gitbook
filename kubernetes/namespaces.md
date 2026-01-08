@@ -20,8 +20,7 @@ Kubernetes 'de namespace 'de tam olarak bu işi yapar.
 
 kube-system : Kubernetes tarafından oluşturulan objelerin tutulduğu namespace 'dir.\
 kube-public   : Kimliği doğrulanmamış olanlarda dahil, tüm kullanıcılar tarafından erişilmesine, ihtiyaç duyulan objelerin oluşturulabileceği yerdir.\
-kube-nodel-lease : Node hard link işlemleri için gerekli özel bir namespace'dir.\
-
+kube-nodel-lease : Node hard link işlemleri için gerekli özel bir namespace'dir.<br>
 
 Kısacası kube ile başlayan namespace'ler, kubernetes tarafından oluşturulur. Cluster'ın işleyişi ile alakalı objelerin tutulduğu yerdir. Bunun yanı sıra, default adında namespace daha oluşturulur. Bizler aksini belirtmediğimiz sürece, tüm objeler default olarak burada oluşur.&#x20;
 

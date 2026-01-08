@@ -495,8 +495,7 @@ Bu satır, uygulamanın `/metrics` yolunda Prometheus metriklerini sunar. Bu say
 
 ...
 
-...\
-
+...<br>
 
 
 

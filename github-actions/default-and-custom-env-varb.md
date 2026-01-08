@@ -117,4 +117,4 @@ steps:
 2. **Custom Env Vars**
    * Kendi istediğin değerleri tanımlayıp `$DEGISKEN_ADI` şeklinde kullanırsın.
    * Düzeyler: **Workflow**, **Job**, **Step**.
-   * Daha spesifik düzeyde tanımlanan env var, önceki düzeydekileri geçersiz kılar.\
+   * Daha spesifik düzeyde tanımlanan env var, önceki düzeydekileri geçersiz kılar.<br>

@@ -20,8 +20,7 @@ AKS, tüm bu kavramları otomatik olarak yöneten ve yüksek kullanılabilirlik,
 Kubernetes düğüm havuzları (node pools), farklı tipte iş yüklerini veya uygulama bileşenlerini çalıştırmak için farklı yapılandırmalara sahip düğüm gruplarıdır. Her bir node pool, örneğin CPU veya bellek gibi kaynaklar açısından farklılık gösterebilir.&#x20;
 
 \
-Örneğin, yüksek CPU gereksinimlerine sahip uygulama bileşenleri için daha güçlü makineler, bellek yoğun iş yükleri için ise daha fazla belleğe sahip makineler kullanabilirsiniz. Bazı node 'lar daha düşük maliyetli olabilir ve daha az kritik iş yükleri için kullanılabilirken, diğerleri daha yüksek performanslı ve dolayısıyla daha maliyetli olabilir. \
-
+Örneğin, yüksek CPU gereksinimlerine sahip uygulama bileşenleri için daha güçlü makineler, bellek yoğun iş yükleri için ise daha fazla belleğe sahip makineler kullanabilirsiniz. Bazı node 'lar daha düşük maliyetli olabilir ve daha az kritik iş yükleri için kullanılabilirken, diğerleri daha yüksek performanslı ve dolayısıyla daha maliyetli olabilir. <br>
 
 Bu yapılandırma esnekliği, Kubernetes'in iş yüklerini mikro hizmet mimarilerindeki gibi çeşitli bileşenlere bölme ve her bir bileşeni en uygun kaynaklarla çalıştırma yeteneği ile iyi bir uyum sağlar.
 {% endhint %}

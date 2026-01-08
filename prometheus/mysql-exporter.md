@@ -1,4 +1,4 @@
-# 👨🚒 mysql exporter
+# 👨‍🚒 mysql exporter
 
 MySQL Exporter, MySQL sunucusunda çalışan ve sunucu üzerinde birçok önemli performans ölçütünü yakalayan bir istemci hizmetidir. Bu ölçütler arasında CPU kullanımı, bellek tüketimi, sorgu sayısı, sorgu süresi, ağ trafiği ve daha fazlası yer alabilir. MySQL Exporter, bu metrikleri ölçer ve Prometheus tarafından toplanabilir hale getirilir. Sonuç olarak, Prometheus bu metrikleri toplar, depolar ve analiz eder, böylece sistem yöneticileri ve geliştiriciler performans sorunlarını tespit edebilir, kapasite planlaması yapabilir ve genel veritabanı sağlığını izleyebilir.
 
@@ -149,8 +149,7 @@ Bu dökümanı izleyerek MySQL Exporter için gerekli kullanıcıyı oluşturabi
     ```bash
     sudo systemctl status mysql_exporter
     ```
-15. **Finish** :tada:\
-
+15. **Finish** :tada:<br>
 
     <figure><img src="../.gitbook/assets/image (118).png" alt=""><figcaption></figcaption></figure>
 

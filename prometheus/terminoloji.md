@@ -70,7 +70,6 @@ Prometheus, bir job için belirli bir scrape interval (örneğin, 15 saniye) aya
 
 Prometheus, veri toplamak için scrape işlemleri yapar ve bu scrape işlemleri sırasında, ölçümlerden elde edilen değerler, "sample" olarak adlandırılır.
 
-\
+<br>
 
-
-\
+<br>
