@@ -31,7 +31,7 @@ Template, Packer'ın diğer ana bileşenlerini organize eden bir orkestrasyon do
 
 Modern altyapı yönetiminde Template'ler kritik bir rol oynar:
 
-* Immutable Infrastructure (Değişmez Altyapı): Uygulama kodu ve bağımlılıklar imajın içine "pişirilir" (baked). Sunucular açıldıktan sonra manuel SSH müdahalesi gerekmez, bu da yapılandırma kaymasını (configuration drift) önler.
+* Immutable Infrastructure (Değişmez Altyapı): Uygulama kodu ve bağımlılıklar imaj oluşturulurken dahil edilir (baked). Sunucular açıldıktan sonra manuel SSH müdahalesi gerekmez, bu da yapılandırma kaymasını (configuration drift) önler.
 * CI/CD Entegrasyonu: GitHub Runners gibi araçlarla entegre edilir. Kod/Paket değişikliği olduğunda Template kullanılarak otomatik yeni bir imaj sürümü üretilir.
 * Debugging (Hata Ayıklama):
   * `packer validate` komutu ile kontrol edilebilir.
