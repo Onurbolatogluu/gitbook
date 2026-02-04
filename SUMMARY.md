@@ -391,3 +391,4 @@
 ## PACKER
 
 * [HashiCorp Packer Nedir?](packer/hashicorp-packer-nedir.md)
+* [Templates](packer/templates.md)
