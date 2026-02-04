@@ -387,3 +387,7 @@
 ## ⭐ Others
 
 * [Linux I/O redirection nedir?](others/linux-i-o-redirection-nedir.md)
+
+## PACKER
+
+* [HashiCorp Packer Nedir?](packer/hashicorp-packer-nedir.md)
