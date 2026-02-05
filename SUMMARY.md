@@ -399,3 +399,7 @@
 * [Debugging](packer/debugging/README.md)
   * [PACKER\_LOG=1](packer/debugging/packer_log-1.md)
   * [packer build -debug](packer/debugging/packer-build-debug.md)
+  * [-on-error=ask/retry](packer/debugging/on-error-ask-retry.md)
+  * [Geçici SSH Anahtarları](packer/debugging/gecici-ssh-anahtarlari.md)
+  * [WinRM](packer/debugging/winrm.md)
+* [Page 1](packer/page-1.md)
