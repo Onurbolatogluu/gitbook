@@ -31,7 +31,7 @@ Packer'a ne yapacağını söylediğimiz reçetelere Template diyoruz (HCL2 form
 * Packer Yöntemi (Immutable): Uygulamanı ve tüm ayarlarını Builder ile Image'ın içine dahil ederiz (Bake edersin).
 * Mantık: Sunucuyu güncellemekle uğraşmazsın. Yeni bir Image oluşturur, eskisini çöpe atar, yenisini Deploy edersin. Tıpkı çizilmiş bir CD'yi tamir etmeye çalışmak yerine yeni bir CD yazmak gibi.
 
-#### 5. Debugging (Hata Ayıklama)
+#### 5. Debugging
 
 Bazen işler yolunda gitmez. Packer sana şunu sunar:
 

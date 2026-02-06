@@ -26,7 +26,7 @@ Diyelim ki Windows Image'ı hazırlarken IIS (Web Sunucusu) kurulumu patladı.
 * Sana ekranda şifreyi yazar.
 * Sen RDP ile bağlanıp, "Denetim Masası"na veya "Event Viewer"a (Olay Görüntüleyicisi) girip hatayı görsel olarak incelersin.
 
-#### 4. İzinler ve Bürokraksi (IAM Policy)
+#### 4. IAM Policy
 
 Metindeki en kritik teknik uyarı `ec2:GetPasswordData` kısmıdır. Bunu şöyle düşün: Packer senin adına AWS'den şifreyi istiyor ama eğer Packer'a verdiğin yetkilerde (IAM User/Role) "Şifreleri görme yetkisi" yoksa, AWS "Sana şifreyi veremem" der ve süreç başarısız olur.
 

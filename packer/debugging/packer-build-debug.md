@@ -4,7 +4,7 @@ icon: bugs
 
 # packer build -debug
 
-#### 1. "Ağır Çekim" Modu (Step-by-Step)
+#### 1. Step-by-Step
 
 Normalde Packer, "Bas gaza" modunda çalışır; her şeyi olabildiğince hızlı ve aynı anda (Paralel) yapmaya çalışır. Ama `-debug` parametresini eklersen Packer "Manuel Vitese" geçer:
 

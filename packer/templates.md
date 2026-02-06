@@ -8,7 +8,7 @@ icon: memo
 
 Packer'ın en temel bileşeni olan Template'ler, bir makine imajının nasıl üretileceğini belirleyen talimat kılavuzları'dır. Otomasyon sürecini yöneten ve diğer tüm bileşenleri bir araya getiren merkezi yapıdır.
 
-**1. Yapı ve Format (Structure & Format)**
+**1. Yapı ve Format**
 
 Template'ler, imaj inşa sürecini detaylandıran kod dosyalarıdır.
 
@@ -19,7 +19,7 @@ Template'ler, imaj inşa sürecini detaylandıran kod dosyalarıdır.
   * Source Block: Builder'ın hangi platformda (AWS, vSphere vb.) çalışacağını ve hangi temel imajı kullanacağını belirtir.
   * Build Block: Provisioner'ları ve Post-processor'ları bir araya getirerek gerçek inşa sürecini tanımlar.
 
-**2. Temel Kavramlarla İlişkisi (Core Concepts)**
+**2. Temel Kavramlarla İlişkisi**
 
 Template, Packer'ın diğer ana bileşenlerini organize eden bir orkestrasyon dosyasıdır:
 

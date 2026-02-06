@@ -402,4 +402,6 @@
   * [-on-error=ask/retry](packer/debugging/on-error-ask-retry.md)
   * [Geçici SSH Anahtarları](packer/debugging/gecici-ssh-anahtarlari.md)
   * [WinRM](packer/debugging/winrm.md)
-* [Page 1](packer/page-1.md)
+* [Workflow](packer/workflow/README.md)
+  * [packer init](packer/workflow/packer-init.md)
+  * [packer validate](packer/workflow/packer-validate.md)

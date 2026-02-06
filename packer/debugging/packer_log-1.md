@@ -8,13 +8,13 @@ icon: sim-card
 
 Normalde Packer bir "Kara Kutu" gibidir. İçeri komut girer, dışarı Image çıkar. Ama arada bir şeyler patlarsa ne olduğunu göremezsin. Bilgisayarının terminaline `export PACKER_LOG=1` yazdığında (Windows'ta `set` ile), Packer "Verbose Mode"a geçer. Yani arka plandaki her fısıltıyı, her ağ bağlantısını, her dosya transferini ekrana basar.
 
-#### 2. Neden Bu Kadar Karmaşık Görünüyor? (Mimari ve RPC)
+#### 2. Neden Bu Kadar Karmaşık Görünüyor?
 
 * Packer tek parça bir program değildir. Builder ayrı bir programcık, Provisioner ayrı bir programcık olarak çalışır.
 * Bunlar kendi aralarında RPC (Remote Procedure Call) denilen bir yöntemle konuşurlar.
 * Klasik Debug burada işe yaramaz. Çünkü ortada tek bir program yok, bir sürü küçük parçanın trafiği var. Bu yüzden logları okumak zorundasın.
 
-#### 3. Logları Okuma Sanatı (Zaman Damgası ve Paralellik)
+#### 3. Logları Okuma Sanatı&#x20;
 
 Packer çok yetenekli olduğu için aynı anda 3 farklı işi (Paralel) yapabilir. Bu durum logların karışmasına neden olur.
 

@@ -6,7 +6,7 @@ icon: gears
 
 <figure><img src="../.gitbook/assets/1_lTpplp4vz7CPv-MQOLFeoA.png" alt=""><figcaption></figcaption></figure>
 
-#### 1. Post-Processor Nedir? (Lojistik Ekibi)
+#### 1. Post-Processor Nedir?&#x20;
 
 Hatırlarsan; Builder keki pişirdi (makineyi açtı), Provisioner keki süsledi (yazılımları kurdu). Artık elimizde bir Artifact (Ürün) var. Ama bu ürün fırının tezgahında duruyor. Post-Processor devreye girer ve şunları yapar:
 
@@ -22,7 +22,7 @@ Yani, oluşan Image'ı Deploy edilmeye (dağıtılmaya) hazır hale getirir.
 * Çözüm: Post-Processor, işlem bitince bir `manifest.json` dosyası oluşturur. İçine "Ben AWS'de şu ID ile, şu tarihte bir Image oluşturdum" diye yazar.
 * Otomasyon (CI/CD): Sonraki adımlarda (Pipeline), Terraform gelir bu dosyayı okur ve "Ha, tamam, kullanmam gereken yeni Image buymuş" der. Bu, tam otomasyonun kilit noktasıdır.
 
-#### 3. Dönüştürme ve Arşivleme (Format & Upload)
+#### 3. Dönüştürme ve Arşivleme
 
 Bazen ürettiğin Image ham haldedir ve onu işlemen gerekir:
 

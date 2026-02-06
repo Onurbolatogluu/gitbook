@@ -6,7 +6,7 @@ icon: hat-cowboy
 
 Packer, tek bir kaynak yapılandırmasından birden fazla platform için (AWS, VMware, Docker vb.) makine ve konteyner imajları oluşturmanızı sağlayan açık kaynaklı bir araçtır.
 
-#### 1. Temel Kavramlar (Terminology)
+#### 1. Temel Kavramlar
 
 Packer ekosistemini oluşturan ana bileşenler şunlardır:
 

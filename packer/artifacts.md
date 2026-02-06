@@ -4,7 +4,7 @@ icon: newspaper
 
 # Artifacts
 
-#### 1. Artifact Nedir? (Fabrikanın Çıktısı)
+#### 1. Artifact Nedir?&#x20;
 
 Packer fabrikasını kurdun (Builder), içini döşedin (Provisioner), paketledin (Post-Processor). Banttan düşen o son ürüne Artifact denir.
 
