@@ -407,4 +407,5 @@
   * [packer validate](packer/workflow/packer-validate.md)
   * [packer build](packer/workflow/packer-build.md)
   * [packer fmt](packer/workflow/packer-fmt.md)
-* [Immutable Infrastructure](packer/immutable-infrastructure.md)
+* [Immutable Infrastructure](packer/immutable-infrastructure/README.md)
+  * [Yapılandırma Sapması](packer/immutable-infrastructure/yapilandirma-sapmasi.md)
