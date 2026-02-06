@@ -9,8 +9,8 @@ icon: circle-play
 Packer, monolitik (tek parça) bir yapıdan ziyade modüler bir mimariye sahiptir. Çekirdek yazılım (Core) ile bulut sağlayıcıları (AWS, VMware, Azure vb.) birbirinden ayrılmıştır.
 
 * Modüler Yapı: Template dosyanızda (HCL2 formatında) `required_plugins` bloğu ile "Ben AWS üzerinde çalışacağım" dediğinizde, Packer çekirdeği bu yeteneğe varsayılan olarak sahip değildir.
-* Tedarik Süreci: `packer init` komutu çalıştırıldığında, Packer bu bloğu okur, gerekli olan eklentileri (Binary dosyaları) HashiCorp'un resmi depolarından veya GitHub üzerinden yerel çalışma ortamına indirir.
-* Versiyon Kilitleme (Version Pinning): Projenin tutarlılığı için belirli eklenti versiyonları (örn: `v1.2.0`) zorunlu kılınabilir. Bu komut, doğru versiyonun indirilmesini garanti ederek, "Benim bilgisayarımda çalışıyordu" sorununu (Environment Consistency) ortadan kaldırır.
+* `packer init` komutu çalıştırıldığında, Packer bu bloğu okur, gerekli olan eklentileri (Binary dosyaları) HashiCorp'un resmi depolarından veya GitHub üzerinden yerel çalışma ortamına indirir.
+* Projenin tutarlılığı için belirli eklenti versiyonları (örn: `v1.2.0`) zorunlu kılınabilir. Bu komut, doğru versiyonun indirilmesini garanti ederek, "Benim bilgisayarımda çalışıyordu" sorununu (Environment Consistency) ortadan kaldırır.
 
 #### 2. Operasyonel İş Akışı
 
