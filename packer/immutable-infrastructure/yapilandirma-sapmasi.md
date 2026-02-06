@@ -11,8 +11,6 @@ Geleneksel (Mutable) altyapı yönetiminde, sunucular yayına alındıktan sonra
 
 #### 2. Çözüm Stratejisi
 
-Packer, sunucuların çalışma zamanında (Run-time) değiştirilmesini engelleyerek sapmayı kaynağında kurutur.
-
 * Baking Yöntemi: Uygulama kodu, sistem kütüphaneleri ve konfigürasyon dosyaları, sunucu henüz başlatılmadan önce Makine İmajı içerisine gömülür.
 * Üretilen imaj, Değişmez (Immutable) bir yapıttır. Bu imajdan başlatılan 1. sunucu ile 1000. sunucunun, bit seviyesinde aynı durumda olduğu matematiksel olarak garantidir.
 * Sunucu yaşam döngüsü boyunca manuel değişiklik yapılmaması beklenir. Değişiklik ihtiyacı doğduğunda sunucu güncellenmemesi önerilir, yenisiyle değiştirilmesi gerekir.
