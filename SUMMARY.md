@@ -405,3 +405,5 @@
 * [Workflow](packer/workflow/README.md)
   * [packer init](packer/workflow/packer-init.md)
   * [packer validate](packer/workflow/packer-validate.md)
+  * [packer build](packer/workflow/packer-build.md)
+  * [packer fmt](packer/workflow/packer-fmt.md)
