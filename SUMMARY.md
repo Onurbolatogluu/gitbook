@@ -416,3 +416,8 @@
   * [Public Clouds](packer/desteklenen-platformlar/public-clouds.md)
   * [Docker](packer/desteklenen-platformlar/docker.md)
   * [VMware, VirtualBox](packer/desteklenen-platformlar/vmware-virtualbox.md)
+* [Yaygın Sorunlar](packer/yaygin-sorunlar/README.md)
+  * [Cloud-init](packer/yaygin-sorunlar/cloud-init.md)
+  * [ulimit](packer/yaygin-sorunlar/ulimit.md)
+  * [TMPDIR](packer/yaygin-sorunlar/tmpdir.md)
+  * [WinRM Bağlantı Hataları](packer/yaygin-sorunlar/winrm-baglanti-hatalari.md)

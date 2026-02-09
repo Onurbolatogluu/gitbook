@@ -13,7 +13,7 @@ Bulut platformlarında (örn. AWS) süreç sonunda sadece soyut bir imaj kimliğ
 Platform Çıktıları (Builder Artifacts):
 
 * VMware: Genellikle bir sanal makine dizini, disk dosyaları (VMDK) veya taşınabilir OVF/OVA şablonları üretir.
-* VirtualBox: `virtualbox-iso` oluşturucusu, ham işletim sistemi medyasından (ISO) başlayarak .vbox konfigürasyon dosyası ve .vdi sanal disk dosyalarını oluşturur.
+* VirtualBox: ham işletim sistemi medyasından (ISO) başlayarak .vbox konfigürasyon dosyası ve .vdi sanal disk dosyalarını oluşturur.
 
 #### 3. Ekosistem  ve Destek Seviyesi
 
