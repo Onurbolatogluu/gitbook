@@ -19,7 +19,7 @@ Bu kural en önemlisidir.
 Kubernetes, Cluster içini "Schengen Bölgesi" gibi görür. Sınırlar ve kontroller kaldırılmıştır.
 
 * Kural: Bir Pod, başka bir Node üzerindeki Pod ile konuşurken arada NAT (Network Address Translation) yapılmaz.
-* Analoji: Nasıl ki evindeki bir odadan diğerine giderken pasaport göstermiyorsan, Pod'lar da birbirine giderken IP adresi çevirisi yapmaz.
+* Nasıl ki evindeki bir odadan diğerine giderken pasaport göstermiyorsan, Pod'lar da birbirine giderken IP adresi çevirisi yapmaz.
 * Sonuç: Çeviri yoksa gecikme (Latency) yoktur. İşlemci yorulmaz (Overhead azalır), sistem hızlı çalışır.
 
 ***
