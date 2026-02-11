@@ -432,3 +432,7 @@
     * [Scalability](kubernetes-networking/giris-kubernetes-networking/temel-amaclar/scalability.md)
     * [Effective Management](kubernetes-networking/giris-kubernetes-networking/temel-amaclar/effective-management.md)
   * [Ağ Modeli](kubernetes-networking/giris-kubernetes-networking/ag-modeli.md)
+  * [Dört Temel İletişim Türü](kubernetes-networking/giris-kubernetes-networking/dort-temel-iletisim-turu.md)
+  * [IP Adres Aralıkları](kubernetes-networking/giris-kubernetes-networking/ip-adres-araliklari.md)
+  * [CNI](kubernetes-networking/giris-kubernetes-networking/cni.md)
+  * [Advanced](kubernetes-networking/giris-kubernetes-networking/advanced.md)
