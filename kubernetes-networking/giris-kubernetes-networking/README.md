@@ -56,4 +56,4 @@ Popüler CNI Eklentileri:
 
 ***
 
-Özetle: Sistem dünyasında bu metinden cebine koyman gereken en önemli bilgi şudur: Kubernetes'te her Pod'un bir IP'si vardır ve NAT yapmadan diğerleriyle konuşabilir. Bu, eski usül sistemlere göre hayatı çok kolaylaştırır.
+Özetle: Kubernetes'te her Pod'un bir IP'si vardır ve NAT yapmadan diğerleriyle konuşabilir. Bu, eski usül sistemlere göre hayatı çok kolaylaştırır.

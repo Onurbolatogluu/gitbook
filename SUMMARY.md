@@ -424,4 +424,10 @@
 
 ## 🌑 Kubernetes Networking
 
-* [💥 Giriş : Kubernetes Networking](kubernetes-networking/giris-kubernetes-networking.md)
+* [💥 Giriş : Kubernetes Networking](kubernetes-networking/giris-kubernetes-networking/README.md)
+  * [Temel Amaçlar](kubernetes-networking/giris-kubernetes-networking/temel-amaclar/README.md)
+    * [Communication](kubernetes-networking/giris-kubernetes-networking/temel-amaclar/communication.md)
+    * [Connectivity](kubernetes-networking/giris-kubernetes-networking/temel-amaclar/connectivity.md)
+    * [Efficient Operation](kubernetes-networking/giris-kubernetes-networking/temel-amaclar/efficient-operation.md)
+    * [Scalability](kubernetes-networking/giris-kubernetes-networking/temel-amaclar/scalability.md)
+    * [Effective Management](kubernetes-networking/giris-kubernetes-networking/temel-amaclar/effective-management.md)
