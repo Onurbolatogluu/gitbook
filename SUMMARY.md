@@ -431,3 +431,4 @@
     * [Efficient Operation](kubernetes-networking/giris-kubernetes-networking/temel-amaclar/efficient-operation.md)
     * [Scalability](kubernetes-networking/giris-kubernetes-networking/temel-amaclar/scalability.md)
     * [Effective Management](kubernetes-networking/giris-kubernetes-networking/temel-amaclar/effective-management.md)
+  * [Ağ Modeli](kubernetes-networking/giris-kubernetes-networking/ag-modeli.md)
