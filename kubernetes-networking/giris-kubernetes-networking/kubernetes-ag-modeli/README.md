@@ -92,21 +92,19 @@ Bir sistem yöneticisi olarak, "Kubernetes bozulursa" Linux komutlarıyla durumu
 Node üzerindeki tüm ağ arayüzlerini listeler. Kubernetes ortamında yüzlerce `veth` (sanal ethernet) arayüzü görmek normaldir.
 
 * Senaryo: Node üzerinde o an kaç tane Pod'un ağa bağlı olduğunu hızlıca anlamak istiyorum.
-*   Komut:
+* Komut:
 
-    Bash
+```bash
+ip addr show | grep veth
+```
 
-    ```
-    ip addr show | grep veth
-    ```
-*   Örnek Çıktı:
+* Örnek Çıktı:
 
-    Plaintext
+```bash
+4: veth1a2b3c@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> ...
+6: veth8d9e0f@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> ...
+```
 
-    ```
-    4: veth1a2b3c@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> ...
-    6: veth8d9e0f@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> ...
-    ```
 * Analiz: Buradaki her bir `veth...` satırı, aslında çalışan bir Pod'un dış dünyaya açılan kapısıdır. `@if3` ifadesi, bu kablonun diğer ucunun (Pod'un içindeki `eth0`'ın) indeks numarasını gösterir.
 
 ***
@@ -116,23 +114,21 @@ Node üzerindeki tüm ağ arayüzlerini listeler. Kubernetes ortamında yüzlerc
 Linux üzerindeki namespace'leri listeler. Hangi işlemin (Process) hangi ağ alanını kullandığını bulmak için kritiktir.
 
 * Senaryo: Sistemde çalışan gizli ağ alanlarını (Network Namespaces) ve bunları kullanan süreçleri (Process ID - PID) bulmak istiyorum.
-*   Komut:
+* Komut:
 
-    Bash
+```shellscript
+lsns -t net
+```
 
-    ```
-    lsns -t net
-    ```
-*   Örnek Çıktı:
+* Örnek Çıktı:
 
-    Plaintext
+```shellscript
+NS         TYPE  NPROCS   PID USER   COMMAND
+4026531992 net      126     1 root   /usr/lib/systemd/systemd
+4026532247 net        1  3456 root   /pause
+4026532248 net        1  4567 root   nginx
+```
 
-    ```
-    NS         TYPE  NPROCS   PID USER   COMMAND
-    4026531992 net      126     1 root   /usr/lib/systemd/systemd
-    4026532247 net        1  3456 root   /pause
-    4026532248 net        1  4567 root   nginx
-    ```
 * Analiz: Listede `/pause` komutunu görüyorsanız, bu bir Kubernetes Pod'unun ağ alanıdır. `PID` sütunundaki numara (örneğin 3456), o Pod'un ağ alanına girmek için kullanacağınız anahtardır.
 
 **C. `nsenter` ile Pod'un İçine Sızmak**
