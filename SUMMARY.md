@@ -441,3 +441,4 @@
     * [Örnekler](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/ornekler.md)
     * [Namespaces](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/namespaces.md)
     * [Host Network Interfaces](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/host-network-interfaces.md)
+    * [Araçlar ve Komutlar](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/araclar-ve-komutlar.md)

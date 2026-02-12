@@ -120,7 +120,7 @@ _(Bu süreçler, Pod'ların "Tapu Sahibi"dir. Uygulamanız çökse bile bu süre
 
 **C. Namespace İzolasyonu**
 
-Her Pod'un kendine ait izole bir ağ ortamı (Network Namespace) olduğunu doğrulayalım.
+Her Pod'un kendine ait izole bir Network Namespace olduğunu doğrulayalım.
 
 Komut (Node üzerinde):
 
