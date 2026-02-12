@@ -439,3 +439,5 @@
   * [Kubernetes Ağ Modeli](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/README.md)
     * [Temel Kavramlar](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/temel-kavramlar.md)
     * [Örnekler](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/ornekler.md)
+    * [Namespaces](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/namespaces.md)
+    * [Host Network Interfaces](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/host-network-interfaces.md)
