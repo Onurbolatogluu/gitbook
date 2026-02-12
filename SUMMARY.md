@@ -436,3 +436,5 @@
   * [IP Adres Aralıkları](kubernetes-networking/giris-kubernetes-networking/ip-adres-araliklari.md)
   * [CNI](kubernetes-networking/giris-kubernetes-networking/cni.md)
   * [Advanced](kubernetes-networking/giris-kubernetes-networking/advanced.md)
+  * [Kubernetes Ağ Modeli](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/README.md)
+    * [Temel Kavramlar](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/temel-kavramlar.md)
