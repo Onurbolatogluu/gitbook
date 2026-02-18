@@ -444,4 +444,5 @@
     * [Araçlar ve Komutlar](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/araclar-ve-komutlar.md)
 * [Giriş : Container Network Interface](kubernetes-networking/giris-container-network-interface/README.md)
   * [Cilium](kubernetes-networking/giris-container-network-interface/cilium.md)
+  * [Installing Cilium and Hubble CLI](kubernetes-networking/giris-container-network-interface/installing-cilium-and-hubble-cli.md)
 * [Giriş : Kubernetes Services](kubernetes-networking/giris-kubernetes-services.md)
