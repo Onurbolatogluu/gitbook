@@ -442,5 +442,6 @@
     * [Namespaces](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/namespaces.md)
     * [Host Network Interfaces](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/host-network-interfaces.md)
     * [Araçlar ve Komutlar](kubernetes-networking/giris-kubernetes-networking/kubernetes-ag-modeli/araclar-ve-komutlar.md)
-* [Giriş : Container Network Interface](kubernetes-networking/giris-container-network-interface.md)
+* [Giriş : Container Network Interface](kubernetes-networking/giris-container-network-interface/README.md)
+  * [Cilium](kubernetes-networking/giris-container-network-interface/cilium.md)
 * [Giriş : Kubernetes Services](kubernetes-networking/giris-kubernetes-services.md)
