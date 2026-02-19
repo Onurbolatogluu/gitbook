@@ -446,4 +446,5 @@
   * [Cilium](kubernetes-networking/giris-container-network-interface/cilium.md)
   * [Installing Cilium and Hubble CLI](kubernetes-networking/giris-container-network-interface/installing-cilium-and-hubble-cli.md)
   * [Internal Kubernetes Communication](kubernetes-networking/giris-container-network-interface/internal-kubernetes-communication.md)
+  * [Pod to Pod Communication](kubernetes-networking/giris-container-network-interface/pod-to-pod-communication.md)
 * [Giriş : Kubernetes Services](kubernetes-networking/giris-kubernetes-services.md)
