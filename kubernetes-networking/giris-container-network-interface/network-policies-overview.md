@@ -4,6 +4,8 @@ icon: diagram-project
 
 # Network Policies Overview
 
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-24 at 11.01.13.png" alt=""><figcaption></figcaption></figure>
+
 En basit tabirle, cluster içindeki trafik ışıkları veya güvenlik görevlileridir. Hangi Pod'un nereye gidebileceğini veya hangi Pod'un kimden veri alabileceğini belirleyen kurallar bütünüdür. Bu kurallar ancak Calico veya Cilium gibi bir CNI kuruluysa çalışır; standart boş bir Kubernetes bunları anlayamaz.
 
 #### 2. Kurallar Neye Göre Yazılır?
