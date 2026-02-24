@@ -74,7 +74,7 @@ spec:
   - Ingress
 ```
 
-#### 6. Standart Network Policy'nin Sınırları (Limitations)
+#### 6. Standart Network Policy'nin Sınırları
 
 Bu standart kuralların bazı yetersizlikleri vardır:
 
@@ -82,6 +82,4 @@ Bu standart kuralların bazı yetersizlikleri vardır:
 * Kuralların işleyip işlemediğini veya engellenen trafiği sana log olarak göstermez (Loglama özelliği yoktur).
 * Doğrudan bir `Service` objesini hedef alamazsın, sadece etiket (label) seçebilirsin.
 
-Peki bu sınırları nasıl aşıyoruz? İşte tam burada önceki konularımızda işlediğimiz Cilium veya Calico gibi gelişmiş CNI araçları devreye giriyor. Örneğin Cilium, standart kuralın yapamadığı _Layer 7 HTTP filtrelemeyi_ ve _Hubble ile loglamayı_ (insights) mümkün kılar.
-
-Özetle; bu doküman, Kubernetes'te iki uygulamanın birbirleriyle veya dış dünyayla olan iletişimini IP, Port ve Etiket bazlı olarak nasıl sınırlandıracağını (Firewall mantığını) gösteriyor.
+Peki bu sınırları nasıl aşıyoruz? İşte tam burada önceki konularımızda işlediğimiz Cilium veya Calico gibi gelişmiş CNI araçları devreye giriyor. Örneğin Cilium, standart kuralın yapamadığı _Layer 7 HTTP filtrelemeyi_ ve _Hubble ile loglamayı_ mümkün kılar.
