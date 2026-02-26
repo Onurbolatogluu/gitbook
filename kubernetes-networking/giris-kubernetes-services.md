@@ -44,6 +44,36 @@ Bu dosyanın en can alıcı kısımlarını basitçe açıklayalım:
 * `port: 80`: Service'in kendisinin dinlediği port numarasıdır.
 * `targetPort: 8080`: Arkadaki Pod'un içinde çalışan asıl uygulamanın (örneğin Java veya Node.js uygulamanın) dinlediği porttur. Service, 80 portundan aldığı isteği, Pod'un 8080 portuna iletir.
 
+#### Service Disocery
+
+Diyelim ki sistemde `my-service` adında bir Service var. Yeni bir Pod ayağa kalkarken kubelet otomatik olarak şu bilgileri Pod'un içine yazar:
+
+* `MY_SERVICE_SERVICE_HOST`: Bu değişkenin karşılığına Service'in IP adresini yazar (Örn: 10.0.0.11).
+* `MY_SERVICE_SERVICE_PORT`: Bu değişkenin karşılığına Service'in portunu yazar (Örn: 80).
+
+İçeride çalışan uygulaman da kod seviyesinde gidip sistemindeki `MY_SERVICE_SERVICE_HOST` değişkenini okuyarak "Hah, gitmem gereken IP adresi buymuş" der.
+
+* Önemli Dezavantajı: Bu yöntemin çalışması için, Service'in Pod'dan önce yaratılmış olması şarttır. Eğer Pod önce yaratılırsa, kubelet olmayan bir Service'in bilgilerini Pod'a yazamaz ve uygulaman Service'i bulamaz. Bu katı sıralama zorunluluğu nedeniyle günümüzde yerini çoğunlukla DNS'e bırakmıştır.
+
+#### 2. DNS Yöntemi
+
+Bu, günümüzde standart olarak kullanılan, en esnek ve en yaygın yöntemdir.
+
+Nasıl Çalışır? Kubernetes, içinde dahili bir telefon rehberi olan CoreDNS (veya benzeri bir DNS add-on) çalıştırır. Sen bir Service oluşturduğunda, bu rehbere otomatik olarak kayıtlar açılır.
+
+A) A record: Bir ismin IP adresine karşılık geldiği temel kayıttır. Formatı her zaman şöyledir: `service-name.namespace.svc.cluster.local`
+
+* Örnek: Eğer _Frontend_ ve _Backend_ uygulamaların aynı namespace (çalışma alanı) içindeyse, Frontend sadece `backend-service` diyerek ulaşabilir. Ancak Frontend farklı bir namespace'te ise, o zaman uzun adresi kullanması gerekir (örneğin: `backend-service.production.svc.cluster.local`). DNS bu uzun ismi saniyesinde IP adresine çevirir.
+
+B) SRV records: A kaydı sadece IP adresini bulurken, SRV kaydı spesifik bir portun adresini ve protokolünü bulmak için kullanılır. Formatı şöyledir: `_port-ismi._protokol.service-name.namespace.svc.cluster.local`
+
+* `_http._tcp.my-service.my-namespace.svc.cluster.local` Bu kayıt aslında sisteme şu soruyu sorar ve cevabını verir: _"my-namespace içindeki my-service servisinin, TCP protokolü ile çalışan 'http' isimli portu tam olarak nerede?"_
+
+Özetle:
+
+* Environment Variables: Bilgileri Pod'un içine baştan yazar, ancak Service'in önce oluşturulmuş olmasını gerektirir (esnek değildir).
+* DNS: Dinamik bir rehberdir. Uygulamalar sadece isim veya port adıyla sorgu yapar, arka planda IP adresleri otomatik çözümlenir.
+
 #### Service Tipleri ve Kullanım Alanları
 
 **1. ClusterIP (Varsayılan Tip)**
