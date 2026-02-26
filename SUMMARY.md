@@ -449,4 +449,6 @@
   * [Pod to Pod Communication](kubernetes-networking/giris-container-network-interface/pod-to-pod-communication.md)
   * [Network Policies Overview](kubernetes-networking/giris-container-network-interface/network-policies-overview/README.md)
     * [Network Policies Demo](kubernetes-networking/giris-container-network-interface/network-policies-overview/network-policies-demo.md)
-* [Giriş : Kubernetes Services](kubernetes-networking/giris-kubernetes-services.md)
+* [Giriş : Kubernetes Services](kubernetes-networking/giris-kubernetes-services/README.md)
+  * [Service Discovery & DNS](kubernetes-networking/giris-kubernetes-services/service-discovery-and-dns/README.md)
+    * [Service Discovery and DNS #2](kubernetes-networking/giris-kubernetes-services/service-discovery-and-dns/service-discovery-and-dns-2.md)
