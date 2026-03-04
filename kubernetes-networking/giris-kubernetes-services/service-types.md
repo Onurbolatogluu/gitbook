@@ -133,7 +133,7 @@ kind: Service
 metadata:
   name: headless-app
 spec:
-  clusterIP: None      # BÜYÜ BURADA: Kubernetes'in rastgele trafik dağıtmasını engeller ve Pod IP'lerinin listesini döndürür.
+  clusterIP: None      # Kubernetes'in rastgele trafik dağıtmasını engeller ve Pod IP'lerinin listesini döndürür.
   selector:
     app: stateful
   ports:
