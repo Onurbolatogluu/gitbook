@@ -10,6 +10,8 @@ Peki trafiği nasıl bu kadar kusursuz yönlendiriyor? İşte Service nesnesinin
 
 ### 1. Endpoints (Klasik Telefon Rehberi)
 
+<figure><img src="../../.gitbook/assets/Screenshot 2026-03-05 at 10.34.45.png" alt=""><figcaption></figcaption></figure>
+
 Siz bir Service oluşturduğunuzda, Kubernetes arka planda sizin ruhunuz bile duymadan o servisle aynı isme sahip bir `Endpoints` nesnesi yaratır.
 
 Bu nesneyi şirketin ana telefon rehberi olarak düşünebilirsiniz. Service'in `selector` etiketlerine uyan tüm Pod'ların güncel IP adresleri ve port numaraları bu rehbere yazılır. Bir Pod silindiğinde veya yeni bir Pod eklendiğinde, Kubernetes Control Plane bu rehberi anında günceller.
@@ -45,6 +47,8 @@ Küçük ve orta ölçekli sistemlerde bu tek parça rehber kusursuz çalışır
 ***
 
 ### 2. Endpoint Slices (Yeni Nesil Parçalı Rehber)
+
+<figure><img src="../../.gitbook/assets/endpoint_vs_endpointslice.webp" alt=""><figcaption></figcaption></figure>
 
 Kubernetes mühendisleri bu darboğazı çözmek için v1.21 sürümüyle birlikte Endpoint Slices mimarisini standart hale getirdiler.
 
