@@ -454,4 +454,5 @@
     * [Service Discovery and DNS #2](kubernetes-networking/giris-kubernetes-services/service-discovery-and-dns/service-discovery-and-dns-2.md)
   * [Service Types](kubernetes-networking/giris-kubernetes-services/service-types/README.md)
     * [Demo](kubernetes-networking/giris-kubernetes-services/service-types/demo.md)
-  * [Endpoints and Endpoint Slices](kubernetes-networking/kubernetes-services/endpoints-and-endpoint-slices.md)
+  * [Endpoints and Endpoint Slices](kubernetes-networking/kubernetes-services/endpoints-and-endpoint-slices/README.md)
+    * [Demo](kubernetes-networking/kubernetes-services/endpoints-and-endpoint-slices/demo.md)
