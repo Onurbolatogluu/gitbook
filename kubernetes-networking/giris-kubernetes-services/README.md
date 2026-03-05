@@ -2,7 +2,7 @@
 icon: server
 ---
 
-# Giriş : Kubernetes Services
+# Kubernetes Services
 
 #### Kubernetes "Service" Nedir? Neden İhtiyacımız Var?
 
