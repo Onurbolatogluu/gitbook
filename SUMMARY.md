@@ -456,3 +456,5 @@
     * [Demo](kubernetes-networking/giris-kubernetes-services/service-types/demo.md)
   * [Endpoints and Endpoint Slices](kubernetes-networking/kubernetes-services/endpoints-and-endpoint-slices/README.md)
     * [Demo](kubernetes-networking/kubernetes-services/endpoints-and-endpoint-slices/demo.md)
+  * [Troubleshooting Internal Networking](kubernetes-networking/kubernetes-services/troubleshooting-internal-networking/README.md)
+    * [Demo](kubernetes-networking/kubernetes-services/troubleshooting-internal-networking/demo.md)
