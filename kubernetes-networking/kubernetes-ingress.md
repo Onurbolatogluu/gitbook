@@ -72,7 +72,7 @@ spec:
 
 ### Özetle Ingress Bize Ne Kazandırır?
 
-1. Maliyet Tasarrufu: Onlarca uygulama için onlarca dış IP satın almaktan kurtarır. Her şeyi tek IP arkasında birleştirir.
-2. Merkezi SSL Yönetimi: Her uygulamanın içine ayrı ayrı SSL sertifikası kurmakla uğraşmazsınız. Sertifikayı Ingress'e yüklersiniz, şifreleme ana kapıda çözülür.
-3. Temiz Mimari: Trafik yönlendirme kurallarını kodunuzun içinden çıkarıp, merkezi bir altyapı bileşenine bırakmış olursunuz.
+1. Onlarca uygulama için onlarca dış IP satın almaktan kurtarır. Her şeyi tek IP arkasında birleştirir.
+2. Her uygulamanın içine ayrı ayrı SSL sertifikası kurmakla uğraşmazsınız. Sertifikayı Ingress'e yüklersiniz, şifreleme ana kapıda çözülür.
+3. Trafik yönlendirme kurallarını kodunuzun içinden çıkarıp, merkezi bir altyapı bileşenine bırakmış olursunuz.
 
