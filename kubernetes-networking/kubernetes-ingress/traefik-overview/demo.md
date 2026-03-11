@@ -155,3 +155,89 @@ On-prem ortamlarda sana o "dış IP'yi" verecek API yoktur. Dolayısıyla Traefi
 
 Bu sorunu çözmek için (eğer MetalLB gibi bir eklentin yoksa), Traefik'in kurulum dosyasındaki (`values.yaml`) o `LoadBalancer` ayarını mecburen `NodePort` olarak değiştirmen gerekir. Böylece sistem sana statik bir IP veremese bile, sunucunun fiziksel IP'si üzerinden örneğin `32080` gibi bir port açarak Traefik motoruna dışarıdan ulaşmanı sağlar.
 {% endhint %}
+
+***
+
+***
+
+Yukarıdaki yazımızda Traefik motorunu sistemimize kurmuş ve trafiği nasıl yönlendirdiğimizi konuşmuştuk. Traefik'i anlatırken onun en büyük güçlerinden birinin "Gözlem ve Yönetim Paneli (Dashboard)" olduğundan bahsetmiştik.
+
+Peki körü körüne terminalden komut yazmak yerine, sistemimize giren trafiği, kuralları ve anlık sağlığı görsel bir arayüzden nasıl izleriz? Hatta Traefik'in o meşhur "Hot Reload" özelliğinin gerçekten çalışıp çalışmadığını kendi gözlerimizle nasıl kanıtlarız?
+
+Traefik, sisteminize kurulduğu anda arka planda muazzam bir veri toplar. Hangi porttan kaç kişi giriyor, kurallar (Routers) doğru çalışıyor mu, arkadaki mikroservislerin (Pods) sağlığı ne durumda? Normalde bu veriler güvenlik nedeniyle dış dünyaya tamamen kapalıdır.
+
+Bu laboratuvar çalışmasında, Traefik'in içindeki bu Dashboard'u dışarı açacak ve sistemimizin anlık röntgenini çekeceğiz.
+
+### 1. Adım: Dashboard'u Dışarı Açmak (NodePort ile)
+
+Traefik API'si ve Dashboard'u, varsayılan olarak pod'un içindeki `9000` portunda çalışır. Buna kendi bilgisayarımızdan erişebilmek için bir Service (NodePort) oluşturmamız gerekiyor.
+
+Aşağıdaki `service-dashboard.yaml` dosyasını oluşturun:
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: traefik-dashboard-service
+  namespace: traefik
+spec:
+  type: NodePort
+  ports:
+    - port: 9000
+      targetPort: 9000
+      nodePort: 30000   # Sabit bir port belirliyoruz (Tarayıcıdan buraya gideceğiz)
+  selector:
+    app.kubernetes.io/instance: traefik-traefik
+```
+
+Dosyayı sisteme uygulayın:
+
+```bash
+kubectl apply -f service-dashboard.yaml
+```
+
+### 2. Adım: API'yi "Güvensiz" Modda Aktif Etmek
+
+Güvenlik prensipleri gereği Traefik paneli şifresiz erişime kapalıdır. Biz şu an bir test/laboratuvar ortamında olduğumuz için şifreleme ve yetkilendirme (Auth) ayarlarıyla vakit kaybetmeden paneli direkt erişime açacağız. _(Uyarı: Bunu asla Production ortamında yapmayın!)_
+
+Mevcut Traefik Deployment'ını terminal üzerinden canlı olarak düzenliyoruz:
+
+```bash
+kubectl edit deployment traefik -n traefik
+```
+
+Açılan metin editöründe, `containers` altındaki `args:` (argümanlar) bölümünü bulun ve aşağıdaki iki satırı ekleyin:
+
+```yaml
+    args:
+      - "--api.dashboard=true"     # Arayüzü aç
+      - "--api.insecure=true"      # Şifresiz/Güvensiz erişime izin ver
+      # ... diğer argümanlar ...
+```
+
+Dosyayı kaydedip çıktığınızda Kubernetes, Traefik pod'unu yeni ayarlarla saniyeler içinde yeniden başlatacaktır. Pod'un çalıştığını teyit edin: `kubectl get pods -n traefik`
+
+### 3. Adım: Kontrol Paneline Giriş ve Keşif
+
+Artık tarayıcınızı açıp doğrudan `http://<Sunucu-IP-Adresiniz>:30000` adresine gidebilirsiniz. Karşınıza Traefik'in modern ve detaylı arayüzü çıkacaktır!
+
+Ekranda önceki yazımızda öğrendiğimiz 4 temel yapı taşını göreceksiniz:
+
+* EntryPoints: Traefik'in dünyayı dinlediği kapılar (web: 80, websecure: 443 vb.).
+* Routers: Yazdığınız Ingress kurallarının listesi (Hangi URL nereye gidiyor?).
+* Services: Arka planda çalışan uygulamalarınız ve anlık sağlık durumları.
+* Middlewares: Trafiğe uyguladığınız hız sınırları veya şifre kuralları.
+
+### 4. Adım: "Hot Reload" Canlı Test Etmek
+
+Geldik en heyecanlı kısma. Traefik'in yeniden başlatılmaya gerek duymadan değişiklikleri anında algıladığını (Hot Reload) özelliğinden bahsetmiştik. Şimdi bunu görsel olarak kanıtlayalım.
+
+Dashboard'da "Services" sekmesini açık tutun ve uygulamanızın (Örn: `whoami`) üzerine tıklayın. Orada şu an sadece 1 adet sağlıklı uç nokta (endpoint/pod) göreceksiniz.
+
+Şimdi terminale dönün ve içerideki uygulamamızın sayısını aniden 5'e çıkarın:
+
+```bash
+kubectl scale deployment whoami --replicas=5
+```
+
+Hiçbir şeyi yeniden başlatmayın, sayfayı yenilemeyin. Sadece Dashboard'u izleyin. Birkaç saniye içinde Traefik'in yeni açılan 4 Pod'u otomatik olarak keşfettiğini ve listedeki sağlıklı sunucu sayısının canlı olarak 5'e çıktığını göreceksiniz. Trafik anında 5 pod arasında dengelenmeye başlayacaktır.
