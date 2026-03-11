@@ -458,4 +458,5 @@
     * [Demo](kubernetes-networking/kubernetes-services/endpoints-and-endpoint-slices/demo.md)
   * [Troubleshooting Internal Networking](kubernetes-networking/kubernetes-services/troubleshooting-internal-networking/README.md)
     * [Demo](kubernetes-networking/kubernetes-services/troubleshooting-internal-networking/demo.md)
-* [Kubernetes Ingress](kubernetes-networking/kubernetes-ingress.md)
+* [Kubernetes Ingress](kubernetes-networking/kubernetes-ingress/README.md)
+  * [Ingress Controllers](kubernetes-networking/kubernetes-ingress/ingress-controllers.md)
