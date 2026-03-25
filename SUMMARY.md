@@ -462,3 +462,6 @@
   * [Ingress Controllers](kubernetes-networking/kubernetes-ingress/ingress-controllers.md)
   * [Traefik Overview](kubernetes-networking/kubernetes-ingress/traefik-overview/README.md)
     * [Demo](kubernetes-networking/kubernetes-ingress/traefik-overview/demo.md)
+  * [External DNS Overview](kubernetes-networking/kubernetes-ingress/external-dns-overview/README.md)
+    * [Demo](kubernetes-networking/kubernetes-ingress/external-dns-overview/demo.md)
+  * [Advanced Networking](kubernetes-networking/kubernetes-ingress/advanced-networking.md)
