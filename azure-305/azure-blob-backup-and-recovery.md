@@ -10,7 +10,7 @@
 
 ### **Versioning,**
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Azure'da her bir blob için yapılan değişiklikler otomatik olarak yeni bir sürüm olarak kaydedilir.
 * Bir blob güncellendiğinde veya üzerine yazıldığında, eski versiyonlar saklanır ve bu eski sürümlere istenildiği zaman erişilebilir.
@@ -48,7 +48,7 @@ Eğer bir blob üzerinde `Versioning` özelliği açıksa ve `Soft Delete` kapal
 
 Point-in-Time Restore (PITR) özelliği, Azure Blob Storage'daki verileri, belli bir geçmiş noktasına göre otomatik olarak geri yükleyebilmeniz için bir veri kurtarma çözümüdür. Bu özellik, özellikle bloblar yanlışlıkla silindiğinde, zarar gördüğünde veya üzerinde istenmeyen değişiklik yapıldığında kullanılır.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 1. **T-3 Gün:**
    * Ekranda sol tarafta gösterilen ilk durum, belirli bir zamandaki (T-3 gün) storage account'unuzun ve içerdiği container'ların durumunu temsil ediyor. Burada her container, içinde bir dizi blob (dosya veya veri parçası) barındırıyor.

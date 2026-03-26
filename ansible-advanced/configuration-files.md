@@ -33,7 +33,7 @@ Her birinde farklı yapılandırma ihtiyaçlarınız olabilir. Örneğin:
 * Veritabanı playbook’larında fact toplama açık olsun, ancak renkli çıktı (colored output) kapalı olsun.
 * Ağ (network) playbook’larında SSH timeout süresi 20 saniye olsun.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 Bu farklılıkları yönetmenin en kolay yollarından biri, **her dizine özel bir `ansible.cfg` dosyası koymaktır**. Bu şekilde, **Ansible bir playbook’u çalıştırırken** öncelikle _o_ dizindeki `ansible.cfg` dosyasına bakar. Bulamazsa bir üst öncelikli dosyaya (örneğin `/etc/ansible/ansible.cfg`) geri döner.
 

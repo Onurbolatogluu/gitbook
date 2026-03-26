@@ -64,7 +64,7 @@ Aşağıdaki komutu kullanarak, Azure'da "demoaccountforshare" adında bir Premi
 az storage account create --name demoaccountforshare1 --resource-group rg-fileshare-demo-001 --location westeurope --sku Premium_LRS --kind FileStorage
 ```
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Adım 2: Paylaşım oluşturma
 
@@ -76,17 +76,17 @@ Aşağıdaki komut, "demoaccountforshare1" adlı depolama hesabı üzerinde "myn
 az storage share-rm create -g rg-fileshare-demo-001 --storage-account demoaccountforshare1 --name mynfsshare1 --enabled-protocols NFS --quota 100 --root-squash AllSquash
 ```
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Adım 3: NFS network ayarlarının yapılandırılması
 
 Sunucular private endpoint kullanarak bağlanacağı için, Network menüsü altından, yeni bir private endpoint oluşturmalıyız. (Private endpoint kurulumda seçtiğimiz vnet ile, nfs paylaşımına bağlancak sunucular aynı vnet içerisinde olmalı)
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Secure transfer required özelliği desteklenmediği için devre dışı bırakmalıyız.
 
-<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Adım 4: Ubuntu 22.04 Paylaşımı mount etme
 
@@ -96,7 +96,7 @@ Aşağıdaki komut ile, storage account ile iletişimimizi kontrol ediyoruz.
 nslookup demoaccountforshare1.file.core.windows.net
 ```
 
-<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Gördüğünüz gibi, iletişim private endpoint kullanarak, aynı vnet üzerinden sağlanılıyor.
 
@@ -111,7 +111,7 @@ sudo mkdir -p /mount/demoaccountforshare1/mynfsshare1
 sudo mount -t nfs demoaccountforshare1.file.core.windows.net:/demoaccountforshare1/mynfsshare1 /mount/demoaccountforshare1/mynfsshare1 -o vers=4,minorversion=1,sec=sys,nconnect=4
 ```
 
-<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Paylaşımı başarılı bir şekilde bağladık. Eğer paylaşıma on-prem sunucularımızdan ve/ya Azure dışında bulunan sunuculardan bağlanmak istersek,
 
@@ -119,7 +119,7 @@ Paylaşımı başarılı bir şekilde bağladık. Eğer paylaşıma on-prem sunu
 * Site to site VPN&#x20;
 * Point to site VPN
 
-seçeneklerinden birini tercih etmeliyiz. Misal, [https://learn.microsoft.com/tr-tr/azure/storage/files/storage-files-configure-p2s-vpn-linux?WT.mc\_id=Portal-Microsoft\_Azure\_FileStorage](https://learn.microsoft.com/tr-tr/azure/storage/files/storage-files-configure-p2s-vpn-linux?WT.mc\_id=Portal-Microsoft\_Azure\_FileStorage)
+seçeneklerinden birini tercih etmeliyiz. Misal, [https://learn.microsoft.com/tr-tr/azure/storage/files/storage-files-configure-p2s-vpn-linux?WT.mc\_id=Portal-Microsoft\_Azure\_FileStorage](https://learn.microsoft.com/tr-tr/azure/storage/files/storage-files-configure-p2s-vpn-linux?WT.mc_id=Portal-Microsoft_Azure_FileStorage)
 
 <figure><img src="../.gitbook/assets/image (278).png" alt=""><figcaption></figcaption></figure>
 
@@ -137,7 +137,7 @@ seçeneklerinden birini tercih etmeliyiz. Misal, [https://learn.microsoft.com/tr
 
 smbshare1 adında, smb paylaşımı oluşturuyoruz.
 
-<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Adım 2: Paylaşımı mount etmek
 

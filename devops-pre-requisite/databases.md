@@ -7,7 +7,7 @@
 
 ### SQL (Structured Query Language)
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * SQL veritabanları, ilişkisel model üzerinde çalışır. Veriler, satırlar ve sütunlar şeklinde tablolarda organize edilir. Her tablo, belirli bir veri türüne sahip olabilir ve veriler, bu önceden tanımlanmış yapıya uymalıdır.
 * Veriler üzerinde işlem yapmak için SQL dilini kullanırız. Örneğin, belirli yaşın üzerindeki kişileri listelemek için `SELECT * FROM persons WHERE AGE > 10` gibi bir sorgu yazılır.
@@ -16,7 +16,7 @@
 
 ### NoSQL (Not Only SQL)
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * NoSQL veritabanları, yapılandırılmamış veya yarı yapılandırılmış veri türlerini saklayabilir. JSON, BSON veya XML gibi formatlarda veriler saklanır. Veri yapısı sabit değildir, bu da veri şeması üzerinde daha fazla esneklik sağlar.
 * Veriler, tablolardan ziyade belgeler olarak saklanır ve bu belgeler, çeşitli anahtar-değer çiftlerinden oluşur. Örneğin, MongoDB'de veriler JSON benzeri belgeler olarak saklanır.

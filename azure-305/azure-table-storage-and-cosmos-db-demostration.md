@@ -4,7 +4,7 @@
 
 Azure Table Storage, Microsoft Azure'un sunduğu bir NoSQL key/value veri deposu hizmetidir. Büyük miktarda yapılandırılmış ve ilişkisel olmayan verileri depolamak ve yönetmek için ideal bir çözümdür.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Özellikler,**
 
@@ -60,7 +60,7 @@ Verdiğimiz futbolcu bilgilerini bir tablo üzerinde, key-value eşlenikleri şe
 az storage account create --name storageaccount35623 --resource-group rg-demo-tables-and-CosmosDB-001 --location eastus --sku Standard_LRS --kind StorageV2
 ```
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 2 - **Table oluşturma:** Aşağıdaki komutu kullanarak, storage account içerisinde, "footballPlayers" adında tablo oluşturuyoruz.
 
@@ -68,7 +68,7 @@ az storage account create --name storageaccount35623 --resource-group rg-demo-ta
 az storage table create --name footballPlayers --account-name storageaccount35623
 ```
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 3 - **Connection String Bilgisi:** Table storage bağlantısı kurmak için, connection string ihtiyacımız bulunmaktadır. Bunun için, aşağıdaki komutu çalıştırıp, storage account connection string bilgisini almalıyız.
 
@@ -76,7 +76,7 @@ az storage table create --name footballPlayers --account-name storageaccount3562
 az storage account show-connection-string --name storageaccount35623 --resource-group rg-demo-tables-and-CosmosDB-001
 ```
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 4 - **Kodumuzu test edelim:** Kodumuzu çalıştırıp, bizden istediği bilgileri girelim. Öncelikle, kodumuzun çalışması için gerekli olan extensionları yükleyelim.
 
@@ -84,7 +84,7 @@ az storage account show-connection-string --name storageaccount35623 --resource-
 pip install azure-data-tables
 ```
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 azure-data-tables extension'u pip ile sistemimize yükledik. Şimdi kodumuzu çalıştırıp, testimizi yapabiliriz. Öncelikle, çalıştırdığım kodu aşağıda paylaşıyorum:
 
@@ -134,19 +134,19 @@ Kodumuzu çalıştırdığımzda, bizden 3 adet bilgi istedi:
 
 Bu bilgileri girdiğimizde, eklendiğine dair karşımıza bir mesaj çıktı.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Bilgiler eklendiğine göre, storage account 'a gidip bu bilgilerin gerçekten düzgün bir şekilde eklendiğini teyit edelim.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 Göreceğiniz üzere, bilgiler eklenmiş. Demo başarılı bir şekilde çalıştı. Farklı bir test yapıp, tablomuza yeni bir anahtar girelim.
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 Eklediğimiz futbolcu bilgisinin yanına, pozisyon bilgisininde girilmesini istedik ve kodumuzu yukarıdaki şekilde güncelledik. Kodumuzu çalıştırdığımızda, table storage da bu bilgiyi teyit edelim.
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 Yeni anahtarımıza başarılı bir şekilde, değer girdik ve eklenip, eklenmediğini teyit ettik. Dolayısıyla table storage demosunu başarılı bir şekilde gerçekleştirdik. Ayrıca istenirse, bu bilgilere kod yardımıyla, SDK, API 'ler kullanarak programatik bir şekilde erişilebilir ve entity 'ler dinamik bir şekilde yönetilebilir.
 
@@ -162,7 +162,7 @@ Cosmos DB, Microsoft tarafından sunulan ve küresel ölçekte dağıtılmış �
 
 Azure Table Storage, basit NoSQL tablo depolama hizmetidir. Veriler satır ve sütun şeklinde depolanır. Ancak sorgu yetenekleri ve özellik seti sınırlıdır. Cosmos DB ise çok daha gelişmiş bir hizmettir. Verileri farklı biçimlerde saklayabilir ve zengin sorgu imkanı sunar.
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Başlıca Kullanılabilir API'ler,**
 
