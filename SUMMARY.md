@@ -465,4 +465,6 @@
   * [External DNS Overview](kubernetes-networking/kubernetes-ingress/external-dns-overview/README.md)
     * [Demo](kubernetes-networking/kubernetes-ingress/external-dns-overview/demo.md)
   * [Advanced Networking](kubernetes-networking/kubernetes-ingress/advanced-networking.md)
-* [Network Security](kubernetes-networking/network-security.md)
+* [Network Security](kubernetes-networking/network-security/README.md)
+  * [Cert Manager and Lets Encrypt Overview](kubernetes-networking/network-security/cert-manager-and-lets-encrypt-overview/README.md)
+    * [Demo](kubernetes-networking/network-security/cert-manager-and-lets-encrypt-overview/demo.md)
