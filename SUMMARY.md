@@ -471,3 +471,5 @@
   * [CNI Network Policies](kubernetes-networking/network-security/cni-network-policies/README.md)
     * [Demo](kubernetes-networking/network-security/cni-network-policies/demo.md)
   * [mTLS](kubernetes-networking/network-security/mtls.md)
+  * [Cilium Hubble](kubernetes-networking/network-security/cilium-hubble/README.md)
+    * [Demo](kubernetes-networking/network-security/cilium-hubble/demo.md)
