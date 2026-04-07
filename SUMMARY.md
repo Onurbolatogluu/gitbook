@@ -468,3 +468,4 @@
 * [Network Security](kubernetes-networking/network-security/README.md)
   * [Cert Manager and Lets Encrypt Overview](kubernetes-networking/network-security/cert-manager-and-lets-encrypt-overview/README.md)
     * [Demo](kubernetes-networking/network-security/cert-manager-and-lets-encrypt-overview/demo.md)
+  * [CNI Network Policies](kubernetes-networking/network-security/cni-network-policies.md)
