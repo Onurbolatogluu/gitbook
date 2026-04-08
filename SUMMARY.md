@@ -477,3 +477,4 @@
 ## &#x20;VMware vSphere
 
 * [How To Build A Virtual Environment](vmware-vsphere/how-to-build-a-virtual-environment.md)
+* [Hardware Virtualization](vmware-vsphere/hardware-virtualization.md)
