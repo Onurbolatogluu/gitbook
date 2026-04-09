@@ -479,3 +479,4 @@
 * [How To Build A Virtual Environment](vmware-vsphere/how-to-build-a-virtual-environment.md)
 * [Hardware Virtualization](vmware-vsphere/hardware-virtualization.md)
 * [VMware vSphere Components and Features](vmware-vsphere/vmware-vsphere-components-and-features.md)
+* [ESXi Hardware Requirements](vmware-vsphere/esxi-hardware-requirements.md)
