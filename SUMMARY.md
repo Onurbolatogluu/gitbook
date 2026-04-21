@@ -481,3 +481,4 @@
 * [VMware vSphere Components and Features](vmware-vsphere/vmware-vsphere-components-and-features.md)
 * [ESXi Hardware Requirements](vmware-vsphere/esxi-hardware-requirements.md)
 * [ESXi Network management](vmware-vsphere/esxi-network-management.md)
+* [Troubleshooting and System Logs](vmware-vsphere/troubleshooting-and-system-logs.md)
