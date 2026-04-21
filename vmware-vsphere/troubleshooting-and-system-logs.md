@@ -14,6 +14,10 @@ IP ayarlarını yaptınız ama sunucuya kendi laptop'ınızdan ulaşamıyorsunuz
 
 İşte DCUI üzerindeki "Test Management Network" seçeneği, sunucunun bir nevi "Nabız Yoklaması"dır. Bu testi başlattığınızda ESXi, otomatik olarak 3 farklı adrese ping atar:
 
+<figure><img src="../.gitbook/assets/Screenshot 2026-04-21 at 12.42.56.png" alt=""><figcaption></figcaption></figure>
+
+,
+
 1. Default Gateway (Router/Switch): Sunucunun bulunduğu ağdan dışarı çıkıp çıkamadığını test eder. _(OK almalısınız)_
 2. DNS Server: İsim çözümlemesinin çalışıp çalışmadığını kontrol eder.
 3. Hostname Resolve: `esxi-1.home` gibi kendi isminin DNS üzerinde doğru çözümlenip çözümlenmediğine bakar.
