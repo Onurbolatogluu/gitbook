@@ -483,3 +483,4 @@
 * [ESXi Network management](vmware-vsphere/esxi-network-management.md)
 * [Troubleshooting and System Logs](vmware-vsphere/troubleshooting-and-system-logs.md)
 * [Thick And Thin-Provisioned Disks](vmware-vsphere/thick-and-thin-provisioned-disks.md)
+* [A Virtual Machine Options](vmware-vsphere/a-virtual-machine-options.md)
