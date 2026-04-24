@@ -61,3 +61,27 @@ Sistemde bir değişiklik yapmadan önce Snapshot (Anlık Görüntü) aldığın
 * `.hlog` (vMotion Günlüğü): Sanal makineyi çalışır vaziyetteyken bir fiziksel sunucudan diğerine (vMotion) taşıdığınızda ortaya çıkar. Sistem, bu taşıma esnasında saniyelik veri kayıplarını önlemek için geçici olarak bu günlüğü kullanır.
 
 Sanal makinenin Datastore üzerindeki bu dosyalarını tanımak, ekranda gördüğünüz arayüzlerin ötesine geçmenizi sağlar. Artık kilitli kalan bir makineyi nasıl açacağınızı (`.lck` dosyasını silerek) veya yedekleme mimarinizin neden hızlı çalıştığını (`-ctk.vmdk` sayesinde) kaputun altındaki mühendislik seviyesinde biliyorsunuz.
+
+
+
+***
+
+**Soru 1: Snapshot alındığında orijinal diske (`.vmdk`) ne olur?** \
+\
+Cevap: Orijinal disk "Salt Okunur" (Read-Only) duruma geçer ve dondurulur. Artık üzerine hiçbir yeni veri yazılmaz.
+
+**Soru 2: Snapshot alınca oluşan `delta.vmdk` dosyasının boyutu orijinal disk kadar (örneğin 50 GB) mıdır?** \
+\
+Cevap: Hayır. `delta.vmdk` bir kopyalama işlemi değildir. Başlangıçta sadece birkaç megabayt (MB) boyutunda, içi neredeyse boş bir dosya olarak oluşur.
+
+**Soru 3: `delta.vmdk` dosyasının boyutu nasıl artar?** \
+\
+Cevap: Sadece snapshot alındıktan _sonra_ yapılan değişiklikleri (farkları) kaydeder. Sen sanal sunucuya yeni veri yazdıkça veya var olan verileri değiştirdikçe dosyanın boyutu dinamik olarak büyür.
+
+**Soru 4: `delta.vmdk` dosyası maksimum ne kadar büyüyebilir?** \
+\
+Cevap: Eğer snapshot işleminden sonra sistemdeki tüm verileri tamamen silip yeniden yazarsan, orijinal diskin boyutu (50 GB) kadar büyüyebilir. Hatta kendi iç haritalamasını da tuttuğu için orijinal boyutu çok ufak bir miktar geçebilir.
+
+**Soru 5: Sanal makine verileri okurken (Read) hangi dosyayı kullanır?** \
+\
+Cevap: Sistem önce değişikliğe bakar. İstenen veri snapshot'tan sonra güncellendiyse yeni `delta.vmdk` dosyasından okur. Veri hiç değiştirilmediyse eski orijinal `.vmdk` dosyasından okur.
