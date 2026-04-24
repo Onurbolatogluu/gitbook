@@ -485,3 +485,4 @@
 * [Thick And Thin-Provisioned Disks](vmware-vsphere/thick-and-thin-provisioned-disks.md)
 * [A Virtual Machine Options](vmware-vsphere/a-virtual-machine-options.md)
 * [Maximum Number Of Virtual Machines Per Host](vmware-vsphere/maximum-number-of-virtual-machines-per-host.md)
+* [Files That Make Up A Virtual Machine](vmware-vsphere/files-that-make-up-a-virtual-machine.md)
