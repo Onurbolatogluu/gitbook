@@ -26,8 +26,8 @@ Bir sanal makinenin var olabilmesi ve verilerini tutabilmesi için bu klasörde 
 
 Sanal makine kapalıyken (Power Off) klasör oldukça sakindir. Ancak makineyi başlattığınız anda (Power On), ESXi klasörün içine dinamik olarak bazı yeni dosyalar yaratır.
 
-* `.vswp` (Misafir İşletim Sistemi Takas Dosyası): Makine her açıldığında, o makineye atanan RAM miktarı kadar (Örn: 8 GB) Datastore üzerinde devasa bir takas dosyası oluşturulur. Eğer ESXi sunucusunun fiziksel RAM'i tamamen dolarsa, içerideki işletim sisteminin çökmemesi için veriler acil durum olarak bu diske yazılır.
-* `vmx-*.vswp` (Hypervisor Ek Yük Takas Dosyası): ESXi, sanal makineyi (klavye, fare, ekran kartı vb.) yönetebilmek için kendisine küçük bir "Yönetim Odası" (VMX Süreci) kurar. Bu dosya, ana işletim sisteminin değil, doğrudan ESXi'ın o makineyi yönetirken kullandığı sürecin (\~50-100 MB) acil durum takas dosyasıdır.
+* `.vswp` : Makine her açıldığında, o makineye atanan RAM miktarı kadar (Örn: 8 GB) Datastore üzerinde devasa bir takas dosyası oluşturulur. Eğer ESXi sunucusunun fiziksel RAM'i tamamen dolarsa, içerideki işletim sisteminin çökmemesi için veriler acil durum olarak bu diske yazılır.
+* `vmx-*.vswp` : ESXi, sanal makineyi (klavye, fare, ekran kartı vb.) yönetebilmek için kendisine küçük bir "Yönetim Odası" (VMX Süreci) kurar. Bu dosya, ana işletim sisteminin değil, doğrudan ESXi'ın o makineyi yönetirken kullandığı sürecin (\~50-100 MB) acil durum swap dosyasıdır.
 * `.nvram` (Sanal BIOS/UEFI): Fiziksel bilgisayarlardaki BIOS pilinin görevini üstlenir. Sanal makinenin boot (ön yükleme) sırası ve BIOS/UEFI ayarları bu dosyanın içinde tutulur.
 * `.vmss` (Suspend / Bekletme Dosyası): Makineyi kapatmak yerine "Suspend" (Duraklat) derseniz, o an RAM'de çalışan tüm veriler dondurularak bu dosyaya yazılır. Makine tekrar başlatıldığında (Resume), sistem bu dosyayı okuyarak kaldığı milisaniyeden çalışmaya devam eder.
 
