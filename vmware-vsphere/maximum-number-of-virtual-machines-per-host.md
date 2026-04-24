@@ -40,7 +40,7 @@ Sanal makinenize bir işletim sistemi (Windows, Linux vb.) kurduktan ve masaüst
 
 VMware Tools olmadan şunları yapamazsınız:
 
-1. Güvenli Snapshot Alma: VMware Tools, makinenin yedeği (Snapshot) alınacağı milisaniyede işletim sistemine "Kısa bir süreliğine diske veri yazmayı durdur" (Quiescing) emri verir. Bu sayede veritabanları bozulmadan yedeklenir.
+1. Güvenli Snapshot Alma: VMware Tools, makinenin yedeği (Snapshot) alınacağı milisaniyede işletim sistemine "Kısa bir süreliğine diske veri yazmayı durdur" (Quiescing) emri verir. Bu sayede veritabanları bozulmadan yedeklenir. `VMware Tools olmadan da Snapshot alabilirsiniz ama bu, koşan bir adamın bulanık fotoğrafını çekmek gibidir; geri yüklediğinizde verilerin sağlam kalacağının garantisi yoktur. VMware Tools (Quiescing) ise adamı bir saniyeliğine durdurup net bir fotoğraf çekmenizi sağlar; geri yüklediğinizde sistemin %100 sağlıklı çalışacağını bilirsiniz.`
 2. Graceful Shutdown: vSphere üzerinden makineye "Kapat" komutu gönderdiğinizde, makinenin fişini çekmek yerine işletim sistemine temiz bir kapanma sinyali gönderir. `Eğer sanal makinenizde VMware Tools kurulu değilse, vSphere arayüzündeki o alttaki "Shut Down Guest OS" butonu ya silik (pasif) görünür ya da bassanız bile hiçbir işe yaramaz. İşletim sistemi bu komutu duymaz.`
 3. High Availability (HA) : Kritik bir özelliktir. ESXi, VMware Tools sayesinde sanal makinenin "yaşayıp yaşamadığını" (Heartbeat) saniye saniye izler. Eğer makine mavi ekran verirse, bunu Tools üzerinden anlar ve makineyi otomatik olarak yeniden başlatır.
 4. Performans Sürücüleri: Sanal ağ kartları (VMXNET3) ve sanal disk kontrolcüleri (PVSCSI) gibi yüksek performanslı sanal donanımların sürücüleri sadece bu paketle gelir.
