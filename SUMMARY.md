@@ -487,3 +487,5 @@
 * [Maximum Number Of Virtual Machines Per Host](vmware-vsphere/maximum-number-of-virtual-machines-per-host.md)
 * [Files That Make Up A Virtual Machine](vmware-vsphere/files-that-make-up-a-virtual-machine.md)
 * [OVF and OVA File Formats and Templates](vmware-vsphere/ovf-and-ova-file-formats-and-templates.md)
+* [Introduction to vCenter Server: Windows Hardware Requirements](vmware-vsphere/introduction-to-vcenter-server-windows-hardware-requirements.md)
+* [Add an ESXi Host to the vCenter Server Inventory](vmware-vsphere/add-an-esxi-host-to-the-vcenter-server-inventory.md)
