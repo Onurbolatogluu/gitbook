@@ -489,3 +489,7 @@
 * [OVF and OVA File Formats and Templates](vmware-vsphere/ovf-and-ova-file-formats-and-templates.md)
 * [Introduction to vCenter Server: Windows Hardware Requirements](vmware-vsphere/introduction-to-vcenter-server-windows-hardware-requirements.md)
 * [Add an ESXi Host to the vCenter Server Inventory](vmware-vsphere/add-an-esxi-host-to-the-vcenter-server-inventory.md)
+* [Difference Between ESXi And vCenter Server User Interface](vmware-vsphere/difference-between-esxi-and-vcenter-server-user-interface.md)
+* [Managing ESXi Hosts in vCenter Server](vmware-vsphere/managing-esxi-hosts-in-vcenter-server.md)
+* [Creating A Virtual Machine In vCenter Server](vmware-vsphere/creating-a-virtual-machine-in-vcenter-server.md)
+* [Work in Progress Panel](vmware-vsphere/work-in-progress-panel.md)
