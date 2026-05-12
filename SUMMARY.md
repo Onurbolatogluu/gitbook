@@ -493,3 +493,4 @@
 * [Managing ESXi Hosts in vCenter Server](vmware-vsphere/managing-esxi-hosts-in-vcenter-server.md)
 * [Creating A Virtual Machine In vCenter Server](vmware-vsphere/creating-a-virtual-machine-in-vcenter-server.md)
 * [Work in Progress Panel](vmware-vsphere/work-in-progress-panel.md)
+* [Understanding Clones](vmware-vsphere/understanding-clones.md)
