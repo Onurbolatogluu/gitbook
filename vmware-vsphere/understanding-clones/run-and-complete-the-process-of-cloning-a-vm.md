@@ -44,6 +44,8 @@ Eğer bu 60 GB'lık (veya daha büyük) klonlama işlemini Mesai Saatleri içind
 
 **4. Ufuk Açıcı Çözüm: Scheduled Tasks (Zamanlanmış Görevler)**
 
+<figure><img src="../../.gitbook/assets/Screenshot 2026-05-18 at 14.25.52.png" alt=""><figcaption></figcaption></figure>
+
 İşte bu performans dar boğazını engellemek için kurumsal altyapılarda klonlama operasyonları asla manuel olarak mesai saatlerinde tetiklenmez. VMware, bu operasyonel yükü yönetebilmek için "Scheduled Tasks" (Zamanlanmış Görevler) mimarisini sunar.
 
 Sistem yöneticisi gündüz mesaisinde klonlama sihirbazını baştan sona hazırlar; kaynak makineyi, hedef Host'u, Datastore'u ve Customization Spec şablonunu seçer. Ancak "Finish" demek yerine bu işlemi bir Scheduled Task olarak kaydeder ve zamanlayıcıyı Cumartesi gecesi saat 02:00'ye ayarlar.
