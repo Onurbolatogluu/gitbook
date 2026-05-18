@@ -493,4 +493,7 @@
 * [Managing ESXi Hosts in vCenter Server](vmware-vsphere/managing-esxi-hosts-in-vcenter-server.md)
 * [Creating A Virtual Machine In vCenter Server](vmware-vsphere/creating-a-virtual-machine-in-vcenter-server.md)
 * [Work in Progress Panel](vmware-vsphere/work-in-progress-panel.md)
-* [Understanding Clones](vmware-vsphere/understanding-clones.md)
+* [Understanding Clones](vmware-vsphere/understanding-clones/README.md)
+  * [Cloning a Windows Virtual Machine: Destination Host](vmware-vsphere/understanding-clones/cloning-a-windows-virtual-machine-destination-host.md)
+  * [Cloning a Windows Virtual machine: Storage Options](vmware-vsphere/understanding-clones/cloning-a-windows-virtual-machine-storage-options.md)
+  * [Create a Customization Specification for Windows in the vSphere Client](vmware-vsphere/understanding-clones/create-a-customization-specification-for-windows-in-the-vsphere-client.md)
