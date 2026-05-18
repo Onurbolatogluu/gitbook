@@ -498,3 +498,4 @@
   * [Cloning a Windows Virtual machine: Storage Options](vmware-vsphere/understanding-clones/cloning-a-windows-virtual-machine-storage-options.md)
   * [Create a Customization Specification for Windows in the vSphere Client](vmware-vsphere/understanding-clones/create-a-customization-specification-for-windows-in-the-vsphere-client.md)
   * [New VM Guest Customization Specification: Network Configuration](vmware-vsphere/understanding-clones/new-vm-guest-customization-specification-network-configuration.md)
+  * [Run and Complete The Process of Cloning a VM](vmware-vsphere/understanding-clones/run-and-complete-the-process-of-cloning-a-vm.md)
