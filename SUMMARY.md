@@ -500,3 +500,5 @@
   * [New VM Guest Customization Specification: Network Configuration](vmware-vsphere/understanding-clones/new-vm-guest-customization-specification-network-configuration.md)
   * [Run and Complete The Process of Cloning a VM](vmware-vsphere/understanding-clones/run-and-complete-the-process-of-cloning-a-vm.md)
   * [Cloning a Linux Virtual machine](vmware-vsphere/understanding-clones/cloning-a-linux-virtual-machine.md)
+  * [Customization Specification Manage](vmware-vsphere/understanding-clones/customization-specification-manage.md)
+  * [Clone a Powered On Virtual Machine](vmware-vsphere/understanding-clones/clone-a-powered-on-virtual-machine.md)
