@@ -502,3 +502,7 @@
   * [Cloning a Linux Virtual machine](vmware-vsphere/understanding-clones/cloning-a-linux-virtual-machine.md)
   * [Customization Specification Manage](vmware-vsphere/understanding-clones/customization-specification-manage.md)
   * [Clone a Powered On Virtual Machine](vmware-vsphere/understanding-clones/clone-a-powered-on-virtual-machine.md)
+* [Introduction To VMware Template](vmware-vsphere/introduction-to-vmware-template.md)
+* [Clone A Virtual Machine To A Template](vmware-vsphere/clone-a-virtual-machine-to-a-template.md)
+* [Deploy a Virtual Machine from a Template](vmware-vsphere/deploy-a-virtual-machine-from-a-template.md)
+* [Clone to Template in Content Library](vmware-vsphere/clone-to-template-in-content-library.md)
