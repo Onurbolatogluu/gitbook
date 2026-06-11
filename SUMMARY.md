@@ -507,3 +507,4 @@
 * [Deploy a Virtual Machine from a Template](vmware-vsphere/deploy-a-virtual-machine-from-a-template.md)
 * [Clone to Template in Content Library](vmware-vsphere/clone-to-template-in-content-library.md)
 * [Scheduling a Clone Task](vmware-vsphere/scheduling-a-clone-task.md)
+* [Other Scheduler Task Available](vmware-vsphere/other-scheduler-task-available.md)
