@@ -509,3 +509,4 @@
 * [Scheduling a Clone Task](vmware-vsphere/scheduling-a-clone-task.md)
 * [Other Scheduler Task Available](vmware-vsphere/other-scheduler-task-available.md)
 * [Virtual Machine Startup](vmware-vsphere/virtual-machine-startup.md)
+* [Virtual Machine Shutdown](vmware-vsphere/virtual-machine-shutdown.md)
