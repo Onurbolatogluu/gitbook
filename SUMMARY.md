@@ -511,3 +511,4 @@
 * [Virtual Machine Startup](vmware-vsphere/virtual-machine-startup.md)
 * [Virtual Machine Shutdown](vmware-vsphere/virtual-machine-shutdown.md)
 * [introduction to User Permissions](vmware-vsphere/introduction-to-user-permissions.md)
+* [Create User, Manage Permission at ESXi Level](vmware-vsphere/create-user-manage-permission-at-esxi-level.md)
