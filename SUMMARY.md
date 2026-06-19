@@ -510,3 +510,4 @@
 * [Other Scheduler Task Available](vmware-vsphere/other-scheduler-task-available.md)
 * [Virtual Machine Startup](vmware-vsphere/virtual-machine-startup.md)
 * [Virtual Machine Shutdown](vmware-vsphere/virtual-machine-shutdown.md)
+* [introduction to User Permissions](vmware-vsphere/introduction-to-user-permissions.md)
