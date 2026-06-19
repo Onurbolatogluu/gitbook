@@ -513,3 +513,4 @@
 * [introduction to User Permissions](vmware-vsphere/introduction-to-user-permissions.md)
 * [Create User, Manage Permission at ESXi Level](vmware-vsphere/create-user-manage-permission-at-esxi-level.md)
 * [Create and Customize User Roles](vmware-vsphere/create-and-customize-user-roles.md)
+* [Log in With a Custom User Roles](vmware-vsphere/log-in-with-a-custom-user-roles.md)
