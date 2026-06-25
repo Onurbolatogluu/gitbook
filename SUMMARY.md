@@ -514,3 +514,5 @@
 * [Create User, Manage Permission at ESXi Level](vmware-vsphere/create-user-manage-permission-at-esxi-level.md)
 * [Create and Customize User Roles](vmware-vsphere/create-and-customize-user-roles.md)
 * [Log in With a Custom User Roles](vmware-vsphere/log-in-with-a-custom-user-roles.md)
+* [Create User, Manage Permission at vCenter Server Level](vmware-vsphere/create-user-manage-permission-at-vcenter-server-level.md)
+* [Create a New User and Roles at vCenter Server Level](vmware-vsphere/create-a-new-user-and-roles-at-vcenter-server-level.md)
