@@ -30,7 +30,7 @@ Bu ekranda sistem yöneticisini iki farklı yol bekler:
 
 Kullanıcıyı oluşturduk ve rolü tasarladık (veya varsayılanlardan birini seçtik). Ancak VMware mimarisinde iş burada bitmez. Sistemde, kullanıcının bu rolü tam olarak nerede uygulayacağını bilmesi gerekir.
 
-İşte bu noktada ana vCenter nesnesine (veya belirli bir Datacenter'a) tıklayıp Permissions (İzinler) sekmesine geçiş yapılır. "Add Permission" (İzin Ekle) sihirbazı, sanallaştırma mimarisinin şu "Kutsal Üçgenini" kurduğunuz yerdir:
+İşte bu noktada ana vCenter nesnesine (veya belirli bir Datacenter'a) tıklayıp Permissions (İzinler) sekmesine geçiş yapılır. "Add Permission" (İzin Ekle) sihirbazı, sanallaştırma mimarisinin şu "Önemli Üçgeni" kurduğunuz yerdir:
 
 1. Domain (Kaynak): `vsphere.local` seçilir.
 2. Kullanıcı/Grup: Oluşturulan hesap (`jack`) seçilir.
