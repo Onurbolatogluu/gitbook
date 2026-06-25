@@ -24,7 +24,7 @@ Kullanıcıyı oluşturduktan sonra, ona bir "Karakter" veya "Görev Tanımı" y
 Bu ekranda sistem yöneticisini iki farklı yol bekler:
 
 * Varsayılan Roller (Default Roles): VMware'in sektör standartlarına göre önceden hazırladığı şablonlardır. _Administrator_ (Tam yetkili), _Read Only_ (Sadece İzleyici) veya _Virtual Machine Power User_ gibi hazır paketler bulunur.
-* Özel Roller (Custom Roles): Eğer mevcut şablonlar ihtiyaçlarınızı tam karşılamıyorsa, yepyeni bir rol inşa edebilirsiniz. Örneğin; sadece Veri Deposu (Datastore) üzerindeki alarmları yönetebilecek (Acknowledge/Modify Alarm) veya veri depolarını yeniden isimlendirebilecek (Rename Datastore) çok spesifik ve mikro yetkilerle donatılmış, tamamen size özgü bir rol oluşturabilirsiniz.
+* Özel Roller (Custom Roles): Eğer mevcut şablonlar ihtiyaçlarınızı tam karşılamıyorsa, yepyeni bir rol inşa edebilirsiniz. Örneğin; sadece Veri Deposu (Datastore) üzerindeki alarmları yönetebilecek (Acknowledge/Modify Alarm) veya datastoreları yeniden isimlendirebilecek (Rename Datastore) çok spesifik ve mikro yetkilerle donatılmış, tamamen size özgü bir rol oluşturabilirsiniz.
 
 **3. Kutsal Üçgen: İzinleri (Permissions) Entegre Etmek**
 
