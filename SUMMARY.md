@@ -519,3 +519,4 @@
 * [Virtual Machine Power User](vmware-vsphere/virtual-machine-power-user.md)
 * [Benefits of Having More vCenter Users](vmware-vsphere/benefits-of-having-more-vcenter-users.md)
 * [Create A User for A Specific ChildItem](vmware-vsphere/create-a-user-for-a-specific-childitem.md)
+* [User with Different Roles in Different Items](vmware-vsphere/user-with-different-roles-in-different-items.md)
