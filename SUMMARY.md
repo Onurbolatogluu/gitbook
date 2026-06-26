@@ -518,3 +518,4 @@
 * [Create a New User and Roles at vCenter Server Level](vmware-vsphere/create-a-new-user-and-roles-at-vcenter-server-level.md)
 * [Virtual Machine Power User](vmware-vsphere/virtual-machine-power-user.md)
 * [Benefits of Having More vCenter Users](vmware-vsphere/benefits-of-having-more-vcenter-users.md)
+* [Create A User for A Specific ChildItem](vmware-vsphere/create-a-user-for-a-specific-childitem.md)
