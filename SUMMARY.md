@@ -516,3 +516,4 @@
 * [Log in With a Custom User Roles](vmware-vsphere/log-in-with-a-custom-user-roles.md)
 * [Create User, Manage Permission at vCenter Server Level](vmware-vsphere/create-user-manage-permission-at-vcenter-server-level.md)
 * [Create a New User and Roles at vCenter Server Level](vmware-vsphere/create-a-new-user-and-roles-at-vcenter-server-level.md)
+* [Virtual Machine Power User](vmware-vsphere/virtual-machine-power-user.md)
