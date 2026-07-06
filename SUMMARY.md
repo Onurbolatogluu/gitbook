@@ -521,3 +521,4 @@
 * [Create A User for A Specific ChildItem](vmware-vsphere/create-a-user-for-a-specific-childitem.md)
 * [User with Different Roles in Different Items](vmware-vsphere/user-with-different-roles-in-different-items.md)
 * [introduction to Security Profile](vmware-vsphere/introduction-to-security-profile.md)
+* [Security Profile: Firewall Profiles](vmware-vsphere/security-profile-firewall-profiles.md)
