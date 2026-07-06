@@ -14,7 +14,7 @@ ESXi sunucularında işletim sistemi ayağa kalktığında, fiziksel monitörde 
 
 Sistem yöneticileri genellikle bu ekranın sunucunun donanımına ait ayrılmaz bir parça olduğunu düşünür. Oysa DCUI, tıpkı diğer yazılımlar gibi arka planda çalışan ve istendiğinde durdurulabilen bir servistir.
 
-Eğer ortamınızda çok yüksek bir fiziksel güvenlik standardı varsa, Security Profile üzerinden DCUI servisini "Stop" (Durdur) konumuna getirebilirsiniz. Bu yapıldığında:
+Eğer ortamınızda çok yüksek bir fiziksel güvenlik standardı varsa, Security Profile üzerinden DCUI servisini "Stop" konumuna getirebilirsiniz. Bu yapıldığında:
 
 * Sunucunun başındaki monitöre klavye takıp "F2" tuşuna basan bir kişi, doğru root şifresini bilse dahi "Authentication Denied" (Kimlik Doğrulama Reddedildi) hatası alır.
 * Sistem sadece vCenter veya web arayüzü üzerinden uzaktan yönetilebilir hale gelir. Fiziksel konsol tamamen sağırlaştırılır.
