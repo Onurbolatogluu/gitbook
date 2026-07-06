@@ -522,3 +522,4 @@
 * [User with Different Roles in Different Items](vmware-vsphere/user-with-different-roles-in-different-items.md)
 * [introduction to Security Profile](vmware-vsphere/introduction-to-security-profile.md)
 * [Security Profile: Firewall Profiles](vmware-vsphere/security-profile-firewall-profiles.md)
+* [Enabling or Disabling a Service in the Security Profile](vmware-vsphere/enabling-or-disabling-a-service-in-the-security-profile.md)
