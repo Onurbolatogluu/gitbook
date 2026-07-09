@@ -525,3 +525,4 @@
 * [Enabling or Disabling a Service in the Security Profile](vmware-vsphere/enabling-or-disabling-a-service-in-the-security-profile.md)
 * [Enabling or Disabling Lockdown Mode on an ESXi Host](vmware-vsphere/enabling-or-disabling-lockdown-mode-on-an-esxi-host.md)
 * [Host Image Profile and Host Encryption Level](vmware-vsphere/host-image-profile-and-host-encryption-level.md)
+* [Introduction To Virtual Network Standard Switches](vmware-vsphere/introduction-to-virtual-network-standard-switches.md)
