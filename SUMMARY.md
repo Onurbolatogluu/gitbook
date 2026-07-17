@@ -527,3 +527,4 @@
 * [Host Image Profile and Host Encryption Level](vmware-vsphere/host-image-profile-and-host-encryption-level.md)
 * [Introduction To Virtual Network Standard Switches](vmware-vsphere/introduction-to-virtual-network-standard-switches.md)
 * [Types of Virtual Switch Available in VMware](vmware-vsphere/types-of-virtual-switch-available-in-vmware.md)
+* [ESXi Host Networking Concepts Overview](vmware-vsphere/esxi-host-networking-concepts-overview.md)

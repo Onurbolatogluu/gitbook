@@ -1,3 +1,7 @@
+---
+icon: right-left-large
+---
+
 # Types of Virtual Switch Available in VMware
 
 Sanallaştırma altyapılarında ağ yönetimi kurgulanırken, sistem yöneticilerinin karşısına çıkan en temel yol ayrımı kullanılacak Virtual Switch türüdür. VMware vSphere ekosisteminde yer alan iki temel ağ mimarisi mevcuttur: Standard Switch ve Distributed Switch.
