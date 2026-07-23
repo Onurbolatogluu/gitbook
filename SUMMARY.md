@@ -529,3 +529,4 @@
 * [Types of Virtual Switch Available in VMware](vmware-vsphere/types-of-virtual-switch-available-in-vmware.md)
 * [ESXi Host Networking Concepts Overview](vmware-vsphere/esxi-host-networking-concepts-overview.md)
 * [The VMkernel, The Port Group and The Physical Adapters](vmware-vsphere/the-vmkernel-the-port-group-and-the-physical-adapters.md)
+* [Adding More Physical Network Adapter Into Your Lab](vmware-vsphere/adding-more-physical-network-adapter-into-your-lab.md)
