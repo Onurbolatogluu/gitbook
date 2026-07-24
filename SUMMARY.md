@@ -531,3 +531,4 @@
 * [The VMkernel, The Port Group and The Physical Adapters](vmware-vsphere/the-vmkernel-the-port-group-and-the-physical-adapters.md)
 * [Adding More Physical Network Adapter Into Your Lab](vmware-vsphere/adding-more-physical-network-adapter-into-your-lab.md)
 * [Configure Virtual Switch Security and Load-Balancing Policies](vmware-vsphere/configure-virtual-switch-security-and-load-balancing-policies.md)
+* [Add a Physical Adapter to A Standard Switch for Redundancy](vmware-vsphere/add-a-physical-adapter-to-a-standard-switch-for-redundancy.md)
