@@ -530,3 +530,4 @@
 * [ESXi Host Networking Concepts Overview](vmware-vsphere/esxi-host-networking-concepts-overview.md)
 * [The VMkernel, The Port Group and The Physical Adapters](vmware-vsphere/the-vmkernel-the-port-group-and-the-physical-adapters.md)
 * [Adding More Physical Network Adapter Into Your Lab](vmware-vsphere/adding-more-physical-network-adapter-into-your-lab.md)
+* [Configure Virtual Switch Security and Load-Balancing Policies](vmware-vsphere/configure-virtual-switch-security-and-load-balancing-policies.md)
