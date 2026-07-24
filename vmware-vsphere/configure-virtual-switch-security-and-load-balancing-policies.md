@@ -4,119 +4,124 @@ icon: gear-complex
 
 # Configure Virtual Switch Security and Load-Balancing Policies
 
-VMware ESXi ortamında **standard switch**, host üzerindeki VM'lerin fiziksel ağa çıkışını sağlayan temel yapı taşıdır. Bir standard switch'i doğru yapılandırmak sadece "VM internete çıksın" meselesinden ibaret değildir; uplink redundancy'den NIC teaming policy'sine, security ayarlarından VMkernel/management network ilişkisine kadar bir dizi karar, hem ağın dayanıklılığını hem de host'un yönetilebilirliğini doğrudan etkiler.
+Sanallaştırma ortamlarında ağ altyapısının kalbi, fiziksel switch'lerin yazılımsal karşılığı olan **Virtual Switch (vSwitch)** yapılarıdır. VMware vSphere ortamında her ESXi host, varsayılan olarak bir **Standard Switch (vSS)** ile gelir ve bu switch hem sanal makinelerin dış dünyayla iletişimini hem de host'un yönetim trafiğini taşır. Ancak varsayılan kurulumla yetinmek, hem erişilebilirlik hem de güvenlik açısından ciddi riskler barındırır.
 
-Bu yazıda, bir standard switch'i production'a hazır hale getirirken dikkat edilmesi gereken temel noktaları — uplink redundancy, switch özellikleri (MTU, port sayısı, CDP), NIC teaming/load-balancing algoritmaları, security policy ayarları ve VMkernel yapılandırması — sırasıyla ele alıyorum.
+Bu makalede bir Standard Switch'in temel bileşenlerini inceleyecek, ardından production ortamlarında kritik önem taşıyan **Security Policy** ve **Load-Balancing / NIC Teaming** yapılandırmalarını en iyi pratiklerle birlikte ele alacağız.
 
-***
+### Standard Switch Mimarisine Genel Bakış
 
-### 1. Uplink Redundancy: Neden Bu Kadar Kritik?
+Bir Standard Switch, ESXi host üzerinde çalışan ve sanal makineleri fiziksel ağa bağlayan Layer 2 bir yapıdır. Fiziksel bir switch satın aldığınızda ürünün port sayısı, MTU değeri, discovery protokolleri gibi özelliklerini nasıl inceliyorsanız, vSwitch üzerinde de aynı bilgilere erişebilir ve bunları düzenleyebilirsiniz. Öne çıkan bileşenler şunlardır:
 
-ESXi host client veya vCenter üzerinde sıkça karşılaşılan bir uyarı vardır: _"This virtual switch has no uplink redundancy."_ Bu uyarı, switch'in yalnızca **tek bir uplink adaptörüne (fiziksel NIC)** bağlı olduğunu gösterir.
+* **Uplink (Physical Adapter):** vSwitch'i fiziksel ağa bağlayan fiziksel NIC (vmnic). Bir vSwitch'in dış dünyaya çıkışı tamamen bu adaptörler üzerinden gerçekleşir.
+* **Port Group:** Sanal makinelerin bağlandığı mantıksal port toplulukları. VLAN etiketleme, güvenlik ve teaming politikaları port group seviyesinde override edilebilir.
+* **VMkernel Port:** Host'un kendi trafiği (management, vMotion, vSAN, Fault Tolerance, provisioning, replication vb.) için kullanılan özel port tipi.
+* **MTU:** Varsayılan değer 1500 byte'tır ve çoğu senaryo için yeterlidir. iSCSI, NFS veya vSAN gibi storage trafiği taşıyan ortamlarda 9000 byte (Jumbo Frames) tercih edilebilir; ancak bu durumda uçtan uca tüm fiziksel ağ bileşenlerinin de aynı MTU değerini desteklediğinden emin olunmalıdır. Uçtan uca tutarlılık sağlanamıyorsa varsayılan değerde kalmak en güvenli yaklaşımdır.
+* **Port Sayısı:** Standard Switch üzerinde 1500'ün üzerinde kullanılabilir port bulunur (örneğin 1513 gibi bir değer görürsünüz). Modern ESXi sürümlerinde portlar elastic olarak yönetildiği için pratikte port tükenmesi bir sorun teşkil etmez.
+* **Link Discovery (CDP):** Standard Switch, **Cisco Discovery Protocol (CDP)** destekler. Bu sayede vSwitch, tıpkı fiziksel bir Cisco switch gibi komşu cihazlarla topoloji bilgisi paylaşabilir. (Not: **LLDP** desteği yalnızca Distributed Switch üzerinde mevcuttur; vendor bağımsız bir ortamda çalışıyorsanız bu ayrım tasarım kararınızı etkileyebilir.)
 
-Bunun pratikteki anlamı basit: switch üzerindeki tüm trafik tek bir fiziksel yol üzerinden geçiyor demektir. Bu NIC üzerinde bir arıza, kablo kopması, switch portu sorunu ya da fiziksel switch tarafında bir kesinti yaşanırsa, host'un ağ bağlantısı tamamen kopar — yönetim erişimi dahil.
+### Uplink Redundancy: En Sık Görülen Uyarının Anlamı
 
-```
-Redundancy YOK (tek uplink):
-   [ vSwitch0 ] ---- vmnic0 ---- [ Fiziksel Switch ]
-        |
-   (vmnic0 arızalanırsa host izole kalır)
+Tek bir fiziksel adaptöre bağlı bir vSwitch üzerinde şu uyarıyı görürsünüz:
 
-Redundancy VAR (NIC teaming):
-   [ vSwitch0 ] ---- vmnic0 ---- [ Fiziksel Switch A ]
-        |     \
-        |      ---- vmnic1 ---- [ Fiziksel Switch B ]
-        |
-   (Active/Standby ya da Active/Active — biri düşerse diğeri devam eder)
-```
+> _"This virtual switch has no uplink redundancy. You should add another uplink adapter."_
 
-Günümüz sunucularının çoğu zaten 2'den fazla fiziksel NIC ile geldiği için bu genelde donanımsal bir kısıt değil, bir **yapılandırma tercihi** meselesidir. Ancak özellikle HAProxy ve CDN tabanlı yapılar gibi kesintiye duyarlı sistemlerde, tek uplink'li bir vSwitch, üst katmanda ne kadar sağlam bir redundancy stratejisi kurulmuş olursa olsun, bunun fiziksel katmanda delinmesi anlamına gelir. Bu yüzden en az iki fiziksel NIC'i aynı vSwitch'e uplink olarak bağlamak, production ortamlar için pratikte zorunlu kabul edilmelidir.
+Bu uyarının anlamı nettir: vSwitch'in fiziksel ağa çıkışı **tek bir NIC'e** bağlıdır ve bu NIC'te (ya da bağlı olduğu kabloda, portta veya fiziksel switch'te) bir arıza yaşanırsa, o vSwitch üzerindeki tüm sanal makineler ve VMkernel servisleri ağ bağlantısını kaybeder. Management trafiği de aynı switch üzerindeyse **host'a erişiminizi tamamen yitirirsiniz.**
 
-***
+#### Redundancy için en iyi pratikler
 
-### 2. Switch Özellikleri: MTU, Port Sayısı ve CDP
+* Her vSwitch'e **en az iki fiziksel uplink** atayın. Modern sunucular zaten iki ve üzeri NIC ile geldiği için bu genellikle ek maliyet gerektirmez.
+* İki uplink'i **farklı fiziksel switch'lere** bağlayın. Aynı fiziksel switch'e bağlı iki NIC, switch arızasında sizi korumaz; gerçek redundancy uçtan uca düşünülmelidir.
+* Mümkünse NIC'leri sunucu üzerinde **farklı fiziksel kartlara** dağıtın (örneğin biri onboard, biri PCIe kart üzerinde). Böylece tek bir kart arızası tüm uplink'leri düşürmez.
+* Kritik trafiği ayrıştırın: Management ve vMotion trafiğini VM trafiğinden ayrı port group'larda (ideal olarak ayrı VLAN'larda) taşıyın.
 
-Bir standard switch yapılandırılırken göz atılması gereken üç temel özellik şunlardır:
+### VMkernel ve Management Network
 
-| Özellik                | Varsayılan / Tipik Değer                                | Pratik Not                                                                                                                                                                                                                               |
-| ---------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **MTU**                | 1500                                                    | Jumbo frame (9000 MTU) genelde yalnızca vMotion veya iSCSI/NFS storage trafiği izole bir switch üzerinden taşınırken tercih edilir. Karışık trafik taşıyan bir switch'te MTU'yu varsayılandan değiştirmemek genelde doğru bir tercihtir. |
-| **Ports**              | Switch oluşturulurken belirlenir (genelde 128 ve üzeri) | Gerçek sınır, host'un desteklediği toplam port sayısıdır; port sayısını gereğinden yüksek tutmak ekstra maliyet getirmez ama gereğinden düşük tutmak ileride VM eklerken tıkanıklığa yol açabilir.                                       |
-| **Discovery Protocol** | CDP (Cisco Discovery Protocol) veya LLDP                | CDP/LLDP, fiziksel switch tarafının sanal switch'i "görebilmesini" sağlar; troubleshooting sırasında hangi vSwitch'in hangi fiziksel porta bağlı olduğunu tespit etmek için çok işe yarar. Cisco olmayan ortamlarda LLDP tercih edilir.  |
+Her ESXi host üzerinde **en az bir VMkernel portu management servisi etkin olarak** bulunmak zorundadır. Bu port, sizin vSphere Client veya SSH üzerinden host'a bağlanmanızı sağlayan arayüzdür. Management özelliği tamamen devre dışı bırakılmış bir host'a ağ üzerinden erişmek mümkün olmadığından, sistem bu senaryoya izin vermez; bu VMkernel portunu silmek, host ile aranızdaki tüm bağlantıyı koparmak anlamına gelir (kurtarma yalnızca DCUI/konsol üzerinden mümkün olur).
 
-***
+VMkernel portu üzerinde etkinleştirilebilecek servisler şunlardır:
 
-### 3. NIC Teaming ve Load-Balancing Policy
+* **Management:** Host yönetim trafiği (zorunlu, en az bir portta etkin olmalı)
+* **vMotion:** Sanal makinelerin canlı taşınması
+* **Provisioning:** Cold migration, cloning ve snapshot trafiği
+* **Fault Tolerance Logging:** FT korumalı VM'lerin senkronizasyon trafiği
+* **vSphere Replication / Replication NFC:** Replikasyon trafiği
+* **vSAN:** vSAN storage trafiği
 
-ESXi standard switch'te dört farklı load-balancing algoritması bulunur ve bu seçim, hem performansı hem de fiziksel switch tarafındaki gereksinimleri doğrudan etkiler:
+**Best practice:** Her servisi aynı VMkernel portuna yığmak yerine, her kritik servis için ayrı VMkernel portu ve ayrı VLAN kullanın. Özellikle vMotion trafiği şifrelenmemiş bellek içeriği taşıyabildiği için mutlaka izole bir ağda tutulmalıdır. IP yapılandırmasında DHCP yerine **static IP** kullanmak, management erişiminin DHCP altyapısına bağımlı kalmasını engeller ve production ortamlarında standart kabul edilir.
 
-1. **Route based on originating virtual port ID** (varsayılan) — Her VM'in sanal port ID'sine göre bir uplink'e sabitlenir. Basit ve ek fiziksel switch yapılandırması gerektirmez.
-2. **Route based on source MAC hash** — VM'in MAC adresine göre uplink seçimi yapılır; port ID yöntemine benzer davranış sergiler.
-3. **Route based on IP hash** — Kaynak ve hedef IP'nin hash'ine göre dağıtım yapar; fiziksel switch tarafında **EtherChannel/LACP (static)** yapılandırması _zorunludur_, aksi halde paket kaybı veya MAC flapping yaşanır.
-4. **Explicit failover order** — Teaming yok; tanımlı sırayla tek bir aktif uplink kullanılır, diğerleri yalnızca failover için beklemededir.
+### Virtual Switch Security Policy'leri
 
-```
-Load-Balancing Karar Ağacı:
-                    ┌─────────────────────────┐
-                    │ Fiziksel switch LACP/    │
-                    │ EtherChannel destekliyor │
-                    │ mu ve yapılandırıldı mı? │
-                    └───────────┬─────────────┘
-                     Evet ───────┴──────── Hayır
-                      │                       │
-              IP Hash kullanılabilir   Port ID / MAC Hash
-              (yüksek performans)      (varsayılan, güvenli)
-```
+vSwitch ve port group seviyesinde üç temel güvenlik politikası bulunur. Bu politikalar Layer 2 seviyesinde çalışır ve sanal makinelerin ağ üzerindeki davranışlarını sınırlar.
 
-Burada asıl kritik nokta şu: seçilen teaming policy ile fiziksel switch tarafındaki yapılandırma **tutarlı olmak zorundadır**. Örneğin fiziksel switch'te LACP yapılandırılmamışken IP Hash policy'sini seçmek, HAProxy ile yük dengelenen backend'lerde session affinity bozulduğunda görülen türden — trafiğin öngörülemez şekilde dağılması, aralıklı paket kaybı, teşhisi zor kesintiler — sorunlara yol açar.
+#### 1. Promiscuous Mode
 
-***
+**Ne yapar:** Etkinleştirildiğinde, port group'a bağlı bir sanal makine, yalnızca kendisine yönlendirilen trafiği değil, o vSwitch (veya VLAN) üzerindeki **tüm trafiği** görebilir.
 
-### 4. Security Policy: Promiscuous Mode, MAC Address Changes, Forged Transmits
+**Önerilen değer: Reject.** Promiscuous Mode'un açık olması, ele geçirilmiş bir sanal makinenin ağdaki diğer VM'lerin trafiğini dinleyebilmesi (packet sniffing) anlamına gelir. Yalnızca IDS/IPS sensörleri, ağ monitörleme araçları veya nested virtualization gibi meşru ihtiyaçlar için, **yalnızca ilgili port group'ta** etkinleştirilmelidir; asla switch genelinde açılmamalıdır.
 
-ESXi standard switch güvenlik politikası üç ayardan oluşur:
+#### 2. MAC Address Changes
 
-* **Promiscuous Mode** (Reject/Accept): Reddedildiğinde (varsayılan), bir VM'in vNIC'i kendisine ait olmayan trafiği dinleyemez. Kabul edilirse VM, switch üzerindeki tüm trafiği görebilir — genelde yalnızca IDS/IPS veya paket yakalama (packet capture) senaryolarında açılır.
-* **MAC Address Changes** (Reject/Accept): Reddedildiğinde, guest OS içinden vNIC'in MAC adresi değiştirilirse trafik switch tarafından düşürülür. Bu, MAC spoofing saldırılarına karşı bir önlemdir.
-* **Forged Transmits** (Reject/Accept): Reddedildiğinde, VM'den çıkan paketlerin kaynak MAC adresi, vNIC'e atanmış gerçek MAC ile eşleşmiyorsa paket düşürülür.
+**Ne yapar:** Sanal makinenin guest OS'i, .vmx dosyasında tanımlı MAC adresinden farklı bir **effective MAC adresi** tanımlamaya çalıştığında gelen trafiğin kabul edilip edilmeyeceğini belirler.
 
-Bu üç ayarın varsayılan değeri (**Reject**) genelde production ortamlar için doğru tercihtir; **Accept**'e çevrilmesi genelde yalnızca nested virtualization (örneğin bir ESXi içinde başka bir hypervisor çalıştırmak) veya ağ izleme araçları gibi özel senaryolarda gerekir.
+**Önerilen değer: Reject.** MAC adresi değişikliğine izin vermek, MAC spoofing saldırılarının önünü açar: kötü niyetli bir VM, başka bir makinenin kimliğine bürünerek ona yönelik trafiği üzerine çekebilir. İstisnalar: Microsoft NLB (unicast mode), bazı cluster çözümleri ve iSCSI failover senaryoları gibi meşru MAC değişikliği gerektiren yapılandırmalar. Bu durumlarda politika yalnızca ilgili port group'ta Accept yapılmalıdır.
 
-***
+#### 3. Forged Transmits
 
-### 5. VMkernel Adaptörü ve Management Network
+**Ne yapar:** MAC Address Changes politikasının çıkış (outbound) trafiği için karşılığıdır. Sanal makine, kaynak MAC adresi kendi tanımlı MAC'inden farklı olan frame'ler göndermeye çalıştığında bu trafiğin iletilip iletilmeyeceğini kontrol eder.
 
-Her ESXi host'unda **en az bir VMkernel adaptörü, management servisi etkin şekilde bulunmak zorundadır.** Bu VMkernel port silinirse, host vCenter'dan veya doğrudan host client üzerinden yönetilemez hale gelir; bu yüzden management VMkernel'i silmek klasik "kendi ayağına sıkma" senaryolarından biridir.
+**Önerilen değer: Reject.** Forged Transmits'in açık olması, VM'lerin sahte kaynak MAC adresiyle paket göndermesine ve dolayısıyla kimlik sahteciliği tabanlı saldırılara olanak tanır. Nested ESXi laboratuvarları ve bazı NLB senaryoları bu politikanın Accept olmasını gerektirir; yine kural aynıdır — istisna, yalnızca ihtiyaç duyulan port group ile sınırlı tutulur.
 
-Bir VMkernel port üzerinde etkinleştirilebilecek başlıca servisler şunlardır:
+> **Not:** Standard Switch'te bu üç politikanın varsayılan değerleri sürüme göre farklılık gösterebilir (eski sürümlerde MAC Address Changes ve Forged Transmits varsayılan olarak Accept gelirdi). Distributed Switch'te ise üçü de varsayılan olarak Reject'tir. Ortamınızdaki mevcut değerleri denetlemek, security hardening çalışmasının ilk adımı olmalıdır. VMware'in **vSphere Security Configuration Guide (Hardening Guide)** dokümanı bu denetim için referans alınabilir.
 
-* **Management** (her zaman en az bir VMkernel'de zorunlu)
-* **vMotion** (canlı VM taşıma trafiği)
-* **Provisioning** (cold migration, cloning, snapshot işlemleri)
-* **Fault Tolerance (FT) logging**
-* **vSphere Replication** ve **NFC (Network File Copy)**
+### NIC Teaming ve Load-Balancing Politikaları
 
-Bu servisleri tek bir VMkernel port üzerinde toplamak, best practice açısından önerilmez. Production ortamlarda yaygın yaklaşım, **her servis için ayrı bir VMkernel port ve mümkünse ayrı bir ağ segmenti/VLAN** kullanmaktır:
+Birden fazla uplink eklediğinizde asıl soru şudur: trafik bu uplink'ler arasında nasıl dağıtılacak? Bu, **Teaming and Failover** ayarları altındaki load-balancing politikasıyla belirlenir.
 
-```
-Örnek VMkernel Ayrımı (Best Practice):
-  vmk0  -> Management        (10.0.10.x)
-  vmk1  -> vMotion           (10.0.20.x, ayrı VLAN, jumbo frame önerilir)
-  vmk2  -> Fault Tolerance   (10.0.30.x)
-  vmk3  -> vSAN / Storage    (10.0.40.x, ayrı VLAN)
-```
+#### Route Based on Originating Virtual Port ID (Varsayılan)
 
-Bu ayrım, hem güvenlik (management trafiğinin izole edilmesi) hem de performans (vMotion gibi yoğun trafiğin diğer servisleri etkilememesi) açısından önemlidir.
+Her sanal makine (daha doğrusu her virtual port), vSwitch'e bağlandığı anda uplink'lerden birine atanır ve trafiği hep o uplink üzerinden akar.
 
-***
+* **Avantajları:** Fiziksel switch tarafında hiçbir özel yapılandırma gerektirmez, overhead'i düşüktür, öngörülebilirdir.
+* **Sınırları:** Tek bir VM asla tek bir uplink'in bant genişliğinden fazlasını kullanamaz. Dağılım VM sayısına göredir, gerçek trafik yüküne göre değildir.
+* **Ne zaman kullanılmalı:** Çoğu ortam için doğru ve güvenli varsayılan tercihtir.
 
-### Sonuç: Pratik Özet
+#### Route Based on Source MAC Hash
 
-Bir standard switch'i production'a hazırlarken kontrol edilmesi gereken maddeler şu şekilde özetlenebilir:
+Uplink seçimi, kaynak MAC adresinden üretilen hash ile yapılır. Davranış olarak Port ID yöntemine çok benzer; pratikte onu tercih etmek için özel bir neden nadiren vardır. Tek VM'de birden fazla vNIC olan bazı senaryolarda farklı dağılım sağlayabilir.
 
-* **En az iki uplink** kullanarak redundancy sağlamak, tek nokta arızasını (single point of failure) ortadan kaldırmak.
-* **NIC teaming policy** seçimini fiziksel switch tarafındaki LACP/EtherChannel yapılandırmasıyla tutarlı tutmak.
-* **Security policy**'de Promiscuous Mode, MAC Address Changes ve Forged Transmits ayarlarını, açık bir gereksinim olmadıkça varsayılan (Reject) değerde bırakmak.
-* **Management VMkernel'ini** her zaman koruyarak, diğer servisleri (vMotion, FT, replication) ayrı VMkernel port'larına ve mümkünse ayrı VLAN'lara dağıtmak.
+#### Route Based on IP Hash
 
-Bu dört madde, görece basit görünen bir standard switch yapılandırmasını, gerçek anlamda dayanıklı ve güvenli bir ağ mimarisine dönüştüren temel kararlardır.
+Uplink seçimi, kaynak ve hedef IP adreslerinin hash'i ile yapılır. Böylece **tek bir VM**, farklı hedeflerle konuşurken farklı uplink'leri kullanabilir ve toplamda tek NIC bant genişliğinin üzerine çıkabilir.
+
+* **Kritik gereksinim:** Fiziksel switch tarafında **static EtherChannel / Port Channel (LACP değil, static mode)** yapılandırması zorunludur. Bu yapılandırma olmadan IP Hash kullanmak, MAC flapping ve paket kaybına yol açar.
+* **Dezavantajları:** Fiziksel ağ ekibiyle koordinasyon gerektirir, tüm uplink'lerin aynı fiziksel switch'e (veya stack/vPC yapısına) bağlı olmasını zorunlu kılar, troubleshooting'i karmaşıklaştırır.
+* **Ne zaman kullanılmalı:** Tek bir VM'in çok sayıda farklı hedefe yüksek hacimli trafik ürettiği ve agregasyon ihtiyacının kanıtlandığı özel durumlarda.
+
+#### Use Explicit Failover Order
+
+Load balancing yapılmaz; trafik her zaman **Active Adapters** listesindeki ilk sağlıklı uplink'ten akar, arıza durumunda **Standby Adapters** devreye girer. Management ve vMotion gibi trafiklerin hangi NIC'ten akacağını deterministik olarak kontrol etmek istediğiniz tasarımlarda (örneğin iki VMkernel portunun aynı iki uplink'i çapraz active/standby kullandığı klasik tasarım) tercih edilir.
+
+#### Route Based on Physical NIC Load (LBT)
+
+Gerçek uplink kullanımını izleyip (%75 doluluk eşiği) port atamalarını dinamik olarak taşıyan tek politikadır ve fiziksel switch tarafında yapılandırma gerektirmez. **Yalnızca vSphere Distributed Switch (vDS) üzerinde kullanılabilir.** Enterprise Plus lisansınız ve vDS'iniz varsa, çoğu senaryoda en dengeli sonuç veren politika budur.
+
+### Failover Davranışını Belirleyen Ek Ayarlar
+
+Load-balancing politikasının yanında, failover'ın nasıl algılanıp yönetileceğini belirleyen dört ayar daha vardır:
+
+* **Network Failure Detection:** Varsayılan yöntem **Link Status Only**'dir; yalnızca fiziksel link'in düşmesini algılar. **Beacon Probing** ise uplink'ler arasında probe paketleri göndererek upstream arızaları da yakalayabilir, ancak sağlıklı çalışması için en az üç uplink gerektirir. İki uplink'li standart yapılarda Link Status Only kullanın ve upstream arızalara karşı fiziksel switch tarafında Link State Tracking benzeri özelliklerden faydalanın.
+* **Notify Switches:** **Yes** olarak kalmalıdır. Bir failover gerçekleştiğinde vSwitch, fiziksel switch'lere RARP paketleri göndererek MAC tablolarının anında güncellenmesini sağlar; bu, kesinti süresini saniyeler mertebesinden milisaniyelere indirir. (İstisna: unicast mode Microsoft NLB kullanan port group'larda No yapılması gerekir.)
+* **Failback:** Arızalanan uplink tekrar ayağa kalktığında trafiğin otomatik olarak ona geri dönüp dönmeyeceğini belirler. Varsayılan **Yes**'tir; ancak port flapping yaşayan ortamlarda trafiğin sürekli gidip gelmesine neden olabilir. Management network gibi hassas trafiklerde **No** olarak ayarlamak stabiliteyi artırır.
+* **Override at Port Group Level:** Tüm teaming ve security politikaları switch seviyesinde tanımlanır ancak port group seviyesinde override edilebilir. Doğru tasarım deseni şudur: switch seviyesinde en kısıtlayıcı/güvenli değerleri tanımlayın, istisnaları yalnızca ihtiyaç duyan port group'larda açın.
+
+### Sonuç
+
+Standard Switch, ilk bakışta "kur ve unut" bir bileşen gibi görünse de, production ortamının hem erişilebilirliğini hem de güvenliğini doğrudan belirleyen kritik bir katmandır. Özetlemek gerekirse:
+
+* Her vSwitch'e **en az iki uplink** atayın ve bunları farklı fiziksel switch'lere bağlayın; uplink redundancy uyarısını asla görmezden gelmeyin.
+* Management için her zaman en az bir VMkernel portu bulundurun, kritik servisleri ayrı VMkernel portları ve VLAN'larla izole edin, static IP kullanın.
+* Üç güvenlik politikasını (**Promiscuous Mode, MAC Address Changes, Forged Transmits**) varsayılan olarak **Reject** yapın; istisnaları port group seviyesinde ve belgeleyerek açın.
+* Load-balancing tercihinizde varsayılan **Port ID** politikası çoğu ortam için yeterlidir; **IP Hash**'i yalnızca fiziksel tarafta static EtherChannel ile, **LBT**'yi ise vDS kullanıyorsanız tercih edin.
+* **Notify Switches: Yes** ayarını koruyun, flapping riski olan ortamlarda **Failback: No** değerlendirin.
+
+Bu prensipleri uyguladığınızda, tek bir kablo arızasının tüm host'u ağdan düşürdüğü ya da tek bir ele geçirilmiş VM'in komşularının trafiğini dinleyebildiği senaryoların önüne geçmiş olursunuz. Sanal ağ tasarımında güvenlik ve erişilebilirlik, sonradan eklenen özellikler değil; ilk günden kurgulanması gereken temel gereksinimlerdir.
