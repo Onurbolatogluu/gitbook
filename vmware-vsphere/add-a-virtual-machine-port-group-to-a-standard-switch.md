@@ -83,3 +83,20 @@ Virtual Machine Port Group, sanal makineler ile fiziksel ağ arasındaki bağlan
 Bu dört karar baştan doğru verildiğinde, VM'leri ağlara bağlamak açılır listeden seçim yapmak kadar basitleşir; yanlış verildiğinde ise sonuçları — çalışmayan migration'lar, ağa çıkamayan makineler, denetlenemeyen güvenlik istisnaları — aylar sonra ortaya çıkar.
 
 Switch'imizde artık sanal makineler için bir port group var; yapıyı tamamlamak için sıradaki adım, aynı switch üzerine host servislerini taşıyacak bir **VMkernel portu** eklemek olacak.
+
+***
+
+#### BONUS
+
+**vmnic — fiziksel adaptör (host'un donanımı).** Sunucunun üzerindeki gerçek network kartının portudur; kablo buna takılır. ESXi bunları `vmnic0`, `vmnic1` diye numaralandırır. Makalelerde "uplink" dediğimiz şey budur — vSwitch'in fiziksel dünyaya çıkışı. `esxcli network nic list` çıktısında gördüklerin bunlardır.
+
+**vNIC — sanal makinenin network kartı.** VM'in donanımının parçasıdır; guest OS'in içinden baktığında gördüğü Ethernet adaptörüdür (E1000, VMXNET3 gibi). Fiziksel bir karşılığı yoktur, tamamen yazılımsaldır. vNIC bir **port group'a** bağlanır — az önce yazdığımız makalede VM oluştururken açılır listeden port group seçmek, aslında VM'in vNIC'ini o port group'a takmaktı.
+
+**vmk — VMkernel portu (host'un kendi sanal arayüzü).** ESXi'nin kendisinin ağa çıktığı arayüzdür (`vmk0`, `vmk1`...); management, vMotion, iSCSI trafiği buradan akar. Bir önceki sohbette `esxtop`'ta baktığımız `vmk0` buydu. Kabaca "host'un kendi vNIC'i" gibi düşünebilirsin.
+
+**vSwitch (Standard Switch / vSS) — Sanal switch.** Host üzerinde çalışan, Layer 2 seviyesinde frame ileten yazılımsal switch'tir. İç tarafında port group'lar ve vmk portları, dış tarafında uplink'ler (vmnic) bulunur. Her host'ta bağımsız olarak yapılandırılır ve yönetilir; kurulumla birlikte gelen varsayılan switch `vSwitch0`'dır.
+
+**vDS (vSphere Distributed Switch) — Dağıtık sanal switch.** Standard Switch'in vCenter üzerinden merkezi yönetilen versiyonudur: yapılandırma bir kez tanımlanır, cluster'daki tüm host'lara otomatik dağıtılır. LLDP, Network I/O Control, LBT (load-based teaming) ve port mirroring gibi vSS'te bulunmayan özellikler sunar; Enterprise Plus lisansı gerektirir.
+
+
+
