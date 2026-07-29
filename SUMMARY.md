@@ -532,3 +532,6 @@
 * [Adding More Physical Network Adapter Into Your Lab](vmware-vsphere/adding-more-physical-network-adapter-into-your-lab.md)
 * [Configure Virtual Switch Security and Load-Balancing Policies](vmware-vsphere/configure-virtual-switch-security-and-load-balancing-policies.md)
 * [Add a Physical Adapter to A Standard Switch for Redundancy](vmware-vsphere/add-a-physical-adapter-to-a-standard-switch-for-redundancy.md)
+* [Types of Virtual Standard Switch Connections](vmware-vsphere/types-of-virtual-standard-switch-connections.md)
+* [Create and Manage A New Standard switch From ESXi](vmware-vsphere/create-and-manage-a-new-standard-switch-from-esxi.md)
+* [Add a Virtual Machine Port Group to a Standard Switch](vmware-vsphere/add-a-virtual-machine-port-group-to-a-standard-switch.md)
