@@ -535,3 +535,4 @@
 * [Types of Virtual Standard Switch Connections](vmware-vsphere/types-of-virtual-standard-switch-connections.md)
 * [Create and Manage A New Standard switch From ESXi](vmware-vsphere/create-and-manage-a-new-standard-switch-from-esxi.md)
 * [Add a Virtual Machine Port Group to a Standard Switch](vmware-vsphere/add-a-virtual-machine-port-group-to-a-standard-switch.md)
+* [Add a VMkernel Port Group to a Standard Switch](vmware-vsphere/add-a-vmkernel-port-group-to-a-standard-switch.md)
