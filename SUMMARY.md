@@ -538,3 +538,5 @@
 * [Add a VMkernel Port Group to a Standard Switch](vmware-vsphere/add-a-vmkernel-port-group-to-a-standard-switch.md)
 * [Creating a Private Network Port Group](vmware-vsphere/creating-a-private-network-port-group.md)
 * [Create and Manage a Standard switch From vCenter Server](vmware-vsphere/create-and-manage-a-standard-switch-from-vcenter-server.md)
+* [Overview of vNetwork Distributed Switch concepts](vmware-vsphere/overview-of-vnetwork-distributed-switch-concepts.md)
+* [Add a New vSphere Distributed Switch](vmware-vsphere/add-a-new-vsphere-distributed-switch.md)
