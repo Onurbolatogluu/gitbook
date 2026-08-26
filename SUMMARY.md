@@ -540,3 +540,4 @@
 * [Create and Manage a Standard switch From vCenter Server](vmware-vsphere/create-and-manage-a-standard-switch-from-vcenter-server.md)
 * [Overview of vNetwork Distributed Switch concepts](vmware-vsphere/overview-of-vnetwork-distributed-switch-concepts.md)
 * [Add a New vSphere Distributed Switch](vmware-vsphere/add-a-new-vsphere-distributed-switch.md)
+* [Create A New Distributed Port Group](vmware-vsphere/create-a-new-distributed-port-group.md)
