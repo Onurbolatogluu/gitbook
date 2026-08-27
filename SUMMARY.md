@@ -544,3 +544,4 @@
 * [Uplink Port Group: Add Hosts to a vSphere Distributed Switch](vmware-vsphere/uplink-port-group-add-hosts-to-a-vsphere-distributed-switch.md)
 * [Migrate VMs to Another Network](vmware-vsphere/migrate-vms-to-another-network.md)
 * [Migrate VMkernel Adapters to Another Network](vmware-vsphere/migrate-vmkernel-adapters-to-another-network.md)
+* [Export and Restore Distributed Switch Configuration](vmware-vsphere/export-and-restore-distributed-switch-configuration.md)
