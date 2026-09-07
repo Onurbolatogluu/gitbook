@@ -547,3 +547,4 @@
 * [Export and Restore Distributed Switch Configuration](vmware-vsphere/export-and-restore-distributed-switch-configuration.md)
 * [Vmware Storage Technologies](vmware-vsphere/vmware-storage-technologies.md)
 * [vSphere iSCSI SAN components](vmware-vsphere/vsphere-iscsi-san-components.md)
+* [vSphere NFS storage components](vmware-vsphere/vsphere-nfs-storage-components.md)

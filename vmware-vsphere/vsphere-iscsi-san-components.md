@@ -4,151 +4,179 @@ icon: hand-holding-droplet
 
 # vSphere iSCSI SAN components
 
-Bir önceki bölümde vSphere'in desteklediği depolama teknolojilerine genel bir bakış attık ve iSCSI'nin neden en yaygın tercih olduğunu ortaya koyduk: mevcut Ethernet altyapısını kullanır, maliyeti Fibre Channel'a göre belirgin şekilde düşüktür ve modern 10/25GbE ağlarla çoğu iş yükü için fazlasıyla yeterli performans sunar. Fibre Channel'ın yüksek maliyeti nedeniyle birçok orta ölçekli ortamda pratikte tek gerçekçi paylaşımlı depolama seçeneği iSCSI'dir.
+Bir önceki bölümde vSphere'in desteklediği depolama teknolojilerine baktık ve iSCSI'nin neden en yaygın tercih olduğunu gördük: mevcut Ethernet ağını kullanır, Fibre Channel'a göre çok daha ucuzdur ve modern 10/25GbE ağlarda çoğu iş yükü için yeterli performansı verir. Fibre Channel'ın maliyeti yüzünden orta ölçekli birçok ortamda tek gerçekçi paylaşımlı depolama seçeneği iSCSI'dir.
 
-Bu makalede bir iSCSI SAN'ın hangi bileşenlerden oluştuğunu, verinin fiziksel diskten sanal makineye kadar hangi katmanlardan geçtiğini ve ESXi tarafında bağlantının nasıl kurulduğunu ele alıyoruz. Amaç, yapılandırma adımlarına geçmeden önce zincirin her halkasının ne işe yaradığını netleştirmek.
+Bu makalede bir iSCSI SAN'ın hangi parçalardan oluştuğunu anlatacağız. Amaç, yapılandırmaya geçmeden önce her parçanın ne işe yaradığını netleştirmek.
 
-### Genel Tablo: Zincirin Halkaları
+### Zincirin Parçaları
 
-Bir iSCSI SAN'da veri şu yolu izler:
+iSCSI'de veri şu yolu izler:
 
 ```
-[Fiziksel Diskler] → [RAID / LUN'lar] → [Storage Processor'lar]
-        → [Ethernet Ağı / Switch] → [iSCSI Initiator] → [ESXi Host]
+[Fiziksel diskler] → [LUN'lar] → [Storage processor'lar]
+        → [Ethernet ağı] → [iSCSI initiator] → [ESXi host]
 ```
 
-Her halkayı sırayla inceleyelim.
+Her parçayı sırayla açalım.
 
-### 1. Fiziksel Diskler ve LUN Kavramı
+### 1. Fiziksel Diskler ve LUN
 
-iSCSI storage sistemi, içinde çok sayıda fiziksel disk barındıran bir kabindir. Bu diskler ESXi'ye tek tek sunulmaz; önce storage sistemi tarafından gruplanır ve mantıksal birimlere bölünür.
+iSCSI storage sistemi, içinde çok sayıda disk barındıran bir kabindir. Bu diskler ESXi'ye tek tek verilmez. Önce gruplanır ve mantıksal parçalara bölünür.
 
-**LUN (Logical Unit Number)**, storage sisteminin dışarıya sunduğu bu mantıksal disk birimidir. Örnek bir yapılandırma:
+**LUN (Logical Unit Number)**, storage sisteminin dışarıya sunduğu bu mantıksal disktir. Basit bir örnek:
 
-* Kabinde 500 GB'lık 10 disk bulunuyor
-* İki disk bir RAID grubunda birleştirilip **LUN 1** olarak sunuluyor (1 TB)
-* İki disk daha **LUN 2** oluşturuyor (1 TB)
-* Üç disk **LUN 3** olarak yapılandırılıyor (1,5 TB)
+* Kabinde 500 GB'lık 10 disk var
+* İki disk birleştirilip **LUN 1** olarak sunuluyor (1 TB)
+* İki disk daha **LUN 2** oluyor (1 TB)
+* Üç disk **LUN 3** oluyor (1,5 TB)
 
-ESXi bu LUN'ları birer disk olarak görür ve üzerlerinde VMFS datastore oluşturur. Yani host, arkadaki fiziksel disk sayısından ve RAID yapısından habersizdir; yalnızca kendisine sunulan mantıksal birimi bilir.
+ESXi bu LUN'ları birer disk olarak görür ve üzerlerine VMFS datastore kurar. Host, arkada kaç disk olduğunu ve nasıl gruplandığını bilmez; sadece kendisine verilen mantıksal diski görür.
 
-**Pratikte bu yapılandırmayı genellikle siz yapmazsınız.** Kurumsal storage sistemleri satın alındığında, RAID grupları ve LUN'lar ya üretici ya da tedarikçi tarafından hazırlanmış olarak gelir. Sizin göreviniz, hazır LUN'ları host'lara sunmak ve ESXi tarafında yapılandırmaktır. Yine de bu katmanı anlamak, kapasite planlaması ve performans sorunlarını teşhis ederken kritik önem taşır.
+**Bu gruplamayı genelde siz yapmazsınız.** Kurumsal storage sistemleri satın alındığında LUN'lar hazır gelir. Sizin işiniz, hazır LUN'ları host'lara sunmak ve ESXi tarafını yapılandırmaktır. Yine de bu katmanı bilmek, kapasite planlarken ve performans sorunu ararken işinize yarar.
 
-#### LUN tasarımı üzerine notlar
+#### LUN boyutlandırma
 
-Boyutlandırma kararında birkaç prensip vardır:
+Birkaç basit prensip:
 
-* **Çok sayıda küçük LUN mu, az sayıda büyük LUN mu?** Büyük LUN'lar yönetimi basitleştirir; küçük LUN'lar ise iş yüklerini birbirinden yalıtır ve bir sorunun etki alanını daraltır. Modern vSphere sürümlerinde VMFS kilitleme mekanizmaları geliştiği için (VAAI ATS), eskiden LUN başına VM sayısını sınırlayan kaygılar büyük ölçüde azalmıştır.
-* **Performans katmanları:** Farklı disk tiplerinden (SSD, SAS, NL-SAS) oluşturulan LUN'ları ayrı datastore'lar olarak sunmak, iş yüklerini performans ihtiyacına göre yerleştirmenizi sağlar.
-* **Genişleme payı:** LUN'ları sonradan büyütmek mümkündür ancak planlı bir işlemdir; baştan makul bir büyüme payı bırakmak operasyonel yükü azaltır.
+* **Büyük LUN mu, küçük LUN mu?** Büyük LUN'lar yönetimi kolaylaştırır. Küçük LUN'lar iş yüklerini birbirinden ayırır, bir sorun çıkarsa etkisi dar kalır. Eskiden LUN başına VM sayısını sınırlayan kilitleme sorunları vardı; modern vSphere'de bu büyük ölçüde çözüldü (VAAI ATS).
+* **Performans katmanı:** Farklı disk tiplerinden (SSD, SAS, NL-SAS) oluşan LUN'ları ayrı datastore olarak sunun. Böylece hangi VM'in hızlı diske, hangisinin yavaş diske gideceğine karar verebilirsiniz.
+* **Büyüme payı:** LUN'ları sonradan büyütmek mümkün ama planlı bir iştir. Baştan biraz pay bırakmak sonraki işi azaltır.
 
-### 2. Storage Processor'lar (SP)
+### 2. Storage Processor (SP)
 
-Storage sisteminin "beyni" ve ağa açılan kapısıdır. Gelen iSCSI isteklerini karşılar, LUN'lara yönlendirir ve cevabı geri gönderir.
+Storage sisteminin beynidir. Ağdan gelen istekleri karşılar, LUN'lara yönlendirir, cevabı geri gönderir.
 
-Kurumsal iSCSI sistemlerinin neredeyse tamamı **en az iki storage processor** ile gelir; daha büyük sistemlerde dört veya daha fazlası bulunabilir. Bunun iki gerekçesi vardır:
+Kurumsal iSCSI sistemlerinin neredeyse hepsi **en az iki storage processor** ile gelir. Büyük sistemlerde dört veya daha fazla olabilir. Sebebi iki tane:
 
-* **Yüksek erişilebilirlik:** Bir SP arızalandığında veya firmware güncellemesi için yeniden başlatıldığında, diğer SP hizmeti devralır. Tek SP'li bir sistem, tüm sanal ortamınız için bir single point of failure demektir.
-* **Performans:** Yük iki denetleyici arasında paylaştırılarak toplam verim artırılır.
+* **Yedeklilik:** Bir SP arızalanırsa veya güncelleme için yeniden başlarsa, diğeri işi devralır. Tek SP'li bir sistem, tüm sanal ortamınız için tek arıza noktasıdır.
+* **Performans:** Yük iki denetleyici arasında bölünür.
 
-**Kritik tasarım notu:** İki SP'nin varlığı tek başına yeterli değildir. Her SP'nin **farklı bir fiziksel switch'e** bağlanması gerekir — aksi halde switch arızasında her iki yol da kesilir. Aynı şekilde host tarafındaki NIC'ler de farklı switch'lere dağıtılmalıdır. Depolama yolunda yedeklilik, ağ yedekliliğinden daha kritiktir: ağ kesintisinde VM'ler erişilemez hale gelir, storage kesintisinde ise diskleri kaybolur.
+**Önemli bir detay:** İki SP'nin olması tek başına yetmez. Her SP **farklı bir fiziksel switch'e** bağlanmalıdır. Aksi halde switch arızasında iki yol da kesilir. Host tarafındaki NIC'ler için de aynı kural geçerlidir.
 
-Ayrıca SP'lerin çalışma modunu bilmek gerekir: bazı array'ler **active/active** (her SP her LUN'a hizmet verir), bazıları **active/passive** (her LUN bir SP'ye "sahiptir") çalışır. Bu fark, ESXi tarafında seçeceğiniz path selection policy'yi doğrudan etkiler.
+Depolama yolunda yedeklilik, ağ yedekliliğinden daha kritiktir. Ağ kesilirse VM'lere erişilemez; storage kesilirse VM'ler diskini kaybeder.
 
-### 3. Ağ Katmanı
+Bir de SP'lerin çalışma şeklini bilmek gerekir. Bazı sistemler **active/active** çalışır (her SP her LUN'a hizmet verir), bazıları **active/passive** (her LUN'un bir sahibi vardır). Bu fark, ESXi tarafında seçeceğiniz yol politikasını etkiler.
 
-iSCSI'nin en belirgin özelliği, özel bir altyapı gerektirmemesidir: storage processor'lar standart Ethernet kablolarıyla ağa bağlanır ve trafik TCP/IP üzerinden akar. Fibre Channel'ın aksine ayrı HBA, ayrı switch ve ayrı kablolama gerekmez.
+### 3. Ağ
 
-Ancak bu kolaylık, en sık yapılan hatanın da kaynağıdır: **iSCSI trafiğinin genel ağ trafiğiyle aynı yolu paylaşması.** Depolama trafiği gecikmeye son derece duyarlıdır; bir yedekleme işi ya da yoğun bir vMotion, aynı hattı paylaşan storage trafiğini etkilediğinde sanal makinelerde disk gecikmeleri (latency) olarak kendini gösterir.
+iSCSI'nin en belirgin özelliği, özel bir altyapı istememesidir. Storage processor'lar normal Ethernet kablosuyla ağa bağlanır, trafik TCP/IP üzerinden akar. Fibre Channel'daki gibi ayrı kart, ayrı switch, ayrı kablo gerekmez.
 
-**Ağ tarafında temel gereklilikler:**
+Ama bu kolaylık, en sık yapılan hatanın da kaynağıdır: **storage trafiğinin normal ağ trafiğiyle aynı yolu paylaşması.**
 
-* **İzolasyon:** iSCSI trafiği kendi VLAN'ında, tercihen kendi fiziksel adaptörleri üzerinde taşınmalıdır. Kritik ortamlarda ayrı bir fiziksel switch çifti kullanılır.
-* **Yedeklilik:** Host'tan array'e giden en az iki bağımsız yol bulunmalı; bu yollar farklı NIC, farklı switch ve farklı SP üzerinden geçmelidir.
-* **Jumbo Frames (MTU 9000):** Verimi artırır, ancak uçtan uca — VMkernel portu, vSwitch, fiziksel switch portları ve array — tutarlı olmak zorundadır. Zincirin bir halkasında 1500 kalırsa, sorunun teşhisi zor performans kayıpları yaşanır.
-* **Flow control ve Spanning Tree:** iSCSI portlarında PortFast/Edge yapılandırması ve doğru flow control ayarları, gereksiz gecikmeleri önler.
+Depolama trafiği gecikmeye çok duyarlıdır. Bir yedekleme işi ya da yoğun bir vMotion aynı hattı doldurduğunda, storage trafiği sıkışır. Sonuç, sanal makinelerde disk gecikmesi olarak görünür — donmalar, uygulama zaman aşımları.
 
-### 4. iSCSI Initiator: Host Tarafındaki Bağlantı Noktası
+**Ağ tarafında yapılması gerekenler:**
 
-Storage tarafına **target**, host tarafına **initiator** denir. Initiator, ESXi'nin iSCSI hedeflerini keşfetmesini ve LUN'lara bağlanmasını sağlayan bileşendir. İki tipi vardır:
+* **Ayırın:** iSCSI trafiği kendi VLAN'ında olsun, tercihen kendi NIC'leri üzerinde. Kritik ortamlarda ayrı switch çifti kullanılır.
+* **Yedekleyin:** Host'tan storage'a en az iki bağımsız yol olsun. Bu yollar farklı NIC, farklı switch ve farklı SP üzerinden geçmeli.
+* **Jumbo Frames (MTU 9000):** Verimi artırır. Ama zincirin tamamında aynı olmak zorundadır — VMkernel portu, vSwitch, fiziksel switch ve storage. Bir halkada 1500 kalırsa, bulması zor performans sorunları çıkar.
+* **Switch ayarları:** iSCSI portlarında PortFast/Edge açık olsun, flow control doğru ayarlansın.
 
-#### Software iSCSI Initiator
+### 4. iSCSI Initiator
 
-ESXi'nin içinde çalışan yazılımsal bir bileşendir. Host'un standart fiziksel network adaptörlerini kullanır; ek donanım gerektirmez.
+Storage tarafına **target**, host tarafına **initiator** denir. Initiator, ESXi'nin storage'ı bulmasını ve LUN'lara bağlanmasını sağlayan parçadır.
 
-* **Avantajı:** Maliyetsizdir, her host'ta mevcuttur ve yapılandırması basittir.
-* **Bedeli:** iSCSI protokol işlemleri host CPU'sunu kullanır. Modern işlemcilerde bu yük çoğu senaryoda ihmal edilebilir düzeydedir.
+İki tipi var:
 
-Pratikte ortamların büyük çoğunluğu software initiator kullanır ve bu, tavsiye edilen başlangıç noktasıdır.
+#### Software initiator
 
-#### Hardware iSCSI Initiator (HBA)
+ESXi'nin içinde çalışan bir yazılımdır. Host'un normal network kartlarını kullanır, ek donanım istemez.
 
-iSCSI işlemlerini kendi üzerinde gerçekleştiren özel bir adaptördür. İki alt tipi vardır:
+* **Artısı:** Bedava, her host'ta hazır, kurulumu kolay.
+* **Eksisi:** iSCSI işlemleri host'un işlemcisini kullanır. Modern işlemcilerde bu yük hissedilmez.
 
-* **Bağımsız (independent) HBA:** iSCSI oturumunu, TCP/IP ve kendi IP yapılandırmasını tamamen kendisi yönetir. ESXi'nin ağ katmanına ihtiyaç duymaz.
-* **Bağımlı (dependent) HBA:** iSCSI offload yapan ancak IP yapılandırması için ESXi'nin VMkernel portlarına bağımlı olan adaptörlerdir.
-* **Avantajı:** CPU yükünü devralır ve boot from SAN senaryolarını mümkün kılar.
-* **Bedeli:** Ek donanım maliyeti ve yönetim karmaşıklığı.
+#### Hardware initiator (HBA)
+
+iSCSI işini kendi üzerinde yapan özel bir karttır.
+
+* **Artısı:** İşlemciyi yormaz. Storage'dan boot etme (boot from SAN) imkânı verir.
+* **Eksisi:** Para verip almak gerekir, yönetimi biraz daha karmaşıktır.
+
+İki alt tipi vardır: **bağımsız (independent)** HBA her şeyi kendi yapar, kendi IP'si vardır. **Bağımlı (dependent)** HBA ise iSCSI işini üstlenir ama IP yapılandırması için ESXi'nin VMkernel portuna ihtiyaç duyar.
 
 #### Hangisini seçmeli?
 
-Karar basittir: **ek donanım almak için özel bir gerekçeniz yoksa software initiator kullanın.** CPU offload ihtiyacı ölçülebilir şekilde ortaya çıkmadıkça ya da iSCSI üzerinden boot etme gereksinimi olmadıkça, hardware HBA'nın getirisi maliyetini karşılamaz.
+Cevap basit: **özel bir gerekçeniz yoksa software initiator kullanın.** Ortamların büyük çoğunluğu böyle çalışır. HBA sadece iki durumda gerekir: işlemci yükü ölçülebilir şekilde sorun oluyorsa, ya da storage'dan boot etmeniz gerekiyorsa.
 
-### 5. Keşif (Discovery) Nasıl Çalışır?
+Bir yanlış anlaşılmayı da netleştirelim: HBA ağ yükünü azaltmaz. Paketler yine aynı Ethernet ağından geçer. HBA'nın rahatlattığı yer işlemcidir. Ağı rahatlatmak istiyorsanız çözüm ayrı NIC ve ayrı VLAN'dır — HBA değil.
 
-Host, ağdaki iSCSI hedeflerini iki yöntemden biriyle bulur:
+### 5. Storage Nasıl Bulunur?
 
-* **Dynamic Discovery (SendTargets):** ESXi'ye storage processor'ın IP adresini girersiniz; host o adrese bağlanıp "hangi hedefleri sunuyorsun?" diye sorar ve array kendisindeki hedefleri listeler. Yaygın kullanılan yöntem budur.
-* **Static Discovery:** Hedefleri tek tek elle tanımlarsınız. Nadiren gerekir.
+Host, ağdaki storage'ı kendiliğinden bulmaz. Adresini siz verirsiniz. İki yöntem var:
 
-Buradaki önemli nokta şudur: keşif kendiliğinden olmaz, **hedefin adresini siz tanımlarsınız.** Yapılandırma sonrası host bir tarama (rescan) yapar ve erişebildiği LUN'ları listeler.
+* **Dynamic Discovery (SendTargets):** ESXi'ye storage processor'ın IP adresini girersiniz. Host o adrese bağlanıp "hangi hedefleri sunuyorsun?" diye sorar, storage kendi listesini döner. Yaygın kullanılan yöntem budur.
+* **Static Discovery:** Hedefleri tek tek elle yazarsınız. Nadiren gerekir.
 
-Her initiator ve target'ın **IQN (iSCSI Qualified Name)** adında benzersiz bir kimliği vardır — `iqn.1998-01.com.vmware:host01-1a2b3c4d` gibi. Array tarafında hangi LUN'un hangi host'a sunulacağı bu IQN'lere göre tanımlanır; bu işleme **LUN masking** denir ve Fibre Channel'daki zoning'in iSCSI karşılığıdır.
+Adresi girdikten sonra host bir tarama (rescan) yapar ve erişebildiği LUN'ları listeler.
+
+#### IQN ve LUN masking
+
+Her initiator ve target'ın benzersiz bir adı vardır: **IQN (iSCSI Qualified Name)**. Şuna benzer:
+
+```
+iqn.1998-01.com.vmware:host01-1a2b3c4d
+```
+
+Storage tarafında "hangi LUN hangi host'a görünsün" tanımı bu IQN'lere göre yapılır. Buna **LUN masking** denir. Fibre Channel'daki zoning'in iSCSI karşılığıdır.
+
+Bu tanım önemlidir: yanlış yapılandırılırsa bir host, başka bir cluster'ın LUN'unu görebilir ve veri bozulmasına yol açabilir.
 
 #### Güvenlik: CHAP
 
-iSCSI trafiği varsayılan olarak şifrelenmez. Erişim denetimi için **CHAP (Challenge-Handshake Authentication Protocol)** kullanılır:
+iSCSI trafiği varsayılan olarak şifrelenmez. Erişim kontrolü için **CHAP** kullanılır — basit bir kullanıcı adı/parola doğrulaması gibi düşünebilirsiniz.
 
-* **One-way CHAP:** Target, initiator'ı doğrular.
-* **Mutual CHAP:** Karşılıklı doğrulama yapılır.
+* **One-way CHAP:** Storage, host'u doğrular.
+* **Mutual CHAP:** İkisi birbirini doğrular.
 
-İzole bir storage VLAN'ında çalışıyorsanız risk düşüktür; yine de paylaşımlı altyapılarda CHAP'i etkinleştirmek, yanlış yapılandırılmış bir host'un başkasının LUN'una bağlanmasını önleyen basit ve etkili bir katmandır.
+Ayrı bir storage VLAN'ında çalışıyorsanız risk düşüktür. Yine de CHAP'i açmak, yanlış yapılandırılmış bir host'un başkasının LUN'una bağlanmasını engelleyen basit bir korumadır.
 
 ### 6. Çoklu Yol (Multipathing)
 
-Host ile array arasında birden fazla fiziksel yol bulunduğunda, ESXi bu yolları **PSA (Pluggable Storage Architecture)** ile yönetir. Path selection policy seçenekleri:
+Host ile storage arasında birden fazla yol varsa, ESXi bunları yönetir. Üç politika vardır:
 
-* **Fixed:** Belirlenen tercih edilen yol kullanılır; o yol düşerse alternatife geçilir.
-* **Most Recently Used (MRU):** Son çalışan yol kullanılmaya devam edilir; genellikle active/passive array'lerde varsayılandır.
-* **Round Robin:** Yollar arasında sırayla dağıtım yapılır; active/active array'lerde hem yedeklilik hem verim sağlar ve modern ortamlarda önerilen politikadır.
+* **Fixed:** Belirlediğiniz yol kullanılır. O yol düşerse alternatife geçer.
+* **Most Recently Used (MRU):** Son çalışan yol kullanılmaya devam eder. Genelde active/passive sistemlerde varsayılandır.
+* **Round Robin:** Yollar arasında sırayla dağıtım yapar. Active/active sistemlerde hem yedeklilik hem hız sağlar. Modern ortamlarda önerilen budur.
 
-Software initiator ile çoklu yol kurmanın yolu **iSCSI port binding**'dir: her fiziksel adaptör için ayrı bir VMkernel portu oluşturulur ve bunlar iSCSI initiator'a bağlanır. Bu yapılandırma olmadan birden fazla NIC'iniz olsa bile gerçek anlamda çoklu yol elde edemezsiniz — bu, iSCSI kurulumlarında en sık atlanan adımdır.
+**Kritik nokta:** Software initiator'da çoklu yol kurmanın yolu **iSCSI port binding**'dir. Her fiziksel NIC için ayrı bir VMkernel portu oluşturulur ve bunlar initiator'a bağlanır.
 
-Ayrıca array üreticinizin **SATP/PSP** önerilerini kontrol edin; birçok üretici kendi array'i için özel bir path politikası ve IOPS değeri tavsiye eder.
+Bu yapılmazsa, iki NIC'iniz olsa bile gerçek çoklu yol elde edemezsiniz. Kablolar doğru takılı olsa da ESXi tek yol üzerinden çalışır ve bir kablo çektiğinizde datastore düşer. iSCSI kurulumlarında en sık atlanan adım budur.
 
-### Pratikte Nasıl İlerlenir?
+Ayrıca storage üreticinizin önerilerine bakın. Çoğu üretici kendi sistemi için özel bir yol politikası ve IOPS değeri tavsiye eder.
 
-Bileşenleri bir araya getirdiğimizde tipik bir kurulum akışı şöyledir:
+### Kurulum Sırası
 
-1. Storage sistemi ağa bağlanır; SP'ler farklı switch'lere dağıtılır.
-2. Array üzerinde LUN'lar oluşturulur (veya hazır gelir) ve host IQN'lerine sunulur.
-3. ESXi'de storage trafiği için ayrı VMkernel portları ve izole VLAN yapılandırılır.
-4. Software iSCSI adapter etkinleştirilir, port binding yapılır.
-5. Dynamic discovery ile array IP'si tanımlanır, gerekiyorsa CHAP ayarlanır.
-6. Rescan yapılır; görünen LUN'lar üzerinde VMFS datastore oluşturulur.
-7. Çoklu yol politikası (genellikle Round Robin) ayarlanır ve yol yedekliliği fiilen test edilir.
+Parçaları bir araya getirdiğimizde tipik akış şöyledir:
 
-Son madde özellikle önemlidir: bir kabloyu çekip yolun gerçekten devraldığını doğrulamadan, yedekliliğin çalıştığını varsaymayın.
+1. Storage ağa bağlanır; SP'ler farklı switch'lere dağıtılır
+2. LUN'lar oluşturulur (veya hazır gelir) ve host IQN'lerine sunulur
+3. ESXi'de storage için ayrı VMkernel portları ve ayrı VLAN yapılandırılır
+4. Software iSCSI adapter açılır, port binding yapılır
+5. Dynamic discovery ile storage IP'si girilir, gerekiyorsa CHAP ayarlanır
+6. Rescan yapılır; görünen LUN'lar üzerine VMFS datastore kurulur
+7. Yol politikası (genelde Round Robin) ayarlanır
+
+Son adımdan sonra bir şey daha yapın: **bir kabloyu çekin ve VM'lerin çalışmaya devam ettiğini görün.** Test edilmemiş yedeklilik, yedeklilik sayılmaz.
+
+Doğrulama için:
+
+```bash
+# LUN başına yol sayısını ve politikayı gör
+esxcli storage nmp device list
+
+# Storage'a erişimi test et
+vmkping -I vmk2 192.168.20.10
+```
 
 ### Sonuç
 
-iSCSI SAN, karmaşık görünen ancak birkaç net bileşenden oluşan bir yapıdır. Özetle:
+iSCSI SAN karmaşık görünür ama birkaç net parçadan oluşur. Özetle:
 
-* **LUN'lar**, fiziksel disklerin gruplanmasıyla oluşan mantıksal birimlerdir; ESXi arkadaki RAID yapısını görmez, yalnızca kendisine sunulan LUN'u bilir.
-* **Storage processor'lar** array'in ağa açılan kapısıdır; en az iki tanesi bulunmalı ve **farklı fiziksel switch'lere** bağlanmalıdır.
-* **Ağ katmanı** standart Ethernet'tir — bu iSCSI'yi ucuz kılan özelliktir, ancak trafiğin **izole edilmesi ve yedeklenmesi** şarttır.
-* **Initiator** host tarafındaki bağlantı noktasıdır; özel bir gerekçe yoksa **software initiator** doğru tercihtir.
-* **Discovery** elle tanımlanan hedef adresiyle başlar; erişim denetimi **IQN tabanlı LUN masking** ve **CHAP** ile sağlanır.
-* **Çoklu yol**, software initiator'da **port binding** ile kurulur ve genellikle **Round Robin** politikasıyla kullanılır.
+* **LUN**, disklerin gruplanmasıyla oluşan mantıksal diskdir. ESXi arkadaki yapıyı görmez, sadece kendisine verilen LUN'u bilir.
+* **Storage processor** storage'ın ağa açılan kapısıdır. En az iki tane olmalı ve **farklı switch'lere** bağlanmalıdır.
+* **Ağ** normal Ethernet'tir. iSCSI'yi ucuz kılan bu, ama trafiği **ayırmak ve yedeklemek** şarttır.
+* **Initiator** host tarafındaki bağlantı noktasıdır. Özel bir gerekçe yoksa **software** yeterlidir; HBA ağ yükünü değil işlemci yükünü azaltır.
+* **Storage kendiliğinden bulunmaz.** IP'sini siz girersiniz. Erişim kontrolü **IQN tabanlı LUN masking** ve **CHAP** ile yapılır.
+* **Çoklu yol**, software initiator'da **port binding** ile kurulur. Bu adım atlanırsa yedeklilik kâğıt üzerinde kalır.
 
-Bileşenleri ve aralarındaki ilişkiyi netleştirdiğimize göre, serinin devamında bunları uygulamaya dökebiliriz: ESXi üzerinde software iSCSI adapter'ın etkinleştirilmesi, VMkernel portlarının ve port binding'in yapılandırılması, hedeflerin tanıtılması ve sunulan LUN'lar üzerinde VMFS datastore oluşturulması.
+Sıradaki bölümde bunları uygulamaya dökeceğiz: ESXi'de software iSCSI adapter'ı açmak, VMkernel portlarını ve port binding'i yapılandırmak, storage'ı tanıtmak ve LUN üzerine VMFS datastore kurmak.
